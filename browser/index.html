@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volaxin — Maritime Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+  <style>
+        *, *::before, *::after {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0
+        }
+
+        :root {
+          --navy: #06101e;
+          --gold: #c8973e;
+          --gold2: #e4b96a;
+          --gold3: #f5d28a;
+          --mist: #b0d4ee;
+          --horizon: #3a78be;
+          --white: #ffffff;
+          --cream: #f8f2e8;
+          /* warm soft palette */
+          --g1: rgba(255,248,235,0.97);
+          --g2: rgba(245,235,215,0.92);
+          --border-warm: rgba(200,151,62,0.22);
+          --glass-bg: rgba(8,18,38,0.52);
+          --glass-border: rgba(255,255,255,0.14);
+          --text-bright: #ffffff;
+          --text-warm: rgba(255,245,225,0.95);
+          --text-soft: rgba(230,218,195,0.85);
+          --text-dim: rgba(200,195,180,0.70);
+        }
+
+        html, body {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          font-family: 'DM Sans',sans-serif;
+          background: var(--navy);
+          color: var(--text-bright);
+          cursor: none
+        }
+
+        /* ─── CURSOR ─── */
+        #cur {
+          position: fixed;
+          width: 7px;
+          height: 7px;
+          background: var(--gold);
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9999;
+          transform: translate(-50%,-50%);
+          transition: transform .07s,background .15s
+        }
+
+        #cur-ring {
+          position: fixed;
+          width: 28px;
+          height: 28px;
+          border: 1px solid rgba(200,151,62,.38);
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9998;
+          transform: translate(-50%,-50%);
+          transition: width .16s,height .16s,border-color .16s
+        }
+
+        body.hov #cur {
+          transform: translate(-50%,-50%) scale(2.1);
+          background: var(--gold2)
+        }
+
+        body.hov #cur-ring {
+          width: 42px;
+          height: 42px;
+          border-color: rgba(200,151,62,.18)
+        }
+
+        /* ─── INTRO ─── */
+        #intro {
+          position: fixed;
+          inset: 0;
+          z-index: 8000;
+          background: var(--navy);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          transition: opacity .9s ease,visibility .9s ease
+        }
+
+          #intro.gone {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+          }
+
+        .i-brand {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          animation: fadeUp .7s .15s ease both
+        }
+
+        .i-logo-img {
+          width: 44px;
+          height: 44px;
+          object-fit: contain;
+          border-radius: 8px;
+          margin-bottom: 4px
+        }
+
+        .i-name {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 24px;
+          font-weight: 300;
+          letter-spacing: .32em;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: 0 0 30px rgba(200,151,62,.5)
+        }
+
+        .i-sub {
+          font-size: 9.5px;
+          letter-spacing: .24em;
+          color: rgba(200,180,140,.55);
+          font-weight: 300;
+          animation: fadeUp .7s .32s ease both
+        }
+
+        .i-bar-wrap {
+          width: 240px;
+          height: 1px;
+          background: rgba(200,151,62,.15);
+          animation: fadeUp .7s .42s ease both
+        }
+
+        .i-bar {
+          height: 1px;
+          background: linear-gradient(90deg,rgba(58,120,190,.6),var(--gold));
+          width: 0;
+          transition: width .08s linear
+        }
+
+        .i-pct {
+          font-size: 9px;
+          letter-spacing: .2em;
+          color: rgba(200,180,140,.5);
+          animation: fadeUp .7s .48s ease both
+        }
+
+        .i-stage {
+          font-size: 8.5px;
+          letter-spacing: .17em;
+          color: rgba(160,150,130,.32);
+          animation: fadeUp .7s .54s ease both;
+          margin-top: -6px
+        }
+
+        /* ─── VIDEO CANVAS — native HD, no zoom ─── */
+        #vid {
+          position: fixed;
+          width: 1px;
+          height: 1px;
+          opacity: 0;
+          pointer-events: none;
+          z-index: -1
+        }
+
+        #cv {
+          position: fixed;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          z-index: 0;
+          transform: translateZ(0);
+          will-change: transform;
+          image-rendering: auto;
+          border: none;
+          outline: none
+        }
+
+        #globe-canvas {
+          position: fixed;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          z-index: 1;
+          opacity: 0;
+          pointer-events: none
+        }
+
+        /* ─── FOG ─── */
+        #fog-layer {
+          position: fixed;
+          inset: 0;
+          z-index: 2;
+          pointer-events: none;
+          overflow: hidden;
+          opacity: 0;
+          transition: opacity .8s ease
+        }
+
+          #fog-layer.vis {
+            opacity: 0.26
+          }
+
+          #fog-layer img {
+            position: absolute;
+            bottom: 0;
+            left: -5%;
+            width: 110%;
+            min-width: 110%;
+            max-width: none;
+            animation: fog_fx calc(3s * var(--i)) ease-in infinite;
+            transform-origin: bottom center;
+            opacity: .2
+          }
+
+        @keyframes fog_fx {
+          0% {
+            opacity: 0;
+            transform: scaleX(1) scaleY(1)
+          }
+
+          15% {
+            opacity: .11
+          }
+
+          50% {
+            opacity: .17
+          }
+
+          85% {
+            opacity: .11
+          }
+
+          100% {
+            opacity: 0;
+            transform: scaleX(2.2) scaleY(2.8)
+          }
+        }
+
+        /* ─── STARS ─── */
+        #star-layer {
+          position: fixed;
+          inset: 0;
+          z-index: 2;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 1.2s ease
+        }
+
+          #star-layer.vis {
+            opacity: 1
+          }
+
+        .star {
+          position: absolute;
+          background: #fff;
+          border-radius: 50%;
+          animation: starBlink var(--dur) ease-in-out infinite
+        }
+
+        @keyframes starBlink {
+          0%,100% {
+            opacity: .07;
+            transform: scale(.7)
+          }
+
+          50% {
+            opacity: 1;
+            transform: scale(1.5)
+          }
+        }
+
+        /* ─── WAKE ─── */
+        #bubble-layer {
+          position: fixed;
+          z-index: 4;
+          pointer-events: none
+        }
+
+        #bubble-dragger {
+          position: fixed;
+          z-index: 6000;
+          display: none;
+          cursor: move
+        }
+
+          #bubble-dragger.vis {
+            display: block
+          }
+
+        .bdrag-h {
+          width: 26px;
+          height: 26px;
+          border: 1px dashed rgba(200,151,62,.55);
+          border-radius: 50%;
+          background: rgba(6,10,22,.55);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 11px;
+          color: var(--gold)
+        }
+
+        #bubble-coords {
+          position: fixed;
+          bottom: 48px;
+          left: 22px;
+          z-index: 6001;
+          font-size: 8.5px;
+          letter-spacing: .16em;
+          color: var(--gold);
+          text-transform: uppercase;
+          display: none;
+          background: rgba(6,10,22,.78);
+          border: 1px solid rgba(200,151,62,.25);
+          padding: 4px 9px;
+          border-radius: 4px
+        }
+
+          #bubble-coords.vis {
+            display: block
+          }
+
+        .wake-p {
+          position: absolute;
+          border-radius: 50%;
+          background: rgba(255,255,255,.82);
+          animation: wakeSpread var(--dur) ease-out forwards;
+          pointer-events: none
+        }
+
+        @keyframes wakeSpread {
+          0% {
+            transform: translate(0,0) scale(1,1);
+            opacity: .84
+          }
+
+          30% {
+            opacity: .54
+          }
+
+          70% {
+            opacity: .20
+          }
+
+          100% {
+            transform: translate(var(--dx),var(--dy)) scaleX(var(--sx)) scaleY(.24);
+            opacity: 0
+          }
+        }
+
+        /* ─── VIGNETTE + PLAYBAR ─── */
+        #vig {
+          position: fixed;
+          inset: 0;
+          z-index: 3;
+          background: radial-gradient(ellipse at center,transparent 34%,rgba(4,8,18,.48) 100%);
+          pointer-events: none
+        }
+
+        #play-bar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 600;
+          height: 2px;
+          width: 0;
+          background: linear-gradient(90deg,var(--horizon),var(--gold));
+          pointer-events: none;
+          transition: opacity .4s
+        }
+
+        /* ═══════════════════════════════
+       NAVBAR — warm glass pill, tiny
+    ═══════════════════════════════ */
+        nav {
+          position: fixed;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%) translateY(0);
+          z-index: 500;
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding: 6px 12px 6px 9px;
+          background: rgba(8,18,40,.48);
+          backdrop-filter: blur(36px) saturate(2.2);
+          -webkit-backdrop-filter: blur(36px) saturate(2.2);
+          border-radius: 40px;
+          border: 1px solid rgba(255,255,255,.12);
+          box-shadow: 0 2px 18px rgba(0,0,0,.28),0 1px 0 rgba(255,255,255,.07) inset;
+          transition: transform .40s cubic-bezier(.22,1,.36,1),opacity .36s ease;
+          will-change: transform,opacity;
+          white-space: nowrap;
+        }
+
+          nav.nav-hidden {
+            transform: translateX(-50%) translateY(-140%);
+            opacity: 0;
+            pointer-events: none
+          }
+
+        .nlogo {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          text-decoration: none;
+          flex-shrink: 0
+        }
+
+        .nlogo-img {
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
+          border-radius: 4px;
+          flex-shrink: 0
+        }
+
+        .nv-brand {
+          display: flex;
+          flex-direction: column;
+          line-height: 1
+        }
+
+        .nv-name {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: .20em;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: 0 0 14px rgba(255,245,220,.45)
+        }
+
+        .nv-sub {
+          font-size: 7.5px;
+          letter-spacing: .14em;
+          color: rgba(200,151,62,.70);
+          text-transform: uppercase;
+          margin-top: 1px
+        }
+
+        .nlinks {
+          display: flex;
+          gap: 1px;
+          list-style: none;
+          align-items: center
+        }
+
+          .nlinks a {
+            font-size: 9px;
+            letter-spacing: .11em;
+            font-weight: 400;
+            color: rgba(255,245,220,.72);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color .18s,background .18s;
+            padding: 4px 10px;
+            border-radius: 20px
+          }
+
+            .nlinks a:hover {
+              color: #fff;
+              background: rgba(255,255,255,.09)
+            }
+
+        .ncta {
+          font-size: 9px;
+          letter-spacing: .10em;
+          font-weight: 500;
+          color: #fff;
+          background: rgba(180,128,32,.65);
+          padding: 6px 15px;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: opacity .2s,background .2s;
+          cursor: none;
+          border-radius: 20px;
+          border: 1px solid rgba(200,151,62,.32);
+          box-shadow: 0 2px 10px rgba(180,128,32,.20);
+          flex-shrink: 0
+        }
+
+          .ncta:hover {
+            opacity: .88;
+            background: rgba(200,151,62,.75)
+          }
+
+        /* ─── DOTS ─── */
+        #dots {
+          position: fixed;
+          right: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 500;
+          display: flex;
+          flex-direction: column;
+          gap: 8px
+        }
+
+        .dot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: rgba(220,210,190,.18);
+          transition: background .28s,transform .28s;
+          cursor: none
+        }
+
+          .dot.on {
+            background: var(--gold);
+            transform: scale(1.8)
+          }
+
+        /* ─── LABELS ─── */
+        #sec-label {
+          position: fixed;
+          left: 18px;
+          bottom: 20px;
+          z-index: 500;
+          font-size: 8.5px;
+          letter-spacing: .26em;
+          color: rgba(255,245,220,.40);
+          text-transform: uppercase
+        }
+
+        #s-hint {
+          position: fixed;
+          bottom: 44px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 500;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          opacity: 0;
+          transition: opacity .5s;
+          pointer-events: none
+        }
+
+          #s-hint.on {
+            opacity: 1
+          }
+
+        .sh-line {
+          width: 1px;
+          height: 26px;
+          background: linear-gradient(to bottom,transparent,var(--gold),transparent);
+          animation: shpulse 2s ease-in-out infinite
+        }
+
+        .sh-txt {
+          font-size: 8.5px;
+          letter-spacing: .26em;
+          color: rgba(255,245,220,.42);
+          text-transform: uppercase
+        }
+
+        /* ─── GLOBE ─── */
+        #globe-container {
+          position: fixed;
+          inset: 0;
+          z-index: 1;
+          display: none;
+          pointer-events: none;
+          width: 100%;
+          height: 100%
+        }
+
+          #globe-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block
+          }
+
+        #globe-ui {
+          position: fixed;
+          inset: 0;
+          z-index: 205;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity .6s ease
+        }
+
+          #globe-ui.vis {
+            opacity: 1;
+            pointer-events: auto
+          }
+
+        .globe-hdr {
+          position: absolute;
+          top: 50%;
+          left: 50px;
+          transform: translateY(-50%);
+          max-width: 320px
+        }
+
+        .globe-loc {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          font-size: 10.5px;
+          letter-spacing: .11em;
+          color: rgba(255,245,220,.90);
+          text-transform: uppercase;
+          margin-bottom: 7px;
+          text-shadow: 0 0 8px rgba(255,245,220,.18)
+        }
+
+        .globe-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: var(--gold);
+          flex-shrink: 0;
+          animation: pulse 2.2s ease infinite
+        }
+
+          .globe-dot.b {
+            background: var(--horizon)
+          }
+
+          .globe-dot.m {
+            background: var(--mist)
+          }
+
+        .globe-hint {
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 9.5px;
+          letter-spacing: .20em;
+          color: rgba(255,245,220,.36);
+          text-transform: uppercase;
+          pointer-events: none
+        }
+
+        /* ─── OVERLAY ─── */
+        #overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 200;
+          pointer-events: none
+        }
+
+        /* ═══════════════════════════════════════════════
+       PANELS — warm swipe: enter from right, exit left
+       Fast, smooth, professional
+    ═══════════════════════════════════════════════ */
+        .panel {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transform: translateX(72px);
+          /* Enter animation */
+          transition: opacity .46s cubic-bezier(.25,.92,.4,1), transform .46s cubic-bezier(.25,.92,.4,1);
+          pointer-events: none;
+          will-change: transform,opacity;
+          contain: layout style;
+        }
+
+          .panel.on {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto
+          }
+          /* Exit left (going forward) */
+          .panel.exit-l {
+            opacity: 0;
+            transform: translateX(-55px);
+            transition: opacity .30s cubic-bezier(.55,0,.8,.45), transform .30s cubic-bezier(.55,0,.8,.45);
+          }
+          /* Exit right (going backward) */
+          .panel.exit-r {
+            opacity: 0;
+            transform: translateX(72px);
+            transition: opacity .30s cubic-bezier(.55,0,.8,.45), transform .30s cubic-bezier(.55,0,.8,.45);
+          }
+          /* Enter from left (going backward) */
+          .panel.enter-l {
+            transform: translateX(-72px)
+          }
+
+        /* ═══════════════════════════
+       TYPOGRAPHY — warm white glow
+    ═══════════════════════════ */
+        h1, h2, .hero-h1, .sec-h2, .cta-h, .aic-h, .mfh, .stat-n, .cm-n {
+          color: #fff !important;
+          text-shadow: 0 0 22px rgba(255,248,230,.58),0 0 44px rgba(200,170,100,.18);
+        }
+
+        .sec-lbl, .eyebrow {
+          color: var(--gold) !important;
+          text-shadow: 0 0 16px rgba(200,151,62,.70);
+          letter-spacing: .28em;
+        }
+
+        p, .sec-p, .hero-p, .cta-p, .aic-t, .mfb, .mc-desc {
+          color: rgba(255,245,220,.92) !important;
+          text-shadow: 0 0 6px rgba(255,235,190,.10);
+        }
+
+        .stat-l, .cm-l, .mc-name, .mft {
+          color: rgba(220,205,175,.88) !important;
+          text-shadow: 0 0 8px rgba(200,170,100,.22);
+        }
+
+        .mffi {
+          color: rgba(255,245,220,.90) !important
+        }
+
+        .globe-hdr .sec-lbl, .globe-hdr h2, .globe-hdr p {
+          color: rgba(255,245,220,.92) !important
+        }
+
+        .fc, .flinks a {
+          color: rgba(255,245,220,.44) !important
+        }
+
+          .flinks a:hover {
+            color: rgba(255,245,220,.80) !important
+          }
+
+        /* ── WARM GLASS CARD ── */
+        .warm-glass {
+          background: rgba(7,16,38,.50);
+          border: 1px solid rgba(255,248,225,.13);
+          backdrop-filter: blur(26px) saturate(1.7);
+          -webkit-backdrop-filter: blur(26px) saturate(1.7);
+          border-radius: 18px;
+          box-shadow: 0 10px 44px rgba(0,0,0,.36),0 1px 0 rgba(255,248,225,.10) inset;
+        }
+
+        /* ── HERO ── */
+        .hero-wrap {
+          padding: 0 44px;
+          width: 100%;
+          max-width: 1060px
+        }
+
+        .hero-glass {
+          padding: 36px 44px;
+          max-width: 620px
+        }
+
+        .eyebrow {
+          font-size: 9.5px;
+          letter-spacing: .28em;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 12px
+        }
+
+          .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0
+          }
+
+        .hero-h1 {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: clamp(32px,4vw,62px);
+          font-weight: 300;
+          line-height: 1.09;
+          letter-spacing: -.01em;
+          margin-bottom: 13px
+        }
+
+          .hero-h1 em {
+            font-style: italic;
+            color: var(--mist);
+            text-shadow: 0 0 22px rgba(176,212,238,.65)
+          }
+
+        .hero-p {
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 1.76;
+          max-width: 400px;
+          margin-bottom: 28px
+        }
+
+        .acts {
+          display: flex;
+          align-items: center;
+          gap: 13px
+        }
+
+        .btn-pri {
+          background: transparent;
+          border: 1px solid var(--gold);
+          color: var(--gold) !important;
+          padding: 9px 22px;
+          font-size: 10px;
+          letter-spacing: .16em;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-family: 'DM Sans',sans-serif;
+          cursor: none;
+          text-decoration: none;
+          transition: background .20s,color .20s;
+          display: inline-block;
+          border-radius: 8px;
+          text-shadow: 0 0 10px rgba(200,151,62,.40)
+        }
+
+          .btn-pri:hover {
+            background: var(--gold);
+            color: var(--navy) !important;
+            text-shadow: none
+          }
+
+        .btn-ghost {
+          color: rgba(255,245,220,.82) !important;
+          font-size: 10px;
+          letter-spacing: .16em;
+          text-transform: uppercase;
+          font-weight: 400;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          transition: color .20s;
+          cursor: none;
+          text-shadow: 0 0 7px rgba(255,245,220,.22)
+        }
+
+          .btn-ghost:hover {
+            color: #fff !important
+          }
+
+          .btn-ghost::after {
+            content: '→';
+            font-size: 12px;
+            transition: transform .20s
+          }
+
+          .btn-ghost:hover::after {
+            transform: translateX(4px)
+          }
+
+        .hero-badges {
+          display: flex;
+          gap: 6px;
+          margin-top: 20px;
+          flex-wrap: wrap
+        }
+
+        .badge {
+          font-size: 8px;
+          letter-spacing: .10em;
+          color: rgba(220,210,185,.88);
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          background: rgba(200,151,62,.10);
+          border: 1px solid rgba(200,151,62,.22);
+          padding: 3px 8px;
+          border-radius: 20px
+        }
+
+          .badge::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: .9
+          }
+
+        /* ── PLATFORM ── */
+        .plat-wrap {
+          padding: 0 44px;
+          max-width: 1020px;
+          width: 100%
+        }
+
+        .plat-glass {
+          padding: 36px 42px
+        }
+
+        .sec-lbl {
+          font-size: 9.5px;
+          letter-spacing: .28em;
+          text-transform: uppercase;
+          margin-bottom: 11px;
+          font-weight: 400
+        }
+
+        .sec-h2 {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: clamp(24px,3.2vw,50px);
+          font-weight: 300;
+          line-height: 1.14;
+          margin-bottom: 11px
+        }
+
+        .sec-p {
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 1.76;
+          max-width: 480px;
+          margin-bottom: 26px
+        }
+
+        .stats {
+          display: flex;
+          gap: 26px;
+          align-items: flex-start;
+          flex-wrap: wrap
+        }
+
+        .stat-n {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 34px;
+          font-weight: 300;
+          color: var(--gold2);
+          line-height: 1;
+          margin-bottom: 3px
+        }
+
+        .stat-l {
+          font-size: 9px;
+          letter-spacing: .13em;
+          text-transform: uppercase
+        }
+
+        .stat-div {
+          width: 1px;
+          height: 38px;
+          background: rgba(200,151,62,.18);
+          align-self: center
+        }
+
+        /* ── GLOBE text ── */
+        .globe-hdr .sec-h2 {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: clamp(22px,2.8vw,44px);
+          font-weight: 300;
+          line-height: 1.14;
+          margin-bottom: 9px
+        }
+
+        .globe-hdr .sec-p {
+          font-size: 12.5px;
+          font-weight: 300;
+          line-height: 1.72;
+          max-width: 300px;
+          margin-bottom: 18px
+        }
+
+        /* ═══════════════════════════════════
+       MODULES 3 — 5×2 grid all visible
+    ═══════════════════════════════════ */
+        .mods-wrap {
+          width: 100%;
+          padding: 0 34px;
+          max-width: 1200px
+        }
+
+        .mods-hdr {
+          margin-bottom: 12px
+        }
+
+        .mods-grid {
+          display: grid;
+          grid-template-columns: repeat(5,1fr);
+          gap: 8px
+        }
+
+        .mc {
+          background: rgba(7,16,38,.56);
+          border: 1px solid rgba(255,248,225,.11);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-radius: 11px;
+          padding: 13px 11px;
+          transition: background .22s,border-color .22s,transform .18s;
+          cursor: none;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 3px 14px rgba(0,0,0,.20),0 1px 0 rgba(255,248,225,.06) inset;
+        }
+
+          .mc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+            transition: background .22s;
+            border-radius: 11px 11px 0 0
+          }
+
+          .mc:hover {
+            background: rgba(14,28,60,.70);
+            border-color: rgba(200,151,62,.32);
+            transform: translateY(-2px)
+          }
+
+            .mc:hover::before {
+              background: var(--gold)
+            }
+
+        .mc-icon {
+          width: 22px;
+          height: 22px;
+          margin-bottom: 7px;
+          opacity: .65
+        }
+
+          .mc-icon svg {
+            width: 22px;
+            height: 22px
+          }
+
+        .mc-name {
+          font-size: 8px;
+          letter-spacing: .12em;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+          text-shadow: 0 0 7px rgba(200,151,62,.40)
+        }
+
+        .mc-desc {
+          font-size: 9.5px;
+          font-weight: 300;
+          line-height: 1.52
+        }
+
+        /* ═══════════════════════════════════
+       DEEP FEATURES 4 — 5×2 grid all visible
+    ═══════════════════════════════════ */
+        .mfull-wrap {
+          padding: 0 34px;
+          max-width: 1200px;
+          width: 100%
+        }
+
+        .mfull-grid {
+          display: grid;
+          grid-template-columns: repeat(5,1fr);
+          gap: 8px
+        }
+
+        .mfc {
+          background: rgba(7,16,38,.56);
+          border: 1px solid rgba(255,248,225,.10);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-radius: 11px;
+          padding: 14px 12px;
+          transition: background .22s,border-color .22s,transform .18s;
+          cursor: none;
+          box-shadow: 0 3px 14px rgba(0,0,0,.18),0 1px 0 rgba(255,248,225,.05) inset;
+        }
+
+          .mfc:hover {
+            background: rgba(14,28,60,.68);
+            border-color: rgba(200,151,62,.28);
+            transform: translateY(-2px)
+          }
+
+        .mft {
+          font-size: 8px;
+          letter-spacing: .17em;
+          color: var(--mist);
+          text-transform: uppercase;
+          margin-bottom: 7px;
+          display: flex;
+          align-items: center;
+          gap: 4px
+        }
+
+          .mft::before {
+            content: '';
+            width: 9px;
+            height: 1px;
+            background: var(--mist)
+          }
+
+        .mfh {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 13px;
+          font-weight: 400;
+          margin-bottom: 5px
+        }
+
+        .mfb {
+          font-size: 9.5px;
+          font-weight: 300;
+          line-height: 1.54;
+          margin-bottom: 8px
+        }
+
+        .mffl {
+          display: flex;
+          flex-direction: column;
+          gap: 2px
+        }
+
+        .mffi {
+          font-size: 9.5px;
+          font-weight: 300;
+          display: flex;
+          align-items: center;
+          gap: 4px
+        }
+
+          .mffi::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            background: var(--gold);
+            flex-shrink: 0
+          }
+
+        /* ═══════════════════════════════════
+       AI & SUPPORT 5 — 3×2 grid all visible
+    ═══════════════════════════════════ */
+        .ai-wrap {
+          padding: 0 34px;
+          max-width: 1100px;
+          width: 100%
+        }
+
+        .ai-hdr {
+          margin-bottom: 14px
+        }
+
+        .ai-grid {
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap: 10px
+        }
+
+        .aic {
+          background: rgba(7,16,38,.54);
+          border: 1px solid rgba(255,248,225,.11);
+          backdrop-filter: blur(16px) saturate(1.4);
+          -webkit-backdrop-filter: blur(16px) saturate(1.4);
+          border-radius: 13px;
+          padding: 18px 15px;
+          transition: border-color .22s,background .22s,transform .18s;
+          box-shadow: 0 4px 18px rgba(0,0,0,.22),0 1px 0 rgba(255,248,225,.08) inset;
+        }
+
+          .aic:hover {
+            border-color: rgba(200,151,62,.36);
+            background: rgba(12,24,54,.68);
+            transform: translateY(-2px)
+          }
+
+        .aic-bar {
+          width: 22px;
+          height: 2px;
+          background: var(--gold);
+          margin-bottom: 11px;
+          border-radius: 2px
+        }
+
+        .aic-h {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 15px;
+          font-weight: 400;
+          margin-bottom: 7px;
+          line-height: 1.24
+        }
+
+        .aic-t {
+          font-size: 11px;
+          font-weight: 300;
+          line-height: 1.64
+        }
+
+        .aic-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          margin-top: 10px;
+          font-size: 8.5px;
+          letter-spacing: .15em;
+          color: var(--gold);
+          text-transform: uppercase;
+          text-shadow: 0 0 9px rgba(200,151,62,.42)
+        }
+
+          .aic-badge::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: pulse 1.9s ease infinite
+          }
+
+        /* ═══════════════════════════════════
+       CONTACT 6 — perfectly centred
+    ═══════════════════════════════════ */
+        #p6 {
+          align-items: center;
+          justify-content: center
+        }
+
+        .cta-wrap {
+          padding: 0 34px;
+          max-width: 840px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center
+        }
+
+        .cta-glass {
+          padding: 44px 50px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center
+        }
+
+        .cta-h {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: clamp(28px,3.8vw,58px);
+          font-weight: 300;
+          line-height: 1.1;
+          margin-bottom: 13px;
+          max-width: 520px
+        }
+
+        .cta-p {
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 1.72;
+          max-width: 380px;
+          margin-bottom: 26px
+        }
+
+        .cta-acts {
+          display: flex;
+          gap: 13px;
+          align-items: center
+        }
+
+        .cta-metrics {
+          margin-top: 28px;
+          padding-top: 22px;
+          border-top: 1px solid rgba(200,151,62,.14);
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          gap: 34px;
+          flex-wrap: wrap
+        }
+
+        .cm-n {
+          font-family: 'Cormorant Garamond',serif;
+          font-size: 24px;
+          font-weight: 300
+        }
+
+        .cm-l {
+          font-size: 8.5px;
+          letter-spacing: .15em;
+          text-transform: uppercase;
+          margin-top: 3px
+        }
+
+        /* ── FOOTER ── */
+        footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 500;
+          padding: 12px 38px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid rgba(200,151,62,.08);
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity .5s ease
+        }
+
+          footer.vis {
+            pointer-events: auto;
+            opacity: 1
+          }
+
+        .fc {
+          font-size: 9px;
+          letter-spacing: .12em;
+          text-transform: uppercase
+        }
+
+        .flinks {
+          display: flex;
+          gap: 18px;
+          list-style: none
+        }
+
+          .flinks a {
+            font-size: 9px;
+            letter-spacing: .12em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color .20s
+          }
+
+        /* ── CONFIG ── */
+        #cfg-btn {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          z-index: 9000;
+          font-size: 8.5px;
+          letter-spacing: .14em;
+          color: rgba(255,245,220,.32);
+          text-transform: uppercase;
+          background: transparent;
+          border: 1px solid rgba(200,151,62,.16);
+          padding: 4px 9px;
+          cursor: none;
+          border-radius: 5px;
+          transition: color .18s,border-color .18s
+        }
+
+          #cfg-btn:hover {
+            color: var(--gold);
+            border-color: var(--gold)
+          }
+
+        #cfg-panel {
+          position: fixed;
+          bottom: 38px;
+          right: 10px;
+          z-index: 9000;
+          background: rgba(5,10,26,.97);
+          border: 1px solid rgba(200,151,62,.16);
+          backdrop-filter: blur(20px);
+          padding: 16px;
+          width: 400px;
+          display: none;
+          border-radius: 10px
+        }
+
+          #cfg-panel.open {
+            display: block
+          }
+
+        .cfg-title {
+          font-size: 9.5px;
+          letter-spacing: .20em;
+          color: var(--gold);
+          text-transform: uppercase;
+          margin-bottom: 11px;
+          border-bottom: 1px solid rgba(200,151,62,.14);
+          padding-bottom: 7px
+        }
+
+        .cfg-row {
+          display: grid;
+          grid-template-columns: 1fr 60px 60px 72px;
+          gap: 5px;
+          align-items: center;
+          margin-bottom: 6px
+        }
+
+          .cfg-row label {
+            font-size: 9px;
+            letter-spacing: .10em;
+            color: rgba(255,245,220,.60);
+            text-transform: uppercase
+          }
+
+          .cfg-row input, .cfg-row select {
+            background: rgba(200,151,62,.08);
+            border: 1px solid rgba(200,151,62,.18);
+            color: #fff;
+            padding: 3px 5px;
+            font-size: 9.5px;
+            font-family: 'DM Sans',sans-serif;
+            width: 100%;
+            text-align: center;
+            border-radius: 4px
+          }
+
+        .cfg-hdr {
+          font-size: 8.5px;
+          letter-spacing: .12em;
+          color: rgba(200,190,160,.42);
+          text-align: center;
+          margin-bottom: 2px
+        }
+
+        .cfg-apply {
+          width: 100%;
+          margin-top: 9px;
+          background: transparent;
+          border: 1px solid var(--gold);
+          color: var(--gold);
+          padding: 6px;
+          font-size: 9px;
+          letter-spacing: .16em;
+          text-transform: uppercase;
+          font-family: 'DM Sans',sans-serif;
+          cursor: none;
+          transition: background .18s;
+          border-radius: 5px
+        }
+
+          .cfg-apply:hover {
+            background: rgba(200,151,62,.10)
+          }
+
+        #wake-btn {
+          position: fixed;
+          bottom: 10px;
+          left: 18px;
+          z-index: 9000;
+          font-size: 8.5px;
+          letter-spacing: .14em;
+          color: rgba(255,245,220,.32);
+          text-transform: uppercase;
+          background: transparent;
+          border: 1px solid rgba(200,151,62,.16);
+          padding: 4px 9px;
+          cursor: none;
+          border-radius: 5px;
+          display: none;
+          transition: color .18s,border-color .18s
+        }
+
+          #wake-btn.vis {
+            display: block
+          }
+
+          #wake-btn:hover {
+            color: var(--gold);
+            border-color: var(--gold)
+          }
+
+        /* ── KEYFRAMES ── */
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px)
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0)
+          }
+        }
+
+        @keyframes pulse {
+          0%,100% {
+            opacity: 1;
+            transform: scale(1)
+          }
+
+          50% {
+            opacity: .30;
+            transform: scale(.65)
+          }
+        }
+
+        @keyframes shpulse {
+          0%,100% {
+            opacity: .32
+          }
+
+          50% {
+            opacity: 1
+          }
+        }
+  </style>
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+<body>
+
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="i-brand">
+      <img src="logo.png" alt="Volaxin" class="i-logo-img" onerror="this.style.display='none'">
+      <div class="i-name">Volaxin</div>
+    </div>
+    <div class="i-sub">Maritime Suite — Intelligent Fleet Management</div>
+    <div class="i-bar-wrap"><div class="i-bar" id="ibar"></div></div>
+    <div class="i-pct" id="ipct">Initialising…</div>
+    <div class="i-stage" id="istage">Preparing navigation systems</div>
+  </div>
+
+  <video id="vid" preload="auto" muted playsinline webkit-playsinline crossorigin="anonymous" decoding="async" disablepictureinpicture></video>
+  <canvas id="cv"></canvas>
+  <canvas id="globe-canvas"></canvas>
+  <div id="fog-layer"></div>
+  <div id="star-layer"></div>
+  <div id="bubble-layer"></div>
+  <div id="bubble-dragger"><div class="bdrag-h">⊕</div></div>
+  <div id="bubble-coords"></div>
+  <div id="vig"></div>
+  <div id="play-bar"></div>
+
+  <!-- GLOBE UI -->
+  <div id="globe-ui">
+    <div class="globe-hdr">
+      <div class="sec-lbl">Global Network</div>
+      <h2 class="sec-h2">One platform.<br>Every ocean.</h2>
+      <p class="sec-p">Complete real-time visibility across your entire fleet — from the South China Sea to the North Atlantic.</p>
+      <div>
+        <div class="globe-loc"><div class="globe-dot"></div>Singapore Hub — 34 Vessels Active</div>
+        <div class="globe-loc"><div class="globe-dot b"></div>Rotterdam Port — 18 Vessels Berthed</div>
+        <div class="globe-loc"><div class="globe-dot m"></div>Houston Terminal — 12 Vessels Loading</div>
+        <div class="globe-loc"><div class="globe-dot"></div>Dubai Anchorage — 9 Vessels at Anchor</div>
+      </div>
+    </div>
+    <div class="globe-hint">Drag to rotate · Scroll to navigate</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <a href="#" class="nlogo">
+      <img src="logo.png" alt="Volaxin" class="nlogo-img" onerror="this.style.display='none'">
+      <div class="nv-brand">
+        <span class="nv-name">Volaxin</span>
+        <span class="nv-sub">Maritime Suite</span>
+      </div>
+    </a>
+    <ul class="nlinks">
+      <li><a href="#" onclick="navTo(1);return false;">Platform</a></li>
+      <li><a href="#" onclick="navTo(3);return false;">Modules</a></li>
+      <li><a href="#" onclick="navTo(5);return false;">AI &amp; Support</a></li>
+      <li><a href="#" onclick="navTo(6);return false;">Contact</a></li>
+    </ul>
+    <a href="#" class="ncta" onclick="navTo(6);return false;">Request Demo</a>
+  </nav>
+
+  <div id="dots">
+    <div class="dot on" data-i="0"></div>
+    <div class="dot" data-i="1"></div>
+    <div class="dot" data-i="2"></div>
+    <div class="dot" data-i="3"></div>
+    <div class="dot" data-i="4"></div>
+    <div class="dot" data-i="5"></div>
+    <div class="dot" data-i="6"></div>
+  </div>
+  <div id="sec-label">Home</div>
+  <div id="s-hint"><div class="sh-line"></div><div class="sh-txt">Scroll</div></div>
+
+  <div id="overlay">
+
+    <!-- 0 · HERO -->
+    <div class="panel on" id="p0">
+      <div class="hero-wrap">
+        <div class="hero-glass warm-glass">
+          <div class="eyebrow">Next-Generation Ship Management</div>
+          <h1 class="hero-h1">Where precision meets<br>the power of <em>open seas</em></h1>
+          <p class="hero-p">Volaxin Maritime Suite unifies every dimension of vessel operations — from planned maintenance and crew welfare to regulatory compliance and predictive intelligence — in one seamless cloud-native platform.</p>
+          <div class="acts">
+            <a href="#" class="btn-pri" onclick="navTo(1);return false;">Explore Platform</a>
+            <a href="#" class="btn-ghost" onclick="navTo(6);return false;">Book a Demo</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge">ISM / ISPS Compliant</span>
+            <span class="badge">MLC 2006 Ready</span>
+            <span class="badge">Class Society Integrated</span>
+            <span class="badge">99.9% Uptime SLA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 · PLATFORM -->
+    <div class="panel" id="p1">
+      <div class="plat-wrap">
+        <div class="plat-glass warm-glass">
+          <div class="sec-lbl">The Platform</div>
+          <h2 class="sec-h2">Eight integrated modules.<br>One intelligent command centre.</h2>
+          <p class="sec-p">We engineered Volaxin from the vessel up — connecting maintenance, crew, compliance, and cargo into a single source of truth for your entire fleet. No silos. No data gaps. Just complete operational clarity.</p>
+          <div class="stats">
+            <div><div class="stat-n">8</div><div class="stat-l">Core Modules</div></div>
+            <div class="stat-div"></div>
+            <div><div class="stat-n">24/7</div><div class="stat-l">Live Expert Support</div></div>
+            <div class="stat-div"></div>
+            <div><div class="stat-n">48h</div><div class="stat-l">Change Guarantee</div></div>
+            <div class="stat-div"></div>
+            <div><div class="stat-n">100%</div><div class="stat-l">Cloud-Native</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 · GLOBE -->
+    <div class="panel" id="p2"></div>
+
+    <!-- 3 · MODULES — 5×2, all 10 visible -->
+    <div class="panel" id="p3">
+      <div class="mods-wrap">
+        <div class="mods-hdr">
+          <div class="sec-lbl">Core Modules</div>
+          <h2 class="sec-h2" style="font-size:clamp(18px,2.2vw,33px);margin-bottom:0">Complete operational coverage, bow to stern</h2>
+        </div>
+        <div class="mods-grid">
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="3" y="3" width="26" height="26" rx="1" stroke="rgba(176,212,238,.6)" stroke-width="1"/><line x1="3" y1="11" x2="29" y2="11" stroke="rgba(176,212,238,.35)" stroke-width="1"/><line x1="3" y1="19" x2="29" y2="19" stroke="rgba(176,212,238,.35)" stroke-width="1"/><line x1="13" y1="3" x2="13" y2="29" stroke="rgba(176,212,238,.35)" stroke-width="1"/></svg></div><div class="mc-name">Common Foundation</div><div class="mc-desc">Unified vessel registry, contacts, flag states, and fleet hierarchy.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(176,212,238,.6)" stroke-width="1"/><path d="M16 9L16 16L22 16" stroke="rgba(200,151,62,.7)" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="2" fill="rgba(200,151,62,.7)"/></svg></div><div class="mc-name">Planned Maintenance</div><div class="mc-desc">Schedule-driven PMS with job cards and class integration.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="7" width="16" height="20" rx="1" stroke="rgba(176,212,238,.6)" stroke-width="1"/><rect x="9" y="3" width="16" height="20" rx="1" stroke="rgba(176,212,238,.32)" stroke-width="1"/><line x1="8" y1="13" x2="18" y2="13" stroke="rgba(200,151,62,.5)" stroke-width="1"/></svg></div><div class="mc-name">Inventory &amp; Procurement</div><div class="mc-desc">Live stock control, automated reorder and budget tracking.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M6 26L6 11L16 4L26 11L26 26Z" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><rect x="12" y="17" width="8" height="9" stroke="rgba(200,151,62,.5)" stroke-width="1" fill="none"/></svg></div><div class="mc-name">Document Management</div><div class="mc-desc">Controlled lifecycle, version history and read receipts.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="11" r="4.5" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><path d="M4 28C4 20 28 20 28 28" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/></svg></div><div class="mc-name">Crew Management</div><div class="mc-desc">End-to-end lifecycle — certificates, rotations and payroll.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3L29 10L29 22L16 29L3 22L3 10Z" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><circle cx="16" cy="16" r="3.5" stroke="rgba(200,151,62,.6)" stroke-width="1.5" fill="none"/></svg></div><div class="mc-name">SHEQ Compliance</div><div class="mc-desc">ISM, ISPS and ISO-aligned safety and quality management.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="3" y="5" width="26" height="22" rx="1" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><rect x="7" y="16" width="4" height="5" fill="rgba(200,151,62,.42)"/><rect x="14" y="14" width="4" height="7" fill="rgba(58,120,190,.5)"/><rect x="21" y="17" width="4" height="4" fill="rgba(176,212,238,.3)"/></svg></div><div class="mc-name">Work &amp; Rest Hours</div><div class="mc-desc">MLC 2006 &amp; STCW-compliant recording with PSC export.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(176,212,238,.35)" stroke-width="1" fill="none" stroke-dasharray="3 2"/><circle cx="16" cy="16" r="5.5" stroke="rgba(200,151,62,.6)" stroke-width="1.5" fill="none"/><path d="M12 16Q14 12 16 16Q18 20 20 16" stroke="rgba(200,151,62,.5)" stroke-width="1" fill="none"/></svg></div><div class="mc-name">AI Intelligence</div><div class="mc-desc">Predictive maintenance, anomaly detection, fleet queries.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M8 20 L16 8 L24 20 Z" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><circle cx="16" cy="24" r="3" stroke="rgba(200,151,62,.6)" stroke-width="1.5" fill="none"/></svg></div><div class="mc-name">Voyage Analytics</div><div class="mc-desc">Real-time tracking, ETA predictions and fuel analytics.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="2" stroke="rgba(176,212,238,.6)" stroke-width="1" fill="none"/><line x1="4" y1="14" x2="28" y2="14" stroke="rgba(200,151,62,.4)" stroke-width="1"/><circle cx="10" cy="20" r="2" fill="rgba(200,151,62,.5)"/><circle cx="22" cy="20" r="2" fill="rgba(58,120,190,.5)"/></svg></div><div class="mc-name">Carbon Reporting</div><div class="mc-desc">IMO CII, EU-ETS and Poseidon Principles compliance.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 · DEEP FEATURES — 5×2, all 10 visible -->
+    <div class="panel" id="p4">
+      <div class="mfull-wrap">
+        <div style="margin-bottom:11px">
+          <div class="sec-lbl">Deep Capabilities</div>
+          <h2 class="sec-h2" style="font-size:clamp(18px,2.0vw,32px);margin-bottom:0">Engineered for every operational challenge at sea</h2>
+        </div>
+        <div class="mfull-grid">
+          <div class="mfc"><div class="mft">Foundation</div><div class="mfh">Unified Fleet Registry</div><div class="mfb">Single source of truth for all vessels and port agents.</div><div class="mffl"><div class="mffi">Multi-vessel, multi-company</div><div class="mffi">Flag state &amp; class records</div><div class="mffi">Port &amp; agent database</div></div></div>
+          <div class="mfc"><div class="mft">PMS</div><div class="mfh">Planned Maintenance</div><div class="mfb">Condition-based scheduling linked to class calendars.</div><div class="mffl"><div class="mffi">Overdue job escalation</div><div class="mffi">Critical equipment tagging</div><div class="mffi">Defect &amp; repair tracking</div></div></div>
+          <div class="mfc"><div class="mft">Inventory</div><div class="mfh">Parts &amp; Supply Chain</div><div class="mfb">Full traceability from requisition to delivery.</div><div class="mffl"><div class="mffi">Multi-warehouse support</div><div class="mffi">Preferred supplier pricing</div><div class="mffi">Budget &amp; spend analytics</div></div></div>
+          <div class="mfc"><div class="mft">DMS</div><div class="mfh">Document Control</div><div class="mfb">Structured lifecycle from creation to vessel distribution.</div><div class="mffl"><div class="mffi">Version &amp; revision control</div><div class="mffi">Acknowledgement tracking</div><div class="mffi">Offline vessel sync</div></div></div>
+          <div class="mfc"><div class="mft">Crew</div><div class="mfh">Crew Operations</div><div class="mfb">Complete seafarer management to repatriation.</div><div class="mffl"><div class="mffi">Certificate expiry alerts</div><div class="mffi">Rotation &amp; relief planning</div><div class="mffi">P&amp;I &amp; flag compliance</div></div></div>
+          <div class="mfc"><div class="mft">SHEQ</div><div class="mfh">Safety &amp; Quality</div><div class="mfb">Incident reporting and real-time KPI dashboards.</div><div class="mffl"><div class="mffi">Near-miss &amp; observation logs</div><div class="mffi">Root cause investigation</div><div class="mffi">Audit &amp; inspection tools</div></div></div>
+          <div class="mfc"><div class="mft">Work Rest</div><div class="mfh">Fatigue Management</div><div class="mfb">Automated MLC 2006 compliance with PSC reports.</div><div class="mffl"><div class="mffi">Violation auto-detection</div><div class="mffi">Schedule optimisation AI</div><div class="mffi">Port state export</div></div></div>
+          <div class="mfc"><div class="mft">AI Engine</div><div class="mfh">Predictive Intelligence</div><div class="mfb">Cross-module AI surfacing risks before incidents.</div><div class="mffl"><div class="mffi">Equipment failure prediction</div><div class="mffi">Cost anomaly detection</div><div class="mffi">Natural language queries</div></div></div>
+          <div class="mfc"><div class="mft">Voyage</div><div class="mfh">Voyage Optimisation</div><div class="mfb">Weather-routing AI with fuel-optimised passage plans.</div><div class="mffl"><div class="mffi">Met-ocean integration</div><div class="mffi">Speed vs. fuel modelling</div><div class="mffi">Port congestion alerts</div></div></div>
+          <div class="mfc"><div class="mft">Carbon</div><div class="mfh">ESG &amp; Decarbonisation</div><div class="mfb">Track IMO CII ratings and Poseidon Principles reports.</div><div class="mffl"><div class="mffi">EU-ETS allowance tracking</div><div class="mffi">Biofuel &amp; LNG logging</div><div class="mffi">Decarbonisation roadmap</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 · AI & SUPPORT — 3×2, all 6 visible -->
+    <div class="panel" id="p5">
+      <div class="ai-wrap">
+        <div class="ai-hdr">
+          <div class="sec-lbl">Service Promise</div>
+          <h2 class="sec-h2">A partner as relentless as the ocean itself</h2>
+        </div>
+        <div class="ai-grid">
+          <div class="aic"><div class="aic-bar"></div><div class="aic-h">AI-Powered Fleet Intelligence</div><div class="aic-t">Our embedded AI engine continuously analyses data across all modules — predicting equipment failures, detecting cost anomalies, and answering complex fleet questions in plain language. Up to 40% reduction in unplanned downtime.</div><div class="aic-badge">Active Intelligence</div></div>
+          <div class="aic"><div class="aic-bar" style="background:var(--mist)"></div><div class="aic-h">24/7 Maritime Specialists</div><div class="aic-t">Your dedicated account team includes certified maritime professionals — not a generic helpdesk. Available around the clock across all time zones, with an average first response under 4 minutes.</div><div class="aic-badge" style="color:var(--mist)">Always On Deck</div></div>
+          <div class="aic"><div class="aic-bar" style="background:var(--horizon)"></div><div class="aic-h">The 48-Hour Guarantee</div><div class="aic-t">Any configuration change, custom report, new workflow, or system adjustment — scoped, built, and delivered within 48 hours. We put it in writing. No exceptions, no hidden queues.</div><div class="aic-badge" style="color:var(--horizon)">Guaranteed Delivery</div></div>
+          <div class="aic"><div class="aic-bar" style="background:#6abf69"></div><div class="aic-h">Predictive Drydocking AI</div><div class="aic-t">Models hull fouling, main engine wear, and underwater appendage degradation — predicting the optimal drydock window to maximise performance and minimise costly emergency diversions.</div><div class="aic-badge" style="color:#6abf69">Smart Scheduling</div></div>
+          <div class="aic"><div class="aic-bar" style="background:#c46a96"></div><div class="aic-h">Natural Language Fleet Queries</div><div class="aic-t">Ask any question about your fleet in plain English. "Which vessels have overdue class items arriving in Rotterdam next month?" Our AI searches across all modules and surfaces the answer instantly.</div><div class="aic-badge" style="color:#c46a96">Ask Anything</div></div>
+          <div class="aic"><div class="aic-bar" style="background:#e8a44a"></div><div class="aic-h">Regulatory Change Monitoring</div><div class="aic-t">Stay ahead of IMO, EU, and flag state regulatory changes automatically. Volaxin monitors regulatory feeds globally and alerts your compliance team before new requirements take effect.</div><div class="aic-badge" style="color:#e8a44a">Always Compliant</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 · CONTACT — centered -->
+    <div class="panel" id="p6">
+      <div class="cta-wrap">
+        <div class="cta-glass warm-glass">
+          <div class="sec-lbl">Set Sail With Us</div>
+          <h2 class="cta-h">Ready to bring your fleet into the future?</h2>
+          <p class="cta-p">Join leading shipowners, managers, and operators across 15 flag states who trust Volaxin to keep their fleets safe, efficient, and fully compliant — every day, every ocean.</p>
+          <div class="cta-acts">
+            <a href="mailto:info@volaxin.com" class="btn-pri">Request a Demo</a>
+            <a href="tel:+442012345678" class="btn-ghost">Speak to a Specialist</a>
+          </div>
+          <div class="cta-metrics">
+            <div style="text-align:center"><div class="cm-n">500+</div><div class="cm-l">Vessels Under Management</div></div>
+            <div style="text-align:center"><div class="cm-n">60+</div><div class="cm-l">Client Companies</div></div>
+            <div style="text-align:center"><div class="cm-n">99.9%</div><div class="cm-l">Platform Uptime SLA</div></div>
+            <div style="text-align:center"><div class="cm-n">15+</div><div class="cm-l">Flag States Supported</div></div>
+          </div>
+        </div>
+        <footer id="site-footer">
+          <span class="fc">© 2025 Volaxin Maritime Suite Ltd. All rights reserved.</span>
+          <ul class="flinks">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">System Status</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+  </div><!-- /overlay -->
+
+  <button id="wake-btn" onclick="toggleWakeDrag()">⊕ Place Wake</button>
+  <button id="cfg-btn" onclick="toggleCfg()">⚙ Config</button>
+  <div id="cfg-panel">
+    <div class="cfg-title">Volaxin — Section Config</div>
+    <div class="cfg-row"><span></span><div class="cfg-hdr">Start (s)</div><div class="cfg-hdr">End (s)</div><div class="cfg-hdr">Fog</div></div>
+    <button class="cfg-apply" onclick="applyCfg()">Apply</button>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ══════════════════════
+         SECTION CONFIG
+      ══════════════════════ */
+      const SC = [
+        { name: 'Home', vs: 0, ve: 0, spd: 1, fog: 'bottom', iA: 5, iZ: 0.012 },
+        { name: 'Platform', vs: 0, ve: 7, spd: 1.4, fog: 'bottom', iA: 4, iZ: 0.010 },
+        { name: 'Globe', vs: 7, ve: 16, spd: 1.4, fog: 'light', iA: 0, iZ: 0.004 },
+        { name: 'Modules', vs: 16, ve: 26.4, spd: 1.8, fog: 'light', iA: 3, iZ: 0.009 },
+        { name: 'Capabilities', vs: 26.4, ve: 35.2, spd: 1.2, fog: 'light', iA: 3, iZ: 0.009 },
+        { name: 'AI & Support', vs: 35.2, ve: 42, spd: 1.2, fog: 'light', iA: 3, iZ: 0.009 },
+        { name: 'Contact', vs: 42, ve: 49, spd: 1.2, fog: 'none', iA: 4, iZ: 0.010 },
+      ];
+      const NS = SC.length;
+
+      /* ── DOM ── */
+      const vid = document.getElementById('vid');
+      const cv = document.getElementById('cv');
+      const cx = cv.getContext('2d');
+      const gcv = document.getElementById('globe-canvas');
+      const fogLayer = document.getElementById('fog-layer');
+      const starLayer = document.getElementById('star-layer');
+      const bLayer = document.getElementById('bubble-layer');
+      const bDragger = document.getElementById('bubble-dragger');
+      const bCoords = document.getElementById('bubble-coords');
+      const intro = document.getElementById('intro');
+      const ibar = document.getElementById('ibar');
+      const ipct = document.getElementById('ipct');
+      const istage = document.getElementById('istage');
+      const pBar = document.getElementById('play-bar');
+      const navEl = document.getElementById('nav');
+      const sHint = document.getElementById('s-hint');
+      const secLbl = document.getElementById('sec-label');
+      const panels = Array.from(document.querySelectorAll('.panel'));
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      const globeUI = document.getElementById('globe-ui');
+      const footer = document.getElementById('site-footer');
+      const wakeBtn = document.getElementById('wake-btn');
+
+      /* ── STATE ── */
+      let W, H, cur = 0, prev = -1;
+      let busy = false, booted = false;
+      let drawRAF = null, pbRAF = null, pbS = 0, pbD = 0;
+      const fwdC = {}, bwdC = {};
+      let gInst = null, gReady = false, gDone = false;
+      let navT = null;
+
+      /* ── WAKE ── */
+      let wakePos = { x: .56, y: .51 };
+      let wDrag = false, wRAF = null, wVis = false, wAllow = false;
+      let isDragW = false, wdx = 0, wdy = 0;
+
+      /* ── FPS ── */
+      function fps(a, b) { const l = Math.abs(b - a); if (l <= 5) return 20; if (l <= 12) return 12; if (l <= 20) return 8; if (l <= 35) return 5; return 3 }
+
+      /* ── RESIZE — pure native size, no scale ── */
+      function resize() {
+        W = window.innerWidth; H = window.innerHeight;
+        cv.width = W; cv.height = H; gcv.width = W; gcv.height = H;
+        if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+        if (gInst) gInst.width(Math.round(W * 1.16)).height(Math.round(H * 1.16));
+        updateWakePos();
+      }
+      window.addEventListener('resize', resize, { passive: true });
+      resize();
+
+      /* ── NAV ── */
+      function navShow() { clearTimeout(navT); navEl.classList.remove('nav-hidden') }
+      function navHide(ms) { clearTimeout(navT); navT = setTimeout(() => navEl.classList.add('nav-hidden'), ms || 2200) }
+
+      /* ── DRAW ── */
+      let lDT = 0; const DI = 1000 / 60;
+      function startDraw() { cancelAnimationFrame(drawRAF); (function lp(ts) { if (ts - lDT >= DI && vid.readyState >= 2) { cx.drawImage(vid, 0, 0, W, H); lDT = ts } drawRAF = requestAnimationFrame(lp) })(performance.now()) }
+      function stopDraw() { cancelAnimationFrame(drawRAF); drawRAF = null; if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H) }
+
+      /* ── PLAYBAR ── */
+      function startPB(d) {
+        cancelAnimationFrame(pbRAF); pbS = performance.now(); pbD = d;
+        pBar.style.transition = 'none'; pBar.style.width = '0%'; pBar.style.opacity = '1';
+        (function t(n) {
+          const p = Math.min((n - pbS) / pbD * 100, 100); pBar.style.width = p + '%';
+          if (p < 100) pbRAF = requestAnimationFrame(t);
+          else setTimeout(() => { pBar.style.transition = 'opacity .5s'; pBar.style.opacity = '0'; setTimeout(() => { pBar.style.transition = 'none'; pBar.style.width = '0%'; pBar.style.opacity = '1' }, 520) }, 200)
+        })(performance.now())
+      }
+
+      /* ── STARS ── */
+      let starsOK = false;
+      function buildStars() { if (starsOK) return; starsOK = true; for (let i = 0; i < 360; i++) { const s = document.createElement('div'); s.className = 'star'; const sz = (Math.random() * 2.2 + .6).toFixed(1), dr = (Math.random() * 3 + 1.4).toFixed(2), dl = (Math.random() * 4).toFixed(2); s.style.cssText = `width:${sz}px;height:${sz}px;left:${(Math.random() * 98).toFixed(1)}%;top:${(Math.random() * 98).toFixed(1)}%;--dur:${dr}s;animation-delay:${dl}s`; starLayer.appendChild(s) } }
+      function showStars() { buildStars(); starLayer.classList.add('vis') }
+      function hideStars() { starLayer.classList.remove('vis') }
+
+      /* ── FOG ── */
+      const FSRC = [{ s: 'fog/fog1.png', i: 1 }, { s: 'fog/fog2.png', i: 2 }, { s: 'fog/fog3.png', i: 3 }, { s: 'fog/fog4.png', i: 4 }, { s: 'fog/fog5.png', i: 5 }, { s: 'fog/fog1.png', i: 10 }, { s: 'fog/fog2.png', i: 9 }, { s: 'fog/fog3.png', i: 8 }, { s: 'fog/fog4.png', i: 7 }, { s: 'fog/fog5.png', i: 6 }];
+      let fogOK = false;
+      function buildFog() { if (fogOK) return; fogOK = true; const fr = document.createDocumentFragment(); for (const { s, i } of FSRC) { const img = document.createElement('img'); img.src = s; img.style.setProperty('--i', String(i)); fr.appendChild(img) } fogLayer.appendChild(fr) }
+      function applyFog(mode) { const imgs = fogLayer.querySelectorAll('img'); imgs.forEach((img, idx) => { img.removeAttribute('style'); img.style.setProperty('--i', FSRC[idx].i); if (mode === 'full' && idx % 2 === 1) { img.style.bottom = 'auto'; img.style.top = '0px'; img.style.transform = 'scaleY(-1)'; img.style.opacity = '.08' } else if (mode === 'light') img.style.opacity = '.08' }) }
+      function showFog(mode) { if (!mode || mode === 'none') { hideFog(); return } buildFog(); applyFog(mode); fogLayer.classList.add('vis'); fogLayer.style.transition = 'opacity .8s ease'; fogLayer.style.opacity = '.26' }
+      function hideFog() { fogLayer.style.transition = 'opacity .6s ease'; fogLayer.style.opacity = '0'; setTimeout(() => fogLayer.classList.remove('vis'), 640) }
+      function setFog(mode) { if (!mode || mode === 'none') { hideFog(); return } if (!fogOK) { showFog(mode); return } applyFog(mode); fogLayer.classList.add('vis'); fogLayer.style.transition = 'opacity .6s ease'; fogLayer.style.opacity = '.26' }
+      function fogOut() { fogLayer.style.transition = 'opacity .45s ease'; fogLayer.style.opacity = '0' }
+      function fogIn() { fogLayer.classList.add('vis'); fogLayer.style.transition = 'opacity .55s ease'; fogLayer.style.opacity = '.26' }
+
+      /* ── WAKE — only section 1 ── */
+      /* ── WAKE — only section 1 ── */
+      function updateWakePos() {
+        bLayer.style.left = (wakePos.x * W) + 'px'; bLayer.style.top = (wakePos.y * H) + 'px';
+        bDragger.style.left = (wakePos.x * W - 13) + 'px'; bDragger.style.top = (wakePos.y * H - 13) + 'px';
+        if (bCoords.classList.contains('vis')) bCoords.textContent = `Wake: ${Math.round(wakePos.x * 100)}% ${Math.round(wakePos.y * 100)}%  px:${Math.round(wakePos.x * W)},${Math.round(wakePos.y * H)}`
+      }
+
+      function spawnWake() {
+        const b = document.createElement('div'); b.className = 'wake-p';
+        const sz = Math.random() * 9 + 3, dr = (Math.random() * 1.5 + .9).toFixed(2);
+        const arm = Math.random() > .5 ? 1 : -1, sp = Math.random() * .55 + .2;
+
+        // CHANGED: Removed negative sign from dx to move right instead of left
+        const dx = (sp * 145 + Math.random() * 30);
+        const dy = arm * (sp * 46 + Math.random() * 11);
+
+        // CHANGED: Logic for sx remains same, but visual flow is now mirrored
+        const sx = 1 + sp * 2.1, ox = (Math.random() * 8 - 4).toFixed(1), oy = (Math.random() * 8 - 4).toFixed(1);
+
+        b.style.cssText = `width:${sz}px;height:${sz * .38}px;left:${ox}px;top:${oy}px;--dur:${dr}s;--dx:${dx}px;--dy:${dy}px;--sx:${sx}`;
+        bLayer.appendChild(b);
+        setTimeout(() => { if (b.parentNode) b.parentNode.removeChild(b) }, parseFloat(dr) * 1000 + 100)
+      }
+      function startWake() { if (!wAllow || wVis) return; wVis = true; cancelAnimationFrame(wRAF); let lt = 0; (function lp(ts) { if (!wVis) return; if (ts - lt > 88) { spawnWake(); lt = ts } wRAF = requestAnimationFrame(lp) })(performance.now()) }
+      function stopWake() { wVis = false; cancelAnimationFrame(wRAF); bLayer.innerHTML = '' }
+      window.toggleWakeDrag = function () { wDrag = !wDrag; bDragger.classList.toggle('vis', wDrag); bCoords.classList.toggle('vis', wDrag); wakeBtn.textContent = wDrag ? '✕ Done' : '⊕ Place Wake'; updateWakePos() };
+      bDragger.addEventListener('mousedown', e => { if (!wDrag) return; isDragW = true; wdx = e.clientX - wakePos.x * W; wdy = e.clientY - wakePos.y * H; e.preventDefault() });
+      document.addEventListener('mousemove', e => { if (!isDragW) return; wakePos.x = Math.max(.01, Math.min(.99, (e.clientX - wdx) / W)); wakePos.y = Math.max(.01, Math.min(.99, (e.clientY - wdy) / H)); updateWakePos() });
+      document.addEventListener('mouseup', () => { isDragW = false });
+
+      /* ── GLOBE ── */
+      function preloadGlobe() { return new Promise(res => { if (gDone) { res(); return } function ls(src, cb) { const s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s) } ls('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', () => ls('https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js', () => { initGlobe(); gDone = true; res() })) }) }
+      function initGlobe() {
+        if (gReady) return; gReady = true;
+        let c = document.getElementById('globe-container');
+        if (!c) { c = document.createElement('div'); c.id = 'globe-container'; document.body.insertBefore(c, fogLayer) }
+        c.style.cssText = 'position:fixed;top:-8%;left:-8%;z-index:1;display:none;pointer-events:none;width:116%;height:116%;overflow:hidden';
+        gInst = Globe().width(Math.round(W * 1.16)).height(Math.round(H * 1.16)).backgroundColor('rgba(0,0,0,0)').globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg').bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png').atmosphereColor('#3a78be').atmosphereAltitude(.22)(c);
+        gInst.pointOfView({ lat: 20, lng: 10, altitude: .75 }, 0);
+        const ct = gInst.controls(); ct.autoRotate = false; ct.autoRotateSpeed = .28; ct.enableZoom = false; ct.enablePan = false; ct.rotateSpeed = .55;
+        const glC = c.querySelector('canvas');
+        if (glC) { glC.addEventListener('contextmenu', e => e.preventDefault()); glC.addEventListener('mousedown', e => { if (e.button !== 0) e.stopPropagation() }, true) }
+        const pts = [{ name: 'Singapore', lat: 1.3, lng: 103.8 }, { name: 'Rotterdam', lat: 51.9, lng: 4.5 }, { name: 'Houston', lat: 29.7, lng: -95.3 }, { name: 'Dubai', lat: 25.2, lng: 55.3 }, { name: 'Shanghai', lat: 31.2, lng: 121.5 }, { name: 'Hamburg', lat: 53.5, lng: 10 }, { name: 'Los Angeles', lat: 33.7, lng: -118.2 }, { name: 'Piraeus', lat: 37.9, lng: 23.6 }];
+        gInst.pointsData(pts).pointColor(() => '#c8973e').pointAltitude(.008).pointRadius(.28).labelsData(pts).labelText('name').labelSize(1).labelColor(() => 'rgba(255,245,220,.88)').labelDotRadius(.25).labelAltitude(.012).ringsData(pts).ringColor(() => t => `rgba(200,151,62,${1 - t})`).ringMaxRadius(2.8).ringPropagationSpeed(1.4).ringRepeatPeriod(1600);
+        const gc = c.querySelector('canvas'); if (gc) { gc.style.width = '100%'; gc.style.height = '100%'; gc.style.display = 'block' }
+        gcv.style.display = 'none';
+        window.addEventListener('resize', () => { if (gInst) gInst.width(Math.round(window.innerWidth * 1.16)).height(Math.round(window.innerHeight * 1.16)) }, { passive: true })
+      }
+      function showGlobe() { const c = document.getElementById('globe-container'); if (!c) return; c.style.display = 'block'; c.style.pointerEvents = 'auto'; if (gInst) gInst.controls().autoRotate = true }
+      function hideGlobe() { const c = document.getElementById('globe-container'); if (c) { c.style.display = 'none'; c.style.pointerEvents = 'none' } if (gInst) gInst.controls().autoRotate = false }
+
+      /* ── SEEK ── */
+      function seekTo(t) { return new Promise(res => { if (Math.abs(vid.currentTime - t) < .033) { res(); return } vid.currentTime = t; vid.addEventListener('seeked', res, { once: true }) }) }
+
+      /* ── PRELOAD — full native resolution, no downscale ── */
+      async function preload() {
+        const jobs = [];
+        for (let i = 1; i < NS; i++) { const { vs: s, ve: e } = SC[i]; if (e > s) { jobs.push({ sec: i, dir: 'f', from: s, to: e, fps: fps(s, e) }); jobs.push({ sec: i, dir: 'b', from: e, to: s, fps: fps(s, e) }) } }
+        const gp = preloadGlobe();
+        const tot = jobs.map(j => Math.min(Math.max(Math.round(Math.abs(j.to - j.from) * j.fps), 3), 60)).reduce((a, b) => a + b, 0);
+        let cap = 0;
+        for (let j = 0; j < jobs.length; j++) {
+          const jb = jobs[j];
+          istage.textContent = `Section ${Math.ceil((j + 1) / 2)}/${NS - 1} · ${jb.dir === 'f' ? 'fwd' : 'rev'} · ${jb.fps}fps`;
+          const sl = Math.abs(jb.to - jb.from), tot2 = Math.min(Math.max(Math.round(sl * jb.fps), 3), 60);
+          const frames = [];
+          for (let i = 0; i < tot2; i++) {
+            const t = jb.from + (i / (tot2 - 1)) * (jb.to - jb.from);
+            await seekTo(t);
+            if (vid.readyState >= 2) {
+              try {
+                /* NATIVE FULL RESOLUTION — no resize */
+                frames.push(await createImageBitmap(vid));
+              } catch (_) { const oc = document.createElement('canvas'); oc.width = W; oc.height = H; oc.getContext('2d').drawImage(vid, 0, 0, W, H); frames.push(oc) }
+            }
+            cap++;
+            const pct = Math.min(Math.round(cap / tot * 98), 98);
+            ibar.style.width = pct + '%'; ipct.textContent = pct + '%';
+          }
+          if (jb.dir === 'f') fwdC[jb.sec] = frames; else bwdC[jb.sec] = frames;
+        }
+        await gp;
+        ibar.style.width = '100%'; ipct.textContent = '100%'; istage.textContent = 'Systems ready';
+      }
+
+      /* ── FRAME PLAY ── */
+      function playFrames(frames, dur, onProg, done) {
+        if (!frames || !frames.length) { done(); return }
+        const mpf = dur / frames.length; let fi = 0, lT = performance.now();
+        (function t(n) {
+          if (n - lT >= mpf && fi < frames.length) {
+            const f = frames[fi];
+            if (f instanceof ImageBitmap) cx.drawImage(f, 0, 0, W, H);
+            else if (f instanceof HTMLCanvasElement) cx.drawImage(f, 0, 0, W, H);
+            fi++; lT = n; if (onProg) onProg(fi / frames.length);
+          }
+          if (fi >= frames.length) { done(); return }
+          requestAnimationFrame(t);
+        })(performance.now())
+      }
+
+      /* ══════════════════════════════════════════
+         TRANSITION — warm smooth swipe
+         Panel: exit current left/right, enter new at 70%
+      ══════════════════════════════════════════ */
+      function doTransition(fromSec, toSec, done) {
+        busy = true;
+        stopIdle();
+        stopWake();
+
+        const fwd = toSec > fromSec;
+        const tgt = fwd ? toSec : fromSec;
+        const cache = fwd ? fwdC[tgt] : bwdC[tgt];
+        const cfg = SC[tgt];
+        const segLen = Math.abs(cfg.ve - cfg.vs);
+        const durMs = Math.max((segLen / Math.max(cfg.spd, .1)) * 1000, 400);
+        const toStar = toSec === 6, fromStar = fromSec === 6;
+        const toFog = cfg.fog && cfg.fog !== 'none' ? cfg.fog : null;
+        const fromFog = SC[fromSec].fog && SC[fromSec].fog !== 'none';
+
+        /* 1. Hard-reset ALL panels — remove every transition/state class */
+        panels.forEach((p, i) => {
+          /* Strip inline styles completely */
+          p.style.cssText = '';
+          p.classList.remove('on', 'exit-l', 'exit-r', 'enter-l');
+          /* Hide everything except the currently visible one */
+          if (i === fromSec) {
+            p.classList.add('on');
+          }
+        });
+        globeUI.classList.remove('vis');
+        if (footer) footer.classList.remove('vis');
+        hideGlobe();
+        navShow();
+
+        /* 2. On next frame, kick off exit animation on current panel */
+        requestAnimationFrame(() => {
+          const fp = panels[fromSec];
+          fp.classList.remove('on');
+          fp.classList.add(fwd ? 'exit-l' : 'exit-r');
+        });
+
+        startPB(durMs);
+        if (fromStar) hideStars();
+        if (fromFog) fogOut();
+
+        let shown = false;
+
+        function bringInPanel() {
+          if (shown) return;
+          shown = true;
+
+          /* fog / stars */
+          if (toStar) showStars();
+          if (toFog) { buildFog(); applyFog(toFog); fogIn() } else hideFog();
+
+          /* Pre-position new panel off-screen with NO transition */
+          const np = panels[toSec];
+          np.style.cssText = 'opacity:0;transform:translateX(' + (fwd ? '72px' : '-72px') + ');transition:none;pointer-events:none;';
+
+          /* Force reflow so browser registers the start position */
+          void np.offsetHeight;
+
+          /* Now re-enable transition and animate to final position */
+          np.style.cssText = 'opacity:1;transform:translateX(0);transition:opacity .46s cubic-bezier(.25,.92,.4,1),transform .46s cubic-bezier(.25,.92,.4,1);pointer-events:auto;';
+
+          /* Update dots, label, hint, globe, footer */
+          dots.forEach((d, i) => d.classList.toggle('on', i === toSec));
+          secLbl.textContent = SC[toSec].name;
+          sHint.classList.toggle('on', toSec === 0);
+          if (toSec === 2) { showGlobe(); globeUI.classList.add('vis'); cv.style.opacity = '.02'; }
+          else cv.style.opacity = '1';
+          if (footer) footer.classList.toggle('vis', toSec === 6);
+        }
+
+        function onProg(ratio) {
+          if (ratio >= .70) bringInPanel();
+        }
+
+        function onDone() {
+          /* Clean up — replace inline styles with class */
+          const np = panels[toSec];
+          np.style.cssText = '';
+          np.classList.add('on');
+          busy = false;
+          done();
+        }
+
+        if (cache && cache.length > 0) {
+          playFrames(cache, durMs, onProg, onDone);
+        } else {
+          const fT = fwd ? cfg.vs : cfg.ve, tT = fwd ? cfg.ve : cfg.vs;
+          vid.currentTime = fT;
+          vid.addEventListener('seeked', function () {
+            if (fwd) {
+              startDraw(); vid.playbackRate = cfg.spd; vid.play().catch(() => { });
+              const tl = Math.max(cfg.ve - cfg.vs, .001);
+              (function chk() {
+                const r = (vid.currentTime - cfg.vs) / tl;
+                if (r >= .70) bringInPanel();
+                if (vid.currentTime >= tT - .04) { vid.pause(); stopDraw(); onDone(); }
+                else requestAnimationFrame(chk);
+              })();
+            } else {
+              const fp2 = fps(fT, tT);
+              const tot2 = Math.min(Math.max(Math.round(Math.abs(tT - fT) * fp2), 3), 60);
+              const frames = [];
+              (async () => {
+                for (let i = 0; i < tot2; i++) {
+                  const t = fT + (i / (tot2 - 1)) * (tT - fT);
+                  await seekTo(t);
+                  if (vid.readyState >= 2) {
+                    try { frames.push(await createImageBitmap(vid)); }
+                    catch (_) { const oc = document.createElement('canvas'); oc.width = W; oc.height = H; oc.getContext('2d').drawImage(vid, 0, 0, W, H); frames.push(oc); }
+                  }
+                }
+                playFrames(frames, durMs, onProg, onDone);
+              })();
+            }
+          }, { once: true });
+        }
+      }
+
+      /* ── IDLE — gentle warm breathing, near-native scale ── */
+      let iRAF = null, iPhase = 0, iActive = false, pMX = 0, pMY = 0, pCX = 0, pCY = 0;
+      document.addEventListener('mousemove', e => { pMX = (e.clientX / W - .5) * 2; pMY = (e.clientY / H - .5) * 2 });
+      function startIdle() {
+        if (iActive) return; iActive = true; cancelAnimationFrame(iRAF); iPhase = 0;
+        const cfg = SC[cur];
+        const amp = cfg.iA || 2, zA = cfg.iZ || .009;
+        const base = 1.0, tX = 1.8, tY = 2.8, persp = 2400; let tCX = 0, tCY = 0;
+        (function lp() {
+          if (!iActive) return; iPhase += .00048;
+          pCX += (pMX - pCX) * .018; pCY += (pMY - pCY) * .018;
+          tCX += (pMX - tCX) * .030; tCY += (pMY - tCY) * .030;
+          const zoom = base + zA + Math.sin(iPhase) * zA;
+          const dX = Math.sin(iPhase * 1.3) * amp + (-pCX * 3.5);
+          const dY = Math.sin(iPhase * .8) * (amp * .28) + (-pCY * 2.5);
+          const cX = Math.max(-.45, Math.min(.45, tCX));
+          const cY = Math.max(-.45, Math.min(.45, tCY));
+          const te = cur !== 2;
+          cv.style.transform = `perspective(${persp}px) scale(${zoom}) rotateY(${te ? cX * tY : 0}deg) rotateX(${te ? -cY * tX : 0}deg) translate(${dX}px,${dY}px) translateZ(0)`;
+          iRAF = requestAnimationFrame(lp);
+        })();
+      }
+      function stopIdle() { iActive = false; cancelAnimationFrame(iRAF) }
+
+      /* ── SHOW PANEL ── */
+      function showPanel(idx) {
+        const fm = SC[idx].fog || 'bottom';
+        if (fm === 'none') hideFog(); else setFog(fm);
+        if (idx === 6) showStars(); else hideStars();
+        wAllow = (idx === 1);
+        if (idx === 1) { wakeBtn.classList.add('vis'); startWake() }
+        else { stopWake(); wakeBtn.classList.remove('vis') }
+        navShow(); navHide(2400);
+        setTimeout(startIdle, 110);
+      }
+
+      /* ── NAVIGATE ── */
+      function navTo(target) {
+        if (busy) return;
+        target = Math.max(0, Math.min(NS - 1, target));
+        if (target === cur) return;
+        navShow(); prev = cur; cur = target;
+        doTransition(prev, target, () => showPanel(cur));
+      }
+      window.navTo = navTo;
+
+      document.addEventListener('mousemove', e => { if (e.clientY < 65) navShow() });
+      let wAcc = 0, wT2 = null;
+      window.addEventListener('wheel', e => {
+        e.preventDefault(); if (busy) { wAcc = 0; return }
+        wAcc += e.deltaY; clearTimeout(wT2); wT2 = setTimeout(() => { wAcc = 0 }, 300);
+        if (Math.abs(wAcc) >= 80) { const d = wAcc > 0 ? 1 : -1; wAcc = 0; clearTimeout(wT2); navTo(cur + d) }
+      }, { passive: false });
+      window.addEventListener('keydown', e => {
+        if (busy) { e.preventDefault(); return }
+        if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); navTo(cur + 1) }
+        if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); navTo(cur - 1) }
+        if (e.key === 'Home') { e.preventDefault(); navTo(0) }
+        if (e.key === 'End') { e.preventDefault(); navTo(NS - 1) }
+      });
+      let ty0 = 0, tLk = false;
+      window.addEventListener('touchstart', e => { ty0 = e.touches[0].clientY; tLk = false }, { passive: true });
+      window.addEventListener('touchend', e => { if (busy || tLk) return; const dy = ty0 - e.changedTouches[0].clientY; if (Math.abs(dy) > 44) { tLk = true; navTo(cur + (dy > 0 ? 1 : -1)) } }, { passive: true });
+      dots.forEach(d => d.addEventListener('click', () => navTo(+d.dataset.i)));
+
+      /* ── CURSOR ── */
+      const curEl = document.getElementById('cur'), ring = document.getElementById('cur-ring');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; curEl.style.left = mx + 'px'; curEl.style.top = my + 'px' });
+      (function cLp() { rx += (mx - rx) * .14; ry += (my - ry) * .14; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(cLp) })();
+      document.querySelectorAll('a,button,.mc,.mfc,.aic,.dot').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hov'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hov'));
+      });
+
+      /* ── CONFIG ── */
+      function buildCfg() {
+        const p = document.getElementById('cfg-panel'); p.querySelectorAll('.cfg-row[data-sec]').forEach(r => r.remove());
+        const ab = p.querySelector('.cfg-apply');
+        for (let i = 1; i < SC.length; i++) {
+          const c = SC[i]; const row = document.createElement('div'); row.className = 'cfg-row'; row.dataset.sec = i;
+          row.innerHTML = `<label>${c.name}</label><input type="number" step=".1" min="0" max="120" value="${c.vs}" data-f="vs"><input type="number" step=".1" min="0" max="120" value="${c.ve}" data-f="ve"><select data-f="fog"><option value="bottom"${c.fog === 'bottom' ? ' selected' : ''}>Bottom</option><option value="light"${c.fog === 'light' ? ' selected' : ''}>Light</option><option value="full"${c.fog === 'full' ? ' selected' : ''}>Full</option><option value="none"${c.fog === 'none' ? ' selected' : ''}>None</option></select>`;
+          p.insertBefore(row, ab);
+        }
+      }
+      window.toggleCfg = function () { const p = document.getElementById('cfg-panel'); p.classList.toggle('open'); if (p.classList.contains('open')) buildCfg() };
+      window.applyCfg = function () {
+        document.querySelectorAll('.cfg-row[data-sec]').forEach(row => {
+          const i = +row.dataset.sec;
+          const s = parseFloat(row.querySelector('[data-f=vs]').value);
+          const e = parseFloat(row.querySelector('[data-f=ve]').value);
+          const f = row.querySelector('[data-f=fog]').value;
+          if (!isNaN(s)) SC[i].vs = s; if (!isNaN(e)) SC[i].ve = e; if (f) SC[i].fog = f;
+        });
+        document.getElementById('cfg-panel').classList.remove('open');
+      };
+
+      /* ── BOOT ── */
+      async function boot() {
+        if (booted) return; booted = true;
+        await seekTo(0); if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+        await preload();
+        await seekTo(0); if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+        intro.classList.add('gone');
+        showFog(SC[0].fog);
+        /* Show first panel */
+        panels[0].style.cssText = '';  
+        panels[0].classList.add('on');
+        dots[0].classList.add('on');
+        secLbl.textContent = SC[0].name;
+        updateWakePos();
+        setTimeout(() => sHint.classList.add('on'), 900);
+        setTimeout(startIdle, 200);
+        navHide(3400);
+      }
+
+      vid.addEventListener('canplay', boot, { once: true });
+      vid.addEventListener('canplaythrough', boot, { once: true });
+      setTimeout(() => { if (!booted) boot() }, 8000);
+      vid.src = 'MaritimeAA7.mp4';
+      vid.load();
+
+    })();
+  </script>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-2C3DASBX.js" type="module"></script></body>
+</html>
