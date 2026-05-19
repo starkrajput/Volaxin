@@ -3693,51 +3693,15 @@
     }
   </style>
   <script>
-
     (function () {
       'use strict';
 
       /* ── EmailJS Init ── */
       emailjs.init('aufjVn4Fu2VdkI5wm');
 
-      /* ════════════════════════════════════════════════════
-      DEVICE CAPABILITY DETECTION
-      Runs once, shapes everything downstream.
-      ════════════════════════════════════════════════════ */
-      const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth <= 900);
-      const isLowEnd = (function () {
-        const mem = navigator.deviceMemory || 4;          // GB RAM hint
-        const cores = navigator.hardwareConcurrency || 4;
-        return isMobile && (mem <= 2 || cores <= 4);
-      })();
-
-      // Scale captured-frame resolution on mobile to cut memory & decode time
-      // Desktop: 1.0 (full), Mid mobile: 0.65, Low-end mobile: 0.50
-      const CAPTURE_SCALE = isMobile ? (isLowEnd ? 0.65 : 0.85) : 1.0;
-
-      // FPS per segment length — higher on desktop, lower on mobile
-      function segmentFPS(a, b) {
-        const l = Math.abs(b - a);
-        if (isMobile) {
-          if (l <= 5) return isLowEnd ? 10 : 14;
-          if (l <= 12) return isLowEnd ? 7 : 10;
-          if (l <= 20) return isLowEnd ? 5 : 7;
-          if (l <= 35) return isLowEnd ? 4 : 5;
-          return 3;
-        }
-        // Desktop — high quality
-        if (l <= 5) return 24;
-        if (l <= 12) return 18;
-        if (l <= 20) return 12;
-        if (l <= 35) return 8;
-        return 5;
-      }
-
-      // Max frames per segment — cap memory use on mobile
-      const MAX_FRAMES_PER_SEG = isMobile ? (isLowEnd ? 40 : 75) : 90;
-
       /* ── MOBILE MENU ── */
       let mobileMenuOpen = false;
+
       window.toggleMobileMenu = function () {
         mobileMenuOpen = !mobileMenuOpen;
         const menu = document.getElementById('mobile-menu');
@@ -3745,6 +3709,7 @@
         menu.classList.toggle('open', mobileMenuOpen);
         btn.classList.toggle('open', mobileMenuOpen);
       };
+
       window.closeMobileMenu = function () {
         mobileMenuOpen = false;
         document.getElementById('mobile-menu').classList.remove('open');
@@ -3754,6 +3719,7 @@
       /* ── SUB PAGE LOGIC ── */
       const subOverlay = document.getElementById('sub-page-overlay');
       let subOpen = false, currentSubPage = null;
+
       window.openSubPage = function (page) {
         closeMobileMenu();
         subOverlay.style.display = 'flex';
@@ -3767,6 +3733,7 @@
         av.currentTime = 0;
         av.play().catch(() => { });
       };
+
       window.closeSubPage = function () {
         subOverlay.classList.remove('visible');
         setTimeout(() => {
@@ -3775,6 +3742,7 @@
         }, 520);
         subOpen = false;
       };
+
       window.switchSubPage = function (page) {
         document.querySelectorAll('.sub-page').forEach(p => p.classList.remove('active'));
         document.querySelectorAll('.sub-nav-links a').forEach(a => {
@@ -3786,8 +3754,12 @@
         const sc = document.querySelector('.sub-content');
         if (sc) sc.scrollTop = 0;
       };
+
       const subContent = document.querySelector('.sub-content');
-      subContent.addEventListener('wheel', e => { if (!subOpen) return; e.stopPropagation(); }, { passive: true });
+      subContent.addEventListener('wheel', function (e) {
+        if (!subOpen) return;
+        e.stopPropagation();
+      }, { passive: true });
 
       /* ── CONTACT FORM ── */
       window.submitContactForm = async function () {
@@ -3801,25 +3773,30 @@
         const fleet = document.getElementById('cf-fleet').value;
         const module = document.getElementById('cf-module').value;
         const message = document.getElementById('cf-message').value.trim();
+
         if (!fname || !lname || !company || !email) {
           msg.className = 'form-msg err'; msg.textContent = 'Please fill in all required fields.'; msg.style.display = 'block'; return;
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid email address.'; msg.style.display = 'block'; return;
         }
+
         btn.disabled = true; btn.textContent = 'Sending…';
         msg.style.display = 'none';
+
         try {
           await emailjs.send('service_jatr29a', 'template_z4tsw4r', {
-            from_name: fname + ' ' + lname, from_email: email,
-            company, phone: phone || 'Not provided',
+            from_name: fname + ' ' + lname,
+            from_email: email,
+            company: company,
+            phone: phone || 'Not provided',
             fleet_size: fleet || 'Not specified',
             module_interest: module || 'Not specified',
             message: message || 'No additional message.',
             to_email: 'info@volaxin.com'
           });
           msg.className = 'form-msg ok';
-          msg.textContent = "Thank you! Your enquiry has been received. We'll be in touch within 24 hours.";
+          msg.textContent = 'Thank you! Your enquiry has been received. We\'ll be in touch within 24 hours.';
           msg.style.display = 'block';
           document.getElementById('contact-form').reset();
         } catch (e) {
@@ -3830,9 +3807,9 @@
         btn.disabled = false; btn.textContent = 'Send Enquiry →';
       };
 
-      /* ════════════════════════════════════════════════════
-      MAIN SITE ENGINE
-      ════════════════════════════════════════════════════ */
+      /* ════════════════════════════════════
+         MAIN SITE ENGINE
+      ════════════════════════════════════ */
       const SECTION_CONFIG = [
         { name: 'Home', videoStart: 0, videoEnd: 0, speed: 1, fog: 'bottom', idleAmp: 6, idleZoom: 0.028 },
         { name: 'Platform', videoStart: 0, videoEnd: 7, speed: 1.4, fog: 'bottom', idleAmp: 5, idleZoom: 0.024 },
@@ -3846,7 +3823,7 @@
 
       const vid = document.getElementById('vid');
       const cv = document.getElementById('cv');
-      const cx = cv.getContext('2d', { alpha: false, willReadFrequently: false });
+      const cx = cv.getContext('2d');
       const fogLayer = document.getElementById('fog-layer');
       const starLayer = document.getElementById('star-layer');
       const intro = document.getElementById('intro');
@@ -3868,19 +3845,6 @@
       let globeInstance = null, globeReady = false, globeInitDone = false;
       let navHideTimer = null;
 
-      // Shared offscreen canvas for scaled capture — allocated once
-      let offCv = null, offCtx = null;
-      function getOffscreen(cw, ch) {
-        if (!offCv) {
-          offCv = document.createElement('canvas');
-          offCtx = offCv.getContext('2d', { alpha: false });
-        }
-        if (offCv.width !== cw || offCv.height !== ch) {
-          offCv.width = cw; offCv.height = ch;
-        }
-        return { offCv, offCtx };
-      }
-
       /* CARD SCROLL */
       window.scrollCards = function (id, dir) {
         const el = document.getElementById(id); if (!el) return;
@@ -3894,11 +3858,30 @@
       };
 
       function navShow() { clearTimeout(navHideTimer); navEl.classList.remove('nav-hidden'); }
-      function navHideAfterDelay(ms) {
-        clearTimeout(navHideTimer);
-        navHideTimer = setTimeout(() => { if (!mobileMenuOpen) navEl.classList.add('nav-hidden'); }, ms || 1800);
-      }
+      function navHideAfterDelay(ms) { clearTimeout(navHideTimer); navHideTimer = setTimeout(() => { if (!mobileMenuOpen) navEl.classList.add('nav-hidden'); }, ms || 1800); }
 
+      //   function segmentFPS(a, b) { const l = Math.abs(b - a); if (l <= 5) return 20; if (l <= 12) return 12; if (l <= 20) return 8; if (l <= 35) return 5; return 3; }
+      //const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth <= 768);
+
+      //const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth <= 768);
+      //const isLowEnd = isMobile && (navigator.deviceMemory !== undefined ? navigator.deviceMemory <= 4 : true);
+
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (('ontouchstart' in window) && window.innerWidth <= 1024);
+
+      function segmentFPS(a, b) {
+        const l = Math.abs(b - a);
+        if (isMobile) {
+          if (l <= 5) return 10;
+          if (l <= 12) return 6;
+          if (l <= 20) return 4;
+          return 3;
+        }
+        if (l <= 5) return 20;
+        if (l <= 12) return 12;
+        if (l <= 20) return 8;
+        if (l <= 35) return 5;
+        return 3;
+      }
       function resize() {
         W = window.innerWidth; H = window.innerHeight;
         cv.width = W; cv.height = H;
@@ -3908,225 +3891,75 @@
       window.addEventListener('resize', resize, { passive: true });
       resize();
 
-      /* ── DRAW LOOP ── */
       let lastDrawTime = 0;
       const DRAW_INTERVAL = 1000 / 60;
-      function startDraw() {
-        cancelAnimationFrame(drawRAF);
-        (function loop(ts) {
-          if (ts - lastDrawTime >= DRAW_INTERVAL) {
-            if (vid.readyState >= 2) { cx.drawImage(vid, 0, 0, W, H); lastDrawTime = ts; }
-          }
-          drawRAF = requestAnimationFrame(loop);
-        })(performance.now());
-      }
-      function stopDraw() {
-        cancelAnimationFrame(drawRAF); drawRAF = null;
-        if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
-      }
+      function startDraw() { cancelAnimationFrame(drawRAF); (function loop(ts) { if (ts - lastDrawTime >= DRAW_INTERVAL) { if (vid.readyState >= 2) { cx.drawImage(vid, 0, 0, W, H); lastDrawTime = ts; } } drawRAF = requestAnimationFrame(loop); })(performance.now()); }
+      function stopDraw() { cancelAnimationFrame(drawRAF); drawRAF = null; if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H); }
 
-      /* ── PLAY BAR ── */
       function startPlayBar(d) {
         cancelAnimationFrame(pbRAF); pbStart = performance.now(); pbDur = d;
         playBar.style.transition = 'none'; playBar.style.width = '0%'; playBar.style.opacity = '1';
-        (function tick(n) {
-          const p = Math.min((n - pbStart) / pbDur * 100, 100);
-          playBar.style.width = p + '%';
-          if (p < 100) pbRAF = requestAnimationFrame(tick);
-          else setTimeout(() => {
-            playBar.style.transition = 'opacity .5s'; playBar.style.opacity = '0';
-            setTimeout(() => { playBar.style.transition = 'none'; playBar.style.width = '0%'; playBar.style.opacity = '1'; }, 520);
-          }, 180);
-        })(performance.now());
+        (function tick(n) { const p = Math.min((n - pbStart) / pbDur * 100, 100); playBar.style.width = p + '%'; if (p < 100) pbRAF = requestAnimationFrame(tick); else setTimeout(() => { playBar.style.transition = 'opacity .5s'; playBar.style.opacity = '0'; setTimeout(() => { playBar.style.transition = 'none'; playBar.style.width = '0%'; playBar.style.opacity = '1'; }, 520); }, 180); })(performance.now());
       }
 
-      /* ── STARS ── */
+      /* STARS */
       let starsBuilt = false;
-      function buildStars() {
-        if (starsBuilt) return; starsBuilt = true; starLayer.innerHTML = '';
-        for (let i = 0; i < 160; i++) {
-          const s = document.createElement('div'); s.className = 'star';
-          const sz = Math.random() * 2.4 + 0.6, dr = (Math.random() * 3 + 1.5).toFixed(2), dl = (Math.random() * 4).toFixed(2);
-          s.style.cssText = `width:${sz}px;height:${sz}px;left:${(Math.random() * 98).toFixed(1)}%;top:${(Math.random() * 98).toFixed(1)}%;--dur:${dr}s;animation-delay:${dl}s`;
-          starLayer.appendChild(s);
-        }
-      }
+      function buildStars() { if (starsBuilt) return; starsBuilt = true; starLayer.innerHTML = ''; for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const sz = Math.random() * 2.4 + 0.6, dr = (Math.random() * 3 + 1.5).toFixed(2), dl = (Math.random() * 4).toFixed(2); s.style.cssText = `width:${sz}px;height:${sz}px;left:${(Math.random() * 98).toFixed(1)}%;top:${(Math.random() * 98).toFixed(1)}%;--dur:${dr}s;animation-delay:${dl}s`; starLayer.appendChild(s); } }
       function showStars() { buildStars(); starLayer.classList.add('visible'); }
       function hideStars() { starLayer.classList.remove('visible'); }
 
-      /* ── FOG ── */
-      const FOG_SRCS = [
-        { src: 'fog/fog1.png', i: 1 }, { src: 'fog/fog2.png', i: 2 }, { src: 'fog/fog3.png', i: 3 },
-        { src: 'fog/fog4.png', i: 4 }, { src: 'fog/fog5.png', i: 5 }, { src: 'fog/fog1.png', i: 10 },
-        { src: 'fog/fog2.png', i: 9 }, { src: 'fog/fog3.png', i: 8 }, { src: 'fog/fog4.png', i: 7 },
-        { src: 'fog/fog5.png', i: 6 }
-      ];
+      /* FOG */
+      const FOG_SRCS = [{ src: 'fog/fog1.png', i: 1 }, { src: 'fog/fog2.png', i: 2 }, { src: 'fog/fog3.png', i: 3 }, { src: 'fog/fog4.png', i: 4 }, { src: 'fog/fog5.png', i: 5 }, { src: 'fog/fog1.png', i: 10 }, { src: 'fog/fog2.png', i: 9 }, { src: 'fog/fog3.png', i: 8 }, { src: 'fog/fog4.png', i: 7 }, { src: 'fog/fog5.png', i: 6 }];
       let fogBuilt = false;
-      function buildFogLayer() {
-        if (fogBuilt) return; fogBuilt = true; fogLayer.innerHTML = '';
-        const frag = document.createDocumentFragment();
-        for (const { src, i } of FOG_SRCS) {
-          const img = document.createElement('img'); img.src = src;
-          img.style.setProperty('--i', String(i)); frag.appendChild(img);
-        }
-        fogLayer.appendChild(frag);
-      }
-      function applyFogMode(mode) {
-        const imgs = fogLayer.querySelectorAll('img');
-        imgs.forEach((img, idx) => {
-          img.removeAttribute('style'); img.style.setProperty('--i', FOG_SRCS[idx].i);
-          if (mode === 'full' && idx % 2 === 1) {
-            img.style.bottom = 'auto'; img.style.top = '0px';
-            img.style.transform = 'scaleY(-1) translateY(-2px)'; img.style.opacity = '0.08';
-          } else if (mode === 'light') img.style.opacity = '0.08';
-        });
-      }
+      function buildFogLayer() { if (fogBuilt) return; fogBuilt = true; fogLayer.innerHTML = ''; const frag = document.createDocumentFragment(); for (const { src, i } of FOG_SRCS) { const img = document.createElement('img'); img.src = src; img.style.setProperty('--i', String(i)); frag.appendChild(img); } fogLayer.appendChild(frag); }
+      function applyFogMode(mode) { const imgs = fogLayer.querySelectorAll('img'); imgs.forEach((img, idx) => { img.removeAttribute('style'); img.style.setProperty('--i', FOG_SRCS[idx].i); if (mode === 'full' && idx % 2 === 1) { img.style.bottom = 'auto'; img.style.top = '0px'; img.style.transform = 'scaleY(-1) translateY(-2px)'; img.style.opacity = '0.08'; } else if (mode === 'light') img.style.opacity = '0.08'; }); }
       function showFog(mode) { if (!mode || mode === 'none') { hideFog(); return; } buildFogLayer(); applyFogMode(mode); fogLayer.classList.add('visible'); fogLayer.style.opacity = '1'; }
       function hideFog() { fogLayer.classList.remove('visible'); fogLayer.style.opacity = '0'; }
       function setFogMode(mode) { if (!mode || mode === 'none') { hideFog(); return; } if (!fogBuilt) { showFog(mode); return; } applyFogMode(mode); fogLayer.classList.add('visible'); fogLayer.style.opacity = '0.22'; }
       function fogFadeOut() { fogLayer.style.transition = 'opacity 0.5s ease'; fogLayer.style.opacity = '0'; }
       function fogFadeIn() { fogLayer.style.transition = 'opacity 0.5s ease'; fogLayer.style.opacity = '1'; }
 
-      /* ── GLOBE ── */
-      function preloadGlobe() {
-        return new Promise(resolve => {
-          if (globeInitDone) { resolve(); return; }
-          // On low-end mobile skip globe to save memory & CPU
-          if (isLowEnd) { globeInitDone = true; resolve(); return; }
-          function ls(src, cb) { const s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s); }
-          ls('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', () =>
-            ls('https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js', () => {
-              initGlobe(); globeInitDone = true; resolve();
-            })
-          );
-        });
-      }
+      /* GLOBE */
+      function preloadGlobe() { return new Promise(resolve => { if (globeInitDone) { resolve(); return; } function ls(src, cb) { const s = document.createElement('script'); s.src = src; s.onload = cb; s.onerror = cb; document.head.appendChild(s); } ls('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', () => ls('https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js', () => { initGlobe(); globeInitDone = true; resolve(); })); }); }
       function initGlobe() {
         if (globeReady) return; globeReady = true;
         let c = document.getElementById('globe-container');
         if (!c) { c = document.createElement('div'); c.id = 'globe-container'; document.body.insertBefore(c, fogLayer); }
         c.style.cssText = 'position:fixed;top:-8%;left:-8%;z-index:1;display:none;pointer-events:none;width:116%;height:116%;overflow:hidden';
-        globeInstance = Globe()
-          .width(Math.round(W * 1.16)).height(Math.round(H * 1.16))
-          .backgroundColor('rgba(0,0,0,0)')
-          .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-          .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-          .atmosphereColor('#2e9cca').atmosphereAltitude(.22)(c);
+
+        globeInstance = Globe().width(Math.round(W * 1.16)).height(Math.round(H * 1.16)).backgroundColor('rgba(0,0,0,0)').globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg').bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png').atmosphereColor('#2e9cca').atmosphereAltitude(.22)(c);
         globeInstance.pointOfView({ lat: 20, lng: 10, altitude: .75 }, 0);
         const controls = globeInstance.controls();
-        controls.autoRotate = false; controls.autoRotateSpeed = .28;
-        controls.enableZoom = false; controls.enablePan = false; controls.rotateSpeed = .55;
-        const ports = [
-          { name: 'Singapore', lat: 1.3, lng: 103.8 }, { name: 'Rotterdam', lat: 51.9, lng: 4.5 },
-          { name: 'Houston', lat: 29.7, lng: -95.3 }, { name: 'Dubai', lat: 25.2, lng: 55.3 },
-          { name: 'Shanghai', lat: 31.2, lng: 121.5 }, { name: 'Hamburg', lat: 53.5, lng: 10 },
-          { name: 'Los Angeles', lat: 33.7, lng: -118.2 }, { name: 'Piraeus', lat: 37.9, lng: 23.6 }
-        ];
-        globeInstance
-          .pointsData(ports).pointColor(() => '#c8923a').pointAltitude(.008).pointRadius(.28)
-          .labelsData(ports).labelText('name').labelSize(1).labelColor(() => 'rgba(10,22,40,0.90)').labelDotRadius(.25).labelAltitude(.012)
-          .ringsData(ports).ringColor(() => t => `rgba(200,146,58,${1 - t})`).ringMaxRadius(2.8).ringPropagationSpeed(1.4).ringRepeatPeriod(1600);
+        controls.autoRotate = false;
+        controls.autoRotateSpeed = isMobile ? 0.18 : .28;
+        controls.enableZoom = false;
+        controls.enablePan = false;
+        controls.rotateSpeed = isMobile ? 0.35 : .55;
+        controls.enableRotate = !isMobile;
+        const ports = [{ name: 'Singapore', lat: 1.3, lng: 103.8 }, { name: 'Rotterdam', lat: 51.9, lng: 4.5 }, { name: 'Houston', lat: 29.7, lng: -95.3 }, { name: 'Dubai', lat: 25.2, lng: 55.3 }, { name: 'Shanghai', lat: 31.2, lng: 121.5 }, { name: 'Hamburg', lat: 53.5, lng: 10 }, { name: 'Los Angeles', lat: 33.7, lng: -118.2 }, { name: 'Piraeus', lat: 37.9, lng: 23.6 }];
+        globeInstance.pointsData(ports).pointColor(() => '#c8923a').pointAltitude(.008).pointRadius(.28).labelsData(ports).labelText('name').labelSize(1).labelColor(() => 'rgba(10,22,40,0.90)').labelDotRadius(.25).labelAltitude(.012).ringsData(ports).ringColor(() => t => `rgba(200,146,58,${1 - t})`).ringMaxRadius(2.8).ringPropagationSpeed(1.4).ringRepeatPeriod(1600);
       }
-      function showGlobe() {
-        const c = document.getElementById('globe-container'); if (!c) return;
-        c.style.display = 'block'; c.style.pointerEvents = 'auto';
-        if (globeInstance) globeInstance.controls().autoRotate = true;
-      }
-      function hideGlobe() {
-        const c = document.getElementById('globe-container');
-        if (c) { c.style.display = 'none'; c.style.pointerEvents = 'none'; }
-        if (globeInstance) globeInstance.controls().autoRotate = false;
-      }
+      function showGlobe() { const c = document.getElementById('globe-container'); if (!c) return; c.style.display = 'block'; c.style.pointerEvents = 'auto'; if (globeInstance) globeInstance.controls().autoRotate = true; }
+      function hideGlobe() { const c = document.getElementById('globe-container'); if (c) { c.style.display = 'none'; c.style.pointerEvents = 'none'; } if (globeInstance) globeInstance.controls().autoRotate = false; }
 
-      /* ════════════════════════════════════════════════════
-      RELIABLE SEEK — with timeout guard & retry
-      Mobile Safari / Chrome can silently hang on seeked
-      ════════════════════════════════════════════════════ */
-      function seekTo(t, timeoutMs) {
-        return new Promise(res => {
-          if (Math.abs(vid.currentTime - t) < 0.05) { res(); return; }
-          const TIMEOUT = timeoutMs || (isMobile ? 3000 : 1500);
-          let done = false;
-          const finish = () => { if (done) return; done = true; clearTimeout(timer); res(); };
-          const timer = setTimeout(finish, TIMEOUT);   // safety net
-          vid.addEventListener('seeked', finish, { once: true });
-          // Some browsers need a tiny delay before setting currentTime
-          requestAnimationFrame(() => { vid.currentTime = t; });
-        });
-      }
+      function seekTo(t) { return new Promise(res => { if (Math.abs(vid.currentTime - t) < .033) { res(); return; } vid.currentTime = t; vid.addEventListener('seeked', res, { once: true }); }); }
 
-      /* ════════════════════════════════════════════════════
-      CAPTURE ONE FRAME → ImageBitmap or fallback canvas
-      Uses a shared offscreen canvas at CAPTURE_SCALE
-      ════════════════════════════════════════════════════ */
-      async function captureFrame() {
-        if (vid.readyState < 2) return null;
-
-        const cw = Math.round(W * CAPTURE_SCALE);
-        const ch = Math.round(H * CAPTURE_SCALE);
-
-        // Path 1: createImageBitmap with resize — fastest decode, no alloc per frame
-        if (typeof createImageBitmap === 'function') {
-          try {
-            return await createImageBitmap(vid, { resizeWidth: cw, resizeHeight: ch, resizeQuality: isMobile ? 'medium' : 'high' });
-          } catch (_) { /* fall through */ }
-        }
-
-        // Path 2: offscreen canvas — works everywhere
-        const { offCv: oc, offCtx: octx } = getOffscreen(cw, ch);
-        octx.drawImage(vid, 0, 0, cw, ch);
-        // Return a snapshot (new canvas each time — needed for independent frames)
-        const snap = document.createElement('canvas');
-        snap.width = cw; snap.height = ch;
-        snap.getContext('2d', { alpha: false }).drawImage(oc, 0, 0);
-        return snap;
-      }
-
-      /* ════════════════════════════════════════════════════
-      DRAW A CACHED FRAME — upscales back to full W×H
-      ════════════════════════════════════════════════════ */
-      function drawCachedFrame(f) {
-        if (!f) return;
-        if (f instanceof ImageBitmap || f instanceof HTMLCanvasElement || f instanceof OffscreenCanvas) {
-          cx.drawImage(f, 0, 0, W, H);
-        }
-      }
-
-      /* ════════════════════════════════════════════════════
-      PLAY FRAMES — time-based with frame-drop catch-up
-      Ensures smoothness even when RAF fires late
-      ════════════════════════════════════════════════════ */
-      function playFrames(frames, durationMs, onProgress, done) {
-        if (!frames || !frames.length) { done(); return; }
-        const mpf = durationMs / frames.length;
-        const start = performance.now();
-        let lastIdx = -1;
-
-        (function tick(now) {
-          const elapsed = now - start;
-          const targetIdx = Math.min(Math.floor(elapsed / mpf), frames.length - 1);
-
-          // Draw the most recent frame we should be on (skip stale frames)
-          if (targetIdx > lastIdx) {
-            drawCachedFrame(frames[targetIdx]);
-            lastIdx = targetIdx;
-          }
-
-          if (onProgress) onProgress((targetIdx + 1) / frames.length);
-
-          if (targetIdx >= frames.length - 1) { done(); return; }
-          requestAnimationFrame(tick);
-        })(performance.now());
-      }
-
-      /* ════════════════════════════════════════════════════
-      PRELOAD ALL SEGMENTS
-      — Chunked to keep progress bar alive
-      — Yield every N frames so the main thread breathes
-      — Timeout guard on each seek (mobile fix)
-      ════════════════════════════════════════════════════ */
       async function preloadAllSegments() {
-        // Build job list
+        if (isMobile) {
+          ibar.style.width = '30%';
+          ipct.textContent = '30%';
+          istage.textContent = 'Preparing systems';
+          await new Promise(r => setTimeout(r, 60));
+          ibar.style.width = '70%';
+          ipct.textContent = '70%';
+          istage.textContent = 'Loading assets';
+          await new Promise(r => setTimeout(r, 80));
+          await preloadGlobe();
+          ibar.style.width = '100%';
+          ipct.textContent = '100%';
+          istage.textContent = 'Systems ready';
+          return;
+        }
         const jobs = [];
         for (let i = 1; i < NUM_SECTIONS; i++) {
           const { videoStart: s, videoEnd: e } = SECTION_CONFIG[i];
@@ -4135,155 +3968,174 @@
             jobs.push({ sec: i, dir: 'bwd', from: e, to: s, fps: segmentFPS(s, e) });
           }
         }
-
-        // Kick off globe load in parallel — don't wait for it yet
         const globePromise = preloadGlobe();
-
-        // Total frame estimate for progress bar
-        let totalEst = 0;
-        for (const j of jobs) {
-          totalEst += Math.min(Math.max(Math.round(Math.abs(j.to - j.from) * j.fps), 3), MAX_FRAMES_PER_SEG);
-        }
-        let captured = 0;
-
-        const YIELD_EVERY = isMobile ? 2 : 4;  // yield more often on mobile
-
-        for (const job of jobs) {
+        const totalFrames = jobs.reduce((sum, j) => {
+          return sum + Math.min(Math.max(Math.round(Math.abs(j.to - j.from) * j.fps), 3), 80);
+        }, 0);
+        let capturedFrames = 0;
+        for (let j = 0; j < jobs.length; j++) {
+          const job = jobs[j];
           const segLen = Math.abs(job.to - job.from);
-          const total = Math.min(Math.max(Math.round(segLen * job.fps), 3), MAX_FRAMES_PER_SEG);
+          const total = Math.min(Math.max(Math.round(segLen * job.fps), 3), 60);
           const frames = [];
-
-          // First seek to start of this segment
-          await seekTo(job.from, isMobile ? 4000 : 2000);
-
           for (let i = 0; i < total; i++) {
-            // Evenly spaced time within segment
-            const t = total === 1
-              ? job.from
-              : job.from + (i / (total - 1)) * (job.to - job.from);
-
-            await seekTo(t, isMobile ? 2500 : 1200);
-
-            const frame = await captureFrame();
-            if (frame) frames.push(frame);
-
-            captured++;
-            // Cap display at 98% until globe+seeks complete
-            const pct = Math.min(Math.round(captured / totalEst * 96), 96);
+            const t = total === 1 ? job.from : job.from + (i / (total - 1)) * (job.to - job.from);
+            await seekTo(t);
+            if (vid.readyState >= 2) {
+              try { frames.push(await createImageBitmap(vid)); }
+              catch (_) {
+                const fc = document.createElement('canvas');
+                fc.width = W; fc.height = H;
+                fc.getContext('2d').drawImage(vid, 0, 0, W, H);
+                frames.push(fc);
+              }
+            }
+            capturedFrames++;
+            const pct = Math.min(Math.round(capturedFrames / totalFrames * 98), 98);
             ibar.style.width = pct + '%';
             ipct.textContent = pct + '%';
-            //istage.textContent = `Loading segment ${job.sec}/${NUM_SECTIONS - 1} (${job.dir})`;
-
-            // Yield to keep UI responsive and progress bar painting
-            if (i % YIELD_EVERY === 0) {
-              await new Promise(r => setTimeout(r, isMobile ? 8 : 0));
-            }
+            if (i % 4 === 0) await new Promise(r => setTimeout(r, 0));
           }
-
           if (job.dir === 'fwd') fwdCache[job.sec] = frames;
           else bwdCache[job.sec] = frames;
         }
-
-        // Wait for globe if not yet ready
         await globePromise;
-
-        // Seek back to section 0 start
-        await seekTo(0);
-        if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
-
         ibar.style.width = '100%';
         ipct.textContent = '100%';
         istage.textContent = 'Systems ready';
       }
 
-      /* ════════════════════════════════════════════════════
-      TRANSITION PLAYBACK
-      ════════════════════════════════════════════════════ */
-      function playTransition(fromSec, toSec, done) {
+      function playFrames(frames, durationMs, onProgress, done) {
+        if (!frames || !frames.length) { done(); return; }
+
+        const mpf = durationMs / frames.length;
+        let fi = 0;
+        let startT = performance.now();
+
+        (function tick(now) {
+          // Calculate which frame we SHOULD be on based on elapsed time
+          // This keeps sync even if RAF fires late (throttled background tab, mobile)
+          const elapsed = now - startT;
+          const targetFrame = Math.min(Math.floor(elapsed / mpf), frames.length - 1);
+
+          // Catch up: draw all frames up to targetFrame (skip if behind)
+          while (fi <= targetFrame && fi < frames.length) {
+            const f = frames[fi];
+            if (f instanceof ImageBitmap) {
+              cx.drawImage(f, 0, 0, W, H);
+            } else if (f instanceof HTMLCanvasElement) {
+              cx.drawImage(f, 0, 0, W, H);
+            }
+            fi++;
+          }
+
+          if (onProgress) onProgress(fi / frames.length);
+
+          if (fi >= frames.length) {
+            done();
+            return;
+          }
+
+          requestAnimationFrame(tick);
+        })(performance.now());
+      }
+
+      function playTransitionMobile(fromSec, toSec, done) {
         isBusy = true; stopIdleMotion(); hideAllPanels(); hideGlobe(); navShow();
         const isForward = toSec > fromSec;
-        const targetSec = isForward ? toSec : fromSec;
-        const cache = isForward ? fwdCache[targetSec] : bwdCache[targetSec];
-        const cfg = SECTION_CONFIG[targetSec];
+        const cfg = SECTION_CONFIG[toSec];
+        const targetT = isForward ? cfg.videoEnd : cfg.videoStart;
         const segLen = Math.abs(cfg.videoEnd - cfg.videoStart);
-        const durMs = Math.max((segLen / Math.max(cfg.speed, 0.1)) * 1000, 400);
-
+        const durMs = Math.max((segLen / Math.max(cfg.speed, .1)) * 1000, 300);
         const toStar = toSec === 6, fromStar = fromSec === 6;
-        const toFog = cfg.fog && cfg.fog !== 'none';
-        const fromFog = SECTION_CONFIG[fromSec].fog && SECTION_CONFIG[fromSec].fog !== 'none';
-
+        const toFog = cfg.fog && cfg.fog !== 'none', fromFog = SECTION_CONFIG[fromSec].fog && SECTION_CONFIG[fromSec].fog !== 'none';
         startPlayBar(durMs);
         if (fromStar) hideStars();
         if (fromFog) fogFadeOut();
+        const startT = isForward ? cfg.videoStart : cfg.videoEnd;
+        vid.currentTime = startT;
+        vid.addEventListener('seeked', function () {
+          vid.playbackRate = Math.min(cfg.speed, 2.0);
+          startDraw();
+          vid.play().catch(() => { });
+          let panelShown = false;
+          const segDur = Math.max(cfg.videoEnd - cfg.videoStart, 0.001);
+          (function chk() {
+            const elapsed = isForward
+              ? (vid.currentTime - cfg.videoStart) / segDur
+              : 1 - (vid.currentTime - cfg.videoStart) / segDur;
+            const r = Math.max(0, Math.min(1, elapsed));
+            if (!panelShown && r >= 0.65) {
+              panelShown = true;
+              if (toStar) showStars();
+              if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); } else hideFog();
+              showPanelContent(toSec);
+            }
+            const atEnd = isForward ? vid.currentTime >= targetT - 0.06 : vid.currentTime <= targetT + 0.06;
+            if (atEnd) {
+              vid.pause(); stopDraw();
+              if (!panelShown) {
+                if (toStar) showStars();
+                if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); } else hideFog();
+                showPanelContent(toSec);
+              }
+              isBusy = false; done();
+            } else {
+              requestAnimationFrame(chk);
+            }
+          })();
+        }, { once: true });
+      }
 
+      function playTransition(fromSec, toSec, done) {
+        if (isMobile) { playTransitionMobile(fromSec, toSec, done); return; }
+        isBusy = true; stopIdleMotion(); hideAllPanels(); hideGlobe(); navShow();
+        const isForward = toSec > fromSec, targetSec = isForward ? toSec : fromSec;
+        const cache = isForward ? fwdCache[targetSec] : bwdCache[targetSec];
+        const cfg = SECTION_CONFIG[targetSec];
+        const segLen = Math.abs(cfg.videoEnd - cfg.videoStart);
+        const durMs = Math.max((segLen / Math.max(cfg.speed, .1)) * 1000, 400);
+        const toStar = toSec === 6, fromStar = fromSec === 6;
+        const toFog = cfg.fog && cfg.fog !== 'none', fromFog = SECTION_CONFIG[fromSec].fog && SECTION_CONFIG[fromSec].fog !== 'none';
+        startPlayBar(durMs);
+        if (fromStar) hideStars();
+        if (fromFog) fogFadeOut();
         let panelShown = false;
-        function onProgress(ratio) {
-          if (!panelShown && ratio >= 0.70) {
-            panelShown = true;
-            if (toStar) showStars();
-            if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); }
-            else hideFog();
-            showPanelContent(toSec);
-          }
-        }
+        function onProgress(ratio) { if (!panelShown && ratio >= .70) { panelShown = true; if (toStar) showStars(); if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); } else hideFog(); showPanelContent(toSec); } }
         function onDone() { isBusy = false; done(); }
-
         if (cache && cache.length > 0) {
           playFrames(cache, durMs, onProgress, onDone);
         } else {
-          // Fallback: live video playback (no cache)
           const fromT = isForward ? cfg.videoStart : cfg.videoEnd;
           const toT = isForward ? cfg.videoEnd : cfg.videoStart;
-          seekTo(fromT).then(() => {
+          vid.currentTime = fromT;
+          vid.addEventListener('seeked', function () {
             if (isForward) {
               startDraw(); vid.playbackRate = cfg.speed; vid.play().catch(() => { });
               let p70 = false;
-              (function chk() {
-                const r = (cfg.videoEnd > cfg.videoStart)
-                  ? (vid.currentTime - cfg.videoStart) / (cfg.videoEnd - cfg.videoStart)
-                  : 1;
-                if (!p70 && r >= 0.70) { p70 = true; onProgress(0.70); }
-                if (vid.currentTime >= toT - 0.04) { vid.pause(); stopDraw(); onDone(); }
-                else requestAnimationFrame(chk);
-              })();
+              (function chk() { const r = Math.max(cfg.videoEnd - cfg.videoStart, .001) > 0 ? (vid.currentTime - cfg.videoStart) / (cfg.videoEnd - cfg.videoStart) : 1; if (!p70 && r >= .70) { p70 = true; onProgress(.70); } if (vid.currentTime >= toT - .04) { vid.pause(); stopDraw(); onDone(); } else requestAnimationFrame(chk); })();
             } else {
-              // Backward without cache — capture on-the-fly
-              const fps2 = segmentFPS(fromT, toT);
-              const total = Math.min(Math.max(Math.round(Math.abs(toT - fromT) * fps2), 3), MAX_FRAMES_PER_SEG);
-              const frames = [];
-              (async () => {
-                for (let i = 0; i < total; i++) {
-                  const t = fromT + (i / (total - 1)) * (toT - fromT);
-                  await seekTo(t);
-                  const f = await captureFrame();
-                  if (f) frames.push(f);
-                }
-                playFrames(frames, durMs, onProgress, onDone);
-              })();
+              const fps2 = segmentFPS(fromT, toT), total = Math.min(Math.max(Math.round(Math.abs(toT - fromT) * fps2), 3), 60), frames = [];
+              (async () => { for (let i = 0; i < total; i++) { const t = fromT + (i / (total - 1)) * (toT - fromT); await seekTo(t); if (vid.readyState >= 2) { try { frames.push(await createImageBitmap(vid)); } catch (_) { const oc = document.createElement('canvas'); oc.width = W; oc.height = H; oc.getContext('2d').drawImage(vid, 0, 0, W, H); frames.push(oc); } } } playFrames(frames, durMs, onProgress, onDone); })();
             }
-          });
+          }, { once: true });
         }
       }
 
-      /* ── IDLE MOTION ── */
+      /* IDLE MOTION */
       let idleRAF = null, idlePhase = 0, idleActive = false, pMX = 0, pMY = 0, pCX = 0, pCY = 0;
       document.addEventListener('mousemove', e => { pMX = (e.clientX / W - .5) * 2; pMY = (e.clientY / H - .5) * 2; });
       function startIdleMotion() {
         if (idleActive) return; idleActive = true; cancelAnimationFrame(idleRAF); idlePhase = 0;
-        const cfg = SECTION_CONFIG[curSec];
-        const amp = cfg.idleAmp || 3;
-        const zAmp = cfg.idleZoom || .02;
-        const baseScale = 1.18, tiltX = 3, tiltY = 5, perspective = 1800;
-        let tCX = 0, tCY = 0;
+        const cfg = SECTION_CONFIG[curSec], amp = cfg.idleAmp || 3, zAmp = cfg.idleZoom || .02;
+        const baseScale = 1.18, tiltX = 3, tiltY = 5, perspective = 1800; let tCX = 0, tCY = 0;
         (function loop() {
           if (!idleActive) return; idlePhase += .00065;
-          pCX += (pMX - pCX) * .025; pCY += (pMY - pCY) * .025;
-          tCX += (pMX - tCX) * .04; tCY += (pMY - tCY) * .04;
+          pCX += (pMX - pCX) * .025; pCY += (pMY - pCY) * .025; tCX += (pMX - tCX) * .04; tCY += (pMY - tCY) * .04;
           const zoom = baseScale + zAmp + Math.sin(idlePhase) * zAmp;
           const dX = Math.sin(idlePhase * 1.3) * amp + (-pCX * 7);
           const dY = Math.sin(idlePhase * .8) * (amp * .35) + (-pCY * 4);
-          const clX = Math.max(-.7, Math.min(.7, tCX));
-          const clY = Math.max(-.7, Math.min(.7, tCY));
+          const clX = Math.max(-.7, Math.min(.7, tCX)), clY = Math.max(-.7, Math.min(.7, tCY));
           const te = curSec !== 2;
           cv.style.transform = `perspective(${perspective}px) scale(${zoom}) rotateY(${te ? clX * tiltY : 0}deg) rotateX(${te ? -clY * tiltX : 0}deg) translate(${dX}px,${dY}px) translateZ(0)`;
           idleRAF = requestAnimationFrame(loop);
@@ -4291,17 +4143,14 @@
       }
       function stopIdleMotion() { idleActive = false; cancelAnimationFrame(idleRAF); }
 
-      function showPanelContent(idx) {
-        panels.forEach((p, i) => { p.classList.remove('on', 'exit', 'below'); if (i === idx) p.classList.add('on'); });
-      }
+      function showPanelContent(idx) { panels.forEach((p, i) => { p.classList.remove('on', 'exit', 'below'); if (i === idx) p.classList.add('on'); }); }
 
       function showPanel(idx) {
         const isGlobe = idx === 2, isContact = idx === 6;
         const fogMode = SECTION_CONFIG[idx].fog || 'bottom';
         if (fogMode === 'none') hideFog(); else setFogMode(fogMode);
         if (isContact) showStars(); else hideStars();
-        if (isGlobe && globeReady) { showGlobe(); globeUI.classList.add('visible'); cv.style.opacity = '.02'; }
-        else { hideGlobe(); globeUI.classList.remove('visible'); cv.style.opacity = '1'; }
+        if (isGlobe) { showGlobe(); globeUI.classList.add('visible'); cv.style.opacity = '.02'; } else { hideGlobe(); globeUI.classList.remove('visible'); cv.style.opacity = '1'; }
         if (mainFooter) mainFooter.classList.toggle('visible', isContact);
         showPanelContent(idx);
         dots.forEach((d, i) => d.classList.toggle('on', i === idx));
@@ -4311,12 +4160,7 @@
         setTimeout(startIdleMotion, 120);
       }
 
-      function hideAllPanels() {
-        panels.forEach(p => p.classList.remove('on'));
-        globeUI.classList.remove('visible');
-        cv.style.opacity = '1';
-        if (mainFooter) mainFooter.classList.remove('visible');
-      }
+      function hideAllPanels() { panels.forEach(p => p.classList.remove('on')); globeUI.classList.remove('visible'); cv.style.opacity = '1'; if (mainFooter) mainFooter.classList.remove('visible'); }
 
       function navTo(target) {
         if (isBusy) return;
@@ -4328,29 +4172,37 @@
         const from = curSec; curSec = target;
         playTransition(from, target, () => showPanel(curSec));
       }
+
       window.navTo = navTo;
 
-      /* HISTORY */
       history.pushState({ sec: 0 }, '', window.location.href);
-      window.addEventListener('popstate', function () {
-        if (subOpen) { closeSubPage(); history.pushState({ sec: 0 }, '', window.location.href); }
-        else if (curSec !== 0) { navTo(0); history.pushState({ sec: 0 }, '', window.location.href); }
-        else { history.pushState({ sec: 0 }, '', window.location.href); }
+      window.addEventListener('popstate', function (e) {
+        if (subOpen) {
+          closeSubPage();
+          history.pushState({ sec: 0 }, '', window.location.href);
+        } else if (curSec !== 0) {
+          navTo(0);
+          history.pushState({ sec: 0 }, '', window.location.href);
+        } else {
+          history.pushState({ sec: 0 }, '', window.location.href);
+        }
       });
 
       document.addEventListener('mousemove', e => { if (e.clientY < 90) navShow(); });
 
-      /* WHEEL */
       let wheelAcc = 0, wheelTimer = null;
       window.addEventListener('wheel', e => {
         e.preventDefault();
         if (subOpen || isBusy) { wheelAcc = 0; return; }
-        wheelAcc += e.deltaY; clearTimeout(wheelTimer);
-        wheelTimer = setTimeout(() => { wheelAcc = 0; }, 300);
-        if (Math.abs(wheelAcc) >= 80) { const dir = wheelAcc > 0 ? 1 : -1; wheelAcc = 0; clearTimeout(wheelTimer); navTo(curSec + dir); }
+        wheelAcc += e.deltaY; clearTimeout(wheelTimer); wheelTimer = setTimeout(() => { wheelAcc = 0; }, 300);
+        if (Math.abs(wheelAcc) >= 80) {
+          const dir = wheelAcc > 0 ? 1 : -1;
+          wheelAcc = 0; clearTimeout(wheelTimer);
+          if (isMobile && dir < 0) return;
+          navTo(curSec + dir);
+        }
       }, { passive: false });
 
-      /* KEYBOARD */
       window.addEventListener('keydown', e => {
         if (subOpen) return;
         if (isBusy) { e.preventDefault(); return; }
@@ -4359,19 +4211,21 @@
         if (e.key === 'Home') { e.preventDefault(); navTo(0); }
         if (e.key === 'End') { e.preventDefault(); navTo(NUM_SECTIONS - 1); }
       });
-
-      /* TOUCH */
       let ty0 = 0, touchLocked = false;
       window.addEventListener('touchstart', e => { ty0 = e.touches[0].clientY; touchLocked = false; }, { passive: true });
       window.addEventListener('touchend', e => {
         if (subOpen || isBusy || touchLocked) return;
         const dy = ty0 - e.changedTouches[0].clientY;
-        if (Math.abs(dy) > 44) { touchLocked = true; navTo(curSec + (dy > 0 ? 1 : -1)); }
+        if (Math.abs(dy) > 44) {
+          touchLocked = true;
+          if (isMobile && dy < 0) return;
+          navTo(curSec + (dy > 0 ? 1 : -1));
+        }
       }, { passive: true });
 
       dots.forEach(d => d.addEventListener('click', () => navTo(+d.dataset.i)));
 
-      /* ── CURSOR ── */
+      /* CURSOR */
       const curEl = document.getElementById('cur'), ring = document.getElementById('cur-ring');
       let mx = 0, my = 0, rx = 0, ry = 0;
       document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; curEl.style.left = mx + 'px'; curEl.style.top = my + 'px'; });
@@ -4383,19 +4237,17 @@
 
       window.applyCfg = function () { document.getElementById('cfg-panel').classList.remove('open'); };
 
-      /* ════════════════════════════════════════════════════
-      AQUATIC VIDEO (SUB-PAGE BACKGROUND)
-      Preloaded as frames, looped on canvas — no video stutter
-      ════════════════════════════════════════════════════ */
+      /* AQUATIC VIDEO FRAME PRELOADER */
       const aqVid = document.getElementById('aquatic-vid');
       let aqFrameCache = [];
       let aqCacheReady = false;
       let aqPlayRAF = null;
       let aqFrameIdx = 0;
-      const aqCanvas = document.createElement('canvas');
-      aqCanvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.42;';
 
-      const AQ_FPS = isMobile ? 8 : 12;
+      const aqCanvas = document.createElement('canvas');
+      aqCanvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.45;';
+
+      const AQ_FPS = 12;
       const AQ_START = 0;
       const AQ_END = 5;
 
@@ -4403,112 +4255,125 @@
         aqVid.src = 'Aquatic.mp4';
         aqVid.load();
 
+        if (isMobile) {
+          aqVid.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.42;display:block;';
+          aqVid.loop = true;
+          aqVid.muted = true;
+          aqVid.setAttribute('playsinline', '');
+          aqVid.setAttribute('webkit-playsinline', '');
+          const tryPlay = () => { if (subOpen) aqVid.play().catch(() => { }); };
+          aqVid.addEventListener('canplay', () => { if (subOpen) aqVid.play().catch(() => { }); }, { once: true });
+          const origOpen = window.openSubPage;
+          window.openSubPage = function (page) {
+            origOpen(page);
+            setTimeout(() => aqVid.play().catch(() => { }), 100);
+          };
+          return;
+        }
+
         await new Promise(res => {
           if (aqVid.readyState >= 1) { res(); return; }
           aqVid.addEventListener('loadedmetadata', res, { once: true });
           aqVid.addEventListener('canplay', res, { once: true });
-          setTimeout(res, 6000);  // hard fallback — don't block forever
+          setTimeout(res, 5000);
         });
-
         const aqEnd = Math.min(AQ_END, isFinite(aqVid.duration) ? aqVid.duration : AQ_END);
-        const total = Math.max(Math.round((aqEnd - AQ_START) * AQ_FPS), 4);
-        const aqScale = isMobile ? 0.5 : 0.75;
-        const aqW = Math.round(window.innerWidth * aqScale);
-        const aqH = Math.round(window.innerHeight * aqScale);
-
-        for (let i = 0; i < total; i++) {
-          const t = AQ_START + (i / (total - 1)) * (aqEnd - AQ_START);
+        const totalFrames = Math.max(Math.round((aqEnd - AQ_START) * AQ_FPS), 6);
+        for (let i = 0; i < totalFrames; i++) {
+          const t = AQ_START + (i / (totalFrames - 1)) * (aqEnd - AQ_START);
           await new Promise(res => {
-            if (Math.abs(aqVid.currentTime - t) < 0.05) { res(); return; }
-            aqVid.addEventListener('seeked', res, { once: true });
-            setTimeout(res, 2000);
+            if (Math.abs(aqVid.currentTime - t) < 0.04) { res(); return; }
             aqVid.currentTime = t;
+            aqVid.addEventListener('seeked', res, { once: true });
           });
           if (aqVid.readyState >= 2) {
-            try {
-              aqFrameCache.push(await createImageBitmap(aqVid, { resizeWidth: aqW, resizeHeight: aqH, resizeQuality: 'medium' }));
-            } catch (_) {
-              const fc = document.createElement('canvas'); fc.width = aqW; fc.height = aqH;
-              fc.getContext('2d').drawImage(aqVid, 0, 0, aqW, aqH);
+            try { aqFrameCache.push(await createImageBitmap(aqVid)); }
+            catch (_) {
+              const fc = document.createElement('canvas');
+              fc.width = aqVid.videoWidth || 1280; fc.height = aqVid.videoHeight || 720;
+              fc.getContext('2d').drawImage(aqVid, 0, 0, fc.width, fc.height);
               aqFrameCache.push(fc);
             }
           }
-          if (i % 2 === 0) await new Promise(r => setTimeout(r, 0));
         }
-
         aqCacheReady = true;
         aqVid.style.display = 'none';
         aqCanvas.width = window.innerWidth;
         aqCanvas.height = window.innerHeight;
-        if (aqVid.parentNode) aqVid.parentNode.insertBefore(aqCanvas, aqVid);
+        aqVid.parentNode.insertBefore(aqCanvas, aqVid);
         loopAquaticFrames();
       }
 
       function loopAquaticFrames() {
-        if (!aqCacheReady || !aqFrameCache.length) return;
-        const ctx = aqCanvas.getContext('2d', { alpha: false });
+        if (isMobile || !aqCacheReady || aqFrameCache.length === 0) return;
+        const ctx = aqCanvas.getContext('2d');
         const mpf = 1000 / AQ_FPS;
         let last = performance.now();
-        (function tick(now) {
-          if (subOpen && now - last >= mpf) {
-            const f = aqFrameCache[aqFrameIdx % aqFrameCache.length];
-            if (f instanceof ImageBitmap || f instanceof HTMLCanvasElement) ctx.drawImage(f, 0, 0, aqCanvas.width, aqCanvas.height);
-            aqFrameIdx++; last = now;
+        function tick(now) {
+          if (subOpen) {
+            if (now - last >= mpf) {
+              const f = aqFrameCache[aqFrameIdx % aqFrameCache.length];
+              if (f instanceof ImageBitmap) ctx.drawImage(f, 0, 0, aqCanvas.width, aqCanvas.height);
+              else if (f instanceof HTMLCanvasElement) ctx.drawImage(f, 0, 0, aqCanvas.width, aqCanvas.height);
+              aqFrameIdx++;
+              last = now;
+            }
           }
           aqPlayRAF = requestAnimationFrame(tick);
-        })(performance.now());
+        }
+        aqPlayRAF = requestAnimationFrame(tick);
       }
 
       window.addEventListener('resize', () => {
         if (aqCacheReady) { aqCanvas.width = window.innerWidth; aqCanvas.height = window.innerHeight; }
       }, { passive: true });
 
-      /* ════════════════════════════════════════════════════
-      BOOT SEQUENCE
-      ════════════════════════════════════════════════════ */
+      /* BOOT */
       async function boot() {
         if (booted) return; booted = true;
 
-        await seekTo(0, 5000);
+        await seekTo(0);
         if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
 
         await preloadAllSegments();
 
-        // Restore section 0 frame
-        await seekTo(0, 3000);
+        await seekTo(0);
         if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
 
-        // GPU warm-up — draw first frame of each cached segment at full alpha
-        // so WebGL/Canvas uploads textures before first user scroll
-        requestAnimationFrame(() => {
-          for (let s = 1; s < NUM_SECTIONS; s++) {
-            const fwd = fwdCache[s]; const bwd = bwdCache[s];
-            // Draw then immediately redraw section 0 frame — user never sees these
-            if (fwd && fwd[0]) { drawCachedFrame(fwd[0]); }
-            if (bwd && bwd[0]) { drawCachedFrame(bwd[0]); }
-          }
-          // Restore
-          if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
-        });
-
-        // Show site
         intro.classList.add('gone');
         showFog(SECTION_CONFIG[0].fog);
         showPanel(0);
         setTimeout(() => sHint.classList.add('on'), 800);
         navHideAfterDelay(3000);
-
-        // Aquatic loads last — completely separate from main video
-        setTimeout(preloadAquaticFrames, 1200);
+        setTimeout(preloadAquaticFrames, isMobile ? 1500 : 800);
+        // GPU warm-up: draw frame 0 of every cached segment invisibly
+        // so the first real scroll has no texture-upload stall
+      /*  if (!isMobile) {
+          requestAnimationFrame(() => {
+            const saved = cx.globalAlpha;
+            cx.globalAlpha = 0.001;
+            for (let s = 1; s < NUM_SECTIONS; s++) {
+              const fwd = fwdCache[s];
+              const bwd = bwdCache[s];
+              if (fwd && fwd[0]) cx.drawImage(fwd[0], 0, 0, W, H);
+              if (bwd && bwd[0]) cx.drawImage(bwd[0], 0, 0, W, H);
+            }
+            cx.globalAlpha = saved;
+            if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+          });
+        }*/
+        /*if (isMobile) {
+          preloadGlobe = () => Promise.resolve();
+        }*/
+        /*setTimeout(preloadAquaticFrames, isMobile ? 2000 : 800);*/
       }
 
-      // Multiple triggers to ensure boot fires on any device
       vid.addEventListener('canplay', boot, { once: true });
       vid.addEventListener('canplaythrough', boot, { once: true });
-      setTimeout(() => { if (!booted) boot(); }, isMobile ? 10000 : 8000);
-
+      setTimeout(() => { if (!booted) boot(); }, 8000);
       vid.src = 'MaritimeAA7.mp4';
       vid.load();
+      aqVid.load();
 
     })();
   </script>
