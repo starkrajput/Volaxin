@@ -3443,10 +3443,10 @@
         <div id="main-footer">
           <span class="fc">© 2025 Volaxin Maritime Suite Ltd. All rights reserved.</span>
           <ul class="flinks">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">System Status</a></li>
+            <li><a href="./privacy.html" target="_blank">Privacy Policy</a></li>
+            <li><a href="./terms.html" target="_blank">Terms of Service</a></li>
+            <li><a href="./security.html" target="_blank">Security</a></li>
+
           </ul>
         </div>
       </div>
@@ -3656,10 +3656,9 @@
     <footer style="background:rgba(4,13,28,0.75);">
       <span class="fc" style="color:white;">© 2026 Volaxin Maritime Suite Ltd. All rights reserved.</span>
       <ul class="flinks">
-        <li><a href="#" style="color:white;">Privacy</a></li>
-        <li><a href="#" style="color:white;">Terms</a></li>
-        <li><a href="#" style="color:white;">Security</a></li>
-        <li><a href="#" style="color:white;">Status</a></li>
+        <li><a href="./privacy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="./terms.html" target="_blank">Terms of Service</a></li>
+        <li><a href="./security.html" target="_blank">Security</a></li>
       </ul>
     </footer>
   </div>
@@ -3669,29 +3668,7 @@
     <div class="cfg-row"><span></span><div>Start</div><div>End</div><div>Fog</div></div>
     <button onclick="applyCfg()">Apply</button>
   </div>
-  <style>
-    /* Mobile-specific contact grid override */
-    @media (max-width: 768px) {
-      #contact-grid {
-        grid-template-columns: 1fr !important;
-      }
 
-      .form-submit {
-        width: 100%;
-        text-align: center;
-        align-self: stretch;
-        cursor: pointer;
-      }
-
-      .arrow-btn {
-        cursor: pointer;
-      }
-
-      .mobile-nav-cta {
-        cursor: pointer;
-      }
-    }
-  </style>
   <script>
     (function () {
       'use strict';
@@ -3882,12 +3859,12 @@
         if (l <= 35) return 5;
         return 3;
       }
-    /*  function resize() {
-        W = window.innerWidth; H = window.innerHeight;
-        cv.width = W; cv.height = H;
-        if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
-        if (globeInstance) globeInstance.width(Math.round(W * 1.16)).height(Math.round(H * 1.16));
-      }*/
+      /*  function resize() {
+          W = window.innerWidth; H = window.innerHeight;
+          cv.width = W; cv.height = H;
+          if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+          if (globeInstance) globeInstance.width(Math.round(W * 1.16)).height(Math.round(H * 1.16));
+        }*/
       function resize() {
         const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 2 : 1);
         W = window.innerWidth; H = window.innerHeight;
@@ -4212,7 +4189,7 @@
           if (isMobile && dir < 0) return;
           navTo(curSec + dir);
         }
-      },{ passive: false });
+      }, { passive: false });
 
       window.addEventListener('keydown', e => {
         if (subOpen) return;
@@ -4359,20 +4336,20 @@
         setTimeout(preloadAquaticFrames, isMobile ? 1500 : 800);
         // GPU warm-up: draw frame 0 of every cached segment invisibly
         // so the first real scroll has no texture-upload stall
-      /*  if (!isMobile) {
-          requestAnimationFrame(() => {
-            const saved = cx.globalAlpha;
-            cx.globalAlpha = 0.001;
-            for (let s = 1; s < NUM_SECTIONS; s++) {
-              const fwd = fwdCache[s];
-              const bwd = bwdCache[s];
-              if (fwd && fwd[0]) cx.drawImage(fwd[0], 0, 0, W, H);
-              if (bwd && bwd[0]) cx.drawImage(bwd[0], 0, 0, W, H);
-            }
-            cx.globalAlpha = saved;
-            if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
-          });
-        }*/
+        /*  if (!isMobile) {
+            requestAnimationFrame(() => {
+              const saved = cx.globalAlpha;
+              cx.globalAlpha = 0.001;
+              for (let s = 1; s < NUM_SECTIONS; s++) {
+                const fwd = fwdCache[s];
+                const bwd = bwdCache[s];
+                if (fwd && fwd[0]) cx.drawImage(fwd[0], 0, 0, W, H);
+                if (bwd && bwd[0]) cx.drawImage(bwd[0], 0, 0, W, H);
+              }
+              cx.globalAlpha = saved;
+              if (vid.readyState >= 2) cx.drawImage(vid, 0, 0, W, H);
+            });
+          }*/
         /*if (isMobile) {
           preloadGlobe = () => Promise.resolve();
         }*/
@@ -4405,3 +4382,28 @@
     });
   })();
 </script>
+
+
+<style>
+  /* Mobile-specific contact grid override */
+  @media (max-width: 768px) {
+    #contact-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .form-submit {
+      width: 100%;
+      text-align: center;
+      align-self: stretch;
+      cursor: pointer;
+    }
+
+    .arrow-btn {
+      cursor: pointer;
+    }
+
+    .mobile-nav-cta {
+      cursor: pointer;
+    }
+  }
+</style>
