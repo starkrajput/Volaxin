@@ -3,39 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Privacy Policy — Volaxin Maritime Suite</title>
-  <meta name="description" content="Volaxin Maritime Suite Privacy Policy — how we collect, process, store and protect your personal data in full compliance with GDPR, UK GDPR and international maritime data regulations.">
+  <title>Terms of Service — Volaxin Maritime Suite</title>
+  <meta name="description" content="Volaxin Maritime Suite Terms of Service — the legally binding agreement governing your access to and use of the Volaxin platform, software licences, SLAs, and all associated services.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://volaxin.com/privacy.html">
+  <link rel="canonical" href="https://volaxin.com/terms.html">
   <meta name="theme-color" content="#040d1c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* Mobile-specific contact grid override */
-    @media (max-width: 768px) {
-      #contact-grid {
-        grid-template-columns: 1fr !important;
-      }
-
-      .form-submit {
-        width: 100%;
-        text-align: center;
-        align-self: stretch;
-        cursor: pointer;
-      }
-
-      .arrow-btn {
-        cursor: pointer;
-      }
-
-      .mobile-nav-cta {
-        cursor: pointer;
-      }
-    }
-  </style>
-  <style>
-    /* ── PASTE YOUR ROOT VARIABLES & BASE STYLES FROM MAIN SITE HERE ── */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -78,13 +54,13 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background: linear-gradient(160deg, #e8eeff 0%, #d4dcf8 30%, #c8d2f4 60%, #d0d8f8 100%);
+      background: linear-gradient(160deg,#e8eeff 0%,#d4dcf8 30%,#c8d2f4 60%,#d0d8f8 100%);
       min-height: 100vh;
       color: var(--text-dark);
       overflow-x: hidden;
     }
 
-    /* ── CURSOR (desktop only) ── */
+    /* CURSOR */
     #cur {
       position: fixed;
       width: 8px;
@@ -94,8 +70,8 @@
       pointer-events: none;
       z-index: 9999;
       transform: translate(-50%,-50%);
-      transition: transform .08s, background .18s;
-      box-shadow: 0 0 12px var(--gold-glow), 0 0 28px rgba(212,160,23,0.3);
+      transition: transform .08s,background .18s;
+      box-shadow: 0 0 12px var(--gold-glow),0 0 28px rgba(212,160,23,0.3);
     }
 
     #cur-ring {
@@ -107,7 +83,7 @@
       pointer-events: none;
       z-index: 9998;
       transform: translate(-50%,-50%);
-      transition: width .18s, height .18s;
+      transition: width .18s,height .18s;
     }
 
     body.hov #cur {
@@ -123,15 +99,15 @@
 
     @media (hover:none) and (pointer:coarse) {
       #cur, #cur-ring {
-        display: none !important;
+        display: none !important
       }
 
       body {
-        cursor: auto;
+        cursor: auto
       }
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -192,7 +168,7 @@
     }
 
     .ntitle {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond',serif;
       font-size: 17px;
       font-weight: 600;
       letter-spacing: .16em;
@@ -237,7 +213,7 @@
         font-size: 13px;
       }
 
-    /* ── HERO BANNER ── */
+    /* HERO */
     .page-hero {
       padding: 52px 52px 36px;
       max-width: 1100px;
@@ -268,7 +244,7 @@
       }
 
     .page-h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond',serif;
       font-size: clamp(28px,4.5vw,58px);
       font-weight: 400;
       line-height: 1.1;
@@ -310,7 +286,38 @@
         flex-shrink: 0;
       }
 
-    /* ── LAYOUT ── */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .legal-badge {
+      font-size: 9px;
+      letter-spacing: .12em;
+      color: var(--text-mid);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(29,78,216,0.07);
+      border: 1px solid rgba(29,78,216,0.20);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+      .legal-badge::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--teal-light);
+        box-shadow: 0 0 6px var(--teal-glow);
+      }
+
+    /* LAYOUT */
     .page-layout {
       max-width: 1100px;
       margin: 0 auto;
@@ -321,7 +328,7 @@
       align-items: start;
     }
 
-    /* ── TOC SIDEBAR ── */
+    /* TOC */
     .toc {
       position: sticky;
       top: 80px;
@@ -384,13 +391,13 @@
           background: rgba(124,58,237,0.12);
         }
 
-      .toc-list .toc-num {
-        font-size: 9px;
-        color: var(--text-muted);
-        margin-right: 4px;
-      }
+    .toc-num {
+      font-size: 9px;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
 
-    /* ── CONTENT ── */
+    /* CONTENT */
     .doc-content {
       min-width: 0;
     }
@@ -406,7 +413,32 @@
       scroll-margin-top: 90px;
       position: relative;
       overflow: hidden;
+      animation: fadeUp .5s ease both;
     }
+
+      .doc-section:nth-child(2) {
+        animation-delay: .05s
+      }
+
+      .doc-section:nth-child(3) {
+        animation-delay: .10s
+      }
+
+      .doc-section:nth-child(4) {
+        animation-delay: .15s
+      }
+
+      .doc-section:nth-child(5) {
+        animation-delay: .20s
+      }
+
+      .doc-section:nth-child(6) {
+        animation-delay: .25s
+      }
+
+      .doc-section:nth-child(7) {
+        animation-delay: .30s
+      }
 
       .doc-section::before {
         content: '';
@@ -415,7 +447,7 @@
         left: 0;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, var(--teal), var(--violet-light));
+        background: linear-gradient(90deg,var(--gold-rich),var(--violet-light));
         border-radius: 20px 20px 0 0;
       }
 
@@ -442,7 +474,7 @@
       }
 
     .doc-section h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond',serif;
       font-size: clamp(18px,2.4vw,28px);
       font-weight: 500;
       color: var(--steel);
@@ -451,7 +483,7 @@
     }
 
     .doc-section h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond',serif;
       font-size: clamp(15px,1.8vw,20px);
       font-weight: 500;
       color: var(--steel);
@@ -563,6 +595,22 @@
         line-height: 1.68;
       }
 
+    .critical-box {
+      background: rgba(180,30,30,0.06);
+      border: 1px solid rgba(180,30,30,0.20);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+      .critical-box p {
+        font-size: 12.5px;
+        color: #b01e1e;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.68;
+      }
+
     .data-table {
       width: 100%;
       border-collapse: collapse;
@@ -598,37 +646,6 @@
         background: rgba(124,58,237,0.04);
       }
 
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0;
-    }
-
-    .legal-badge {
-      font-size: 9px;
-      letter-spacing: .12em;
-      color: var(--text-mid);
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(29,78,216,0.07);
-      border: 1px solid rgba(29,78,216,0.20);
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-weight: 600;
-    }
-
-      .legal-badge::before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: var(--teal-light);
-        box-shadow: 0 0 6px var(--teal-glow);
-      }
-
     .contact-card {
       background: rgba(29,78,216,0.06);
       border: 1px solid rgba(29,78,216,0.18);
@@ -638,7 +655,7 @@
     }
 
     .contact-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond',serif;
       font-size: 17px;
       font-weight: 500;
       color: var(--steel);
@@ -660,7 +677,7 @@
         flex-shrink: 0;
       }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     .page-footer {
       border-top: 1px solid rgba(29,78,216,0.10);
       padding: 20px 52px;
@@ -699,94 +716,69 @@
           color: var(--gold-rich);
         }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
+    /* RESPONSIVE */
+    @media(max-width:900px) {
       .page-layout {
         grid-template-columns: 1fr;
-        padding: 24px 20px 60px;
+        padding: 24px 20px 60px
       }
 
       .toc {
         position: static;
-        display: none;
+        display: none
       }
 
       .page-hero {
-        padding: 32px 20px 24px;
+        padding: 32px 20px 24px
       }
 
       nav {
-        padding: 10px 16px;
+        padding: 10px 16px
       }
 
       .page-footer {
         padding: 14px 20px;
         flex-direction: column;
-        text-align: center;
+        text-align: center
       }
     }
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
       .doc-section {
         padding: 22px 18px;
-        border-radius: 14px;
+        border-radius: 14px
       }
 
       .page-h1 {
-        font-size: clamp(22px,7vw,32px);
+        font-size: clamp(22px,7vw,32px)
       }
 
       .data-table {
-        font-size: 11px;
+        font-size: 11px
       }
 
         .data-table th, .data-table td {
-          padding: 8px 10px;
+          padding: 8px 10px
         }
     }
 
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(14px);
+        transform: translateY(14px)
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
       }
     }
-
-    .doc-section {
-      animation: fadeUp .5s ease both;
-    }
-
-      .doc-section:nth-child(2) {
-        animation-delay: .05s;
-      }
-
-      .doc-section:nth-child(3) {
-        animation-delay: .10s;
-      }
-
-      .doc-section:nth-child(4) {
-        animation-delay: .15s;
-      }
-
-      .doc-section:nth-child(5) {
-        animation-delay: .20s;
-      }
-
-      .doc-section:nth-child(6) {
-        animation-delay: .25s;
-      }
   </style>
 </head>
 <body>
   <div id="cur"></div>
   <div id="cur-ring"></div>
 
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="nlogo">
       <div class="nmark">
@@ -800,338 +792,326 @@
     <a href="index.html" class="nav-back">Return to Platform</a>
   </nav>
 
-  <!-- HERO -->
   <div class="page-hero">
-    <div class="page-eyebrow">Legal & Compliance</div>
-    <h1 class="page-h1">Privacy <em>Policy</em></h1>
-    <p style="font-size:13.5px;color:var(--text-mid);line-height:1.78;max-width:620px;margin-top:8px;">
-      This Privacy Policy governs the collection, processing, storage, transfer and protection of personal data by Volaxin Maritime Suite Ltd in connection with the operation of the Volaxin platform, our corporate website, and all associated services.
+    <div class="page-eyebrow">Legal &amp; Compliance</div>
+    <h1 class="page-h1">Terms of <em>Service</em></h1>
+    <p style="font-size:13.5px;color:var(--text-mid);line-height:1.78;max-width:660px;margin-top:8px;">
+      These Terms of Service constitute the entire legally binding agreement between Volaxin Maritime Suite Ltd and any individual or entity accessing, trialling, or subscribing to the Volaxin platform and associated services. Please read this document in full before accessing the platform. Access constitutes unequivocal acceptance.
     </p>
     <div class="page-meta">
       <div class="page-meta-item">Effective Date: 1 January 2025</div>
       <div class="page-meta-item">Last Revised: 19 May 2026</div>
-      <div class="page-meta-item">Version: 3.1</div>
-      <div class="page-meta-item">Jurisdiction: England &amp; Wales / GDPR Applicable</div>
+      <div class="page-meta-item">Version: 4.2</div>
+    
     </div>
-    <div class="badge-row" style="margin-top:18px;">
-      <span class="legal-badge">GDPR Article 13 &amp; 14 Compliant</span>
-      <span class="legal-badge">UK GDPR Aligned</span>
-      <span class="legal-badge">CCPA Ready</span>
-      <span class="legal-badge">ISO/IEC 27001 Framework</span>
-      <span class="legal-badge">MLC 2006 Crew Data Compliant</span>
+    <div class="badge-row">
+     
+      <span class="legal-badge">ICC Arbitration Clause</span>
+      <span class="legal-badge">SaaS Licence — Not Sale</span>
+      <span class="legal-badge">UCTA 1977 Compliant</span>
+      <span class="legal-badge">Consumer Rights Act 2015 Noted</span>
     </div>
   </div>
 
-  <!-- LAYOUT -->
   <div class="page-layout">
-
-    <!-- SIDEBAR TOC -->
     <aside class="toc">
       <div class="toc-title">Contents</div>
       <ul class="toc-list">
-        <li><a href="#s1"><span class="toc-num">01</span> Data Controller</a></li>
-        <li><a href="#s2"><span class="toc-num">02</span> Definitions</a></li>
-        <li><a href="#s3"><span class="toc-num">03</span> Data We Collect</a></li>
-        <li><a href="#s4"><span class="toc-num">04</span> Lawful Basis</a></li>
-        <li><a href="#s5"><span class="toc-num">05</span> How We Use Data</a></li>
-        <li><a href="#s6"><span class="toc-num">06</span> Data Sharing</a></li>
-        <li><a href="#s7"><span class="toc-num">07</span> International Transfers</a></li>
-        <li><a href="#s8"><span class="toc-num">08</span> Retention Periods</a></li>
-        <li><a href="#s9"><span class="toc-num">09</span> Your Rights</a></li>
-        <li><a href="#s10"><span class="toc-num">10</span> Cookies &amp; Tracking</a></li>
-        <li><a href="#s11"><span class="toc-num">11</span> Maritime Specific Data</a></li>
-        <li><a href="#s12"><span class="toc-num">12</span> Children's Privacy</a></li>
-        <li><a href="#s13"><span class="toc-num">13</span> Policy Changes</a></li>
-        <li><a href="#s14"><span class="toc-num">14</span> Contact &amp; DPO</a></li>
+        <li><a href="#t1"><span class="toc-num">01</span> Interpretation</a></li>
+        <li><a href="#t2"><span class="toc-num">02</span> Platform Licence</a></li>
+        <li><a href="#t3"><span class="toc-num">03</span> Intellectual Property</a></li>
+        <li><a href="#t4"><span class="toc-num">04</span> Subscription &amp; Fees</a></li>
+        <li><a href="#t5"><span class="toc-num">05</span> Service Level Agreement</a></li>
+        <li><a href="#t6"><span class="toc-num">06</span> Client Obligations</a></li>
+        <li><a href="#t7"><span class="toc-num">07</span> Acceptable Use</a></li>
+        <li><a href="#t8"><span class="toc-num">08</span> Data Ownership</a></li>
+        <li><a href="#t9"><span class="toc-num">09</span> Confidentiality</a></li>
+        <li><a href="#t10"><span class="toc-num">10</span> Warranties &amp; Disclaimers</a></li>
+        <li><a href="#t11"><span class="toc-num">11</span> Limitation of Liability</a></li>
+        <li><a href="#t12"><span class="toc-num">12</span> Indemnification</a></li>
+        <li><a href="#t13"><span class="toc-num">13</span> Term &amp; Termination</a></li>
+        <li><a href="#t14"><span class="toc-num">14</span> Force Majeure</a></li>
+        <li><a href="#t15"><span class="toc-num">15</span> Governing Law</a></li>
+        <li><a href="#t16"><span class="toc-num">16</span> General Provisions</a></li>
       </ul>
     </aside>
 
-    <!-- CONTENT -->
     <main class="doc-content">
 
       <!-- §1 -->
-      <div class="doc-section" id="s1">
+      <div class="doc-section" id="t1">
         <div class="sec-num">Section 01</div>
-        <h2>Data Controller Identity &amp; Corporate Details</h2>
-        <p>
-          For the purposes of the UK General Data Protection Regulation (UK GDPR), the EU General Data Protection Regulation 2016/679 (EU GDPR), and all applicable national data protection legislation, the Data Controller of personal data processed in connection with the Volaxin Maritime Suite platform and all related services is:
-        </p>
-        <div class="contact-card">
-          <div class="contact-card-title">Volaxin Maritime Suite Ltd</div>
-          <!--   <div class="contact-row"><span>⊕</span> Registered in England &amp; Wales — Company No. [Registered Number]</div>-->
-          <div class="contact-row"><span>✉</span> info@volaxin.com</div>
-          <div class="contact-row"><span>☎</span> +44 35342 322358</div>
-          <!--<div class="contact-row"><span>▣</span> Registered Office: [Registered Address], London, United Kingdom</div>-->
-        </div>
-        <p style="margin-top:14px;">
-          Where Volaxin processes personal data on behalf of its clients (ship operators, fleet managers, crewing agencies, and other maritime organisations), Volaxin acts as a <strong>Data Processor</strong> under the terms of the applicable Data Processing Agreement (DPA) executed between Volaxin and the respective client entity, which constitutes the Data Controller for such data.
-        </p>
-        <div class="highlight-box">
-          <span class="highlight-box-icon">ℹ</span>
-          <p>If you are a seafarer whose personal data has been uploaded by your employer or crewing manager, your primary data controller is that employing or crewing organisation. You should also direct rights requests to Volaxin as processor where direct access to platform data is required.</p>
-        </div>
+        <h2>Interpretation &amp; Defined Terms</h2>
+        <p>In these Terms of Service, the following definitions apply with binding effect. Where the context so requires, words in the singular include the plural and vice versa, and references to one gender include all genders.</p>
+        <table class="data-table">
+          <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><strong>"Agreement"</strong></td><td>These Terms of Service together with the applicable Order Form, any executed Data Processing Agreement, and all schedules and exhibits incorporated herein by reference.</td></tr>
+            <tr><td><strong>"Authorised Users"</strong></td><td>Individual natural persons — employees, contractors, and agents of the Client — who are permitted by the Client to access the Platform under the subscription, subject to any user seat limits specified in the Order Form.</td></tr>
+            <tr><td><strong>"Client"</strong></td><td>The legal entity (shipowner, ship manager, crewing agency, or other maritime organisation) that has entered into an Order Form with Volaxin, and in whose name the subscription account is registered.</td></tr>
+            <tr><td><strong>"Client Data"</strong></td><td>All data, information, records, files, and content — including vessel operational data, crew personal data, maintenance records, and compliance documentation — uploaded to, processed within, or generated by Client's use of the Platform.</td></tr>
+            <tr><td><strong>"Documentation"</strong></td><td>The technical manuals, user guides, API specifications, release notes, and operational procedures published by Volaxin and made available within the Platform or at docs.volaxin.com.</td></tr>
+            <tr><td><strong>"Order Form"</strong></td><td>The executed commercial agreement or online checkout confirmation specifying the subscribed modules, number of vessels, user seat allocation, subscription term, and applicable fees.</td></tr>
+            <tr><td><strong>"Platform"</strong></td><td>The Volaxin Maritime Suite SaaS application and all its modules (PMS, INV, CREW, DMS, SHEQ, WRH, NAV, PRC, RPT, CRB), including the web interface, mobile applications, APIs, offline synchronisation tooling, and all updates, enhancements, and derivatives thereof.</td></tr>
+            <tr><td><strong>"Volaxin IP"</strong></td><td>All intellectual property subsisting in the Platform, including source code, algorithms, AI/ML models, database schemas, user interface designs, trademarks, trade secrets, and all other proprietary technology developed by or for Volaxin.</td></tr>
+          </tbody>
+        </table>
+        <p>References to statutory provisions include those provisions as amended, modified, consolidated, extended, re-enacted, or replaced from time to time. Headings are included for convenience only and shall not affect the interpretation of this Agreement.</p>
       </div>
 
       <!-- §2 -->
-      <div class="doc-section" id="s2">
+      <div class="doc-section" id="t2">
         <div class="sec-num">Section 02</div>
-        <h2>Definitions &amp; Interpretive Framework</h2>
-        <p>Throughout this Privacy Policy, the following capitalised terms carry the meanings set out below:</p>
-        <table class="data-table">
-          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Personal Data</strong></td><td>Any information relating to an identified or identifiable natural person ("data subject") as defined in Article 4(1) GDPR, including but not limited to names, identification numbers, location data, online identifiers, and professional credentials.</td></tr>
-            <tr><td><strong>Special Category Data</strong></td><td>Personal data revealing racial or ethnic origin, health data, biometric data processed for identification purposes, or any other category listed under Article 9(1) GDPR, processing of which requires an explicit supplementary lawful basis.</td></tr>
-            <tr><td><strong>Processing</strong></td><td>Any operation or set of operations performed on personal data, whether or not by automated means, including collection, recording, organisation, structuring, storage, adaptation, retrieval, consultation, use, disclosure, dissemination, restriction, erasure or destruction.</td></tr>
-            <tr><td><strong>Platform</strong></td><td>The Volaxin Maritime Suite SaaS application, including all modules (PMS, INV, CREW, DMS, SHEQ, WRH, NAV, PRC, RPT, CRB), associated mobile applications, APIs, and offline synchronisation tooling.</td></tr>
-            <tr><td><strong>Data Processing Agreement (DPA)</strong></td><td>The binding contractual instrument executed between Volaxin and each client organisation governing the terms under which Volaxin processes personal data as a processor.</td></tr>
-            <tr><td><strong>Standard Contractual Clauses (SCCs)</strong></td><td>The European Commission-approved contractual mechanisms for the lawful transfer of personal data to third countries, as updated by Commission Implementing Decision (EU) 2021/914.</td></tr>
-          </tbody>
-        </table>
+        <h2>Platform Licence Grant &amp; Restrictions</h2>
+        <h3>2.1 Licence Grant</h3>
+        <p>Subject to (i) execution of an Order Form, (ii) timely payment of all applicable fees, and (iii) ongoing compliance with this Agreement in its entirety, Volaxin hereby grants to the Client a non-exclusive, non-transferable, non-sublicensable, revocable, limited licence to access and use the Platform during the subscription term, solely for the Client's internal business operations relating to the management of vessels, crew, and maritime compliance activities, and solely by Authorised Users up to the seat limit specified in the Order Form.</p>
+        <div class="highlight-box">
+          <span class="highlight-box-icon">📋</span>
+          <p>This Agreement constitutes a licence to access software-as-a-service hosted by Volaxin. It does not constitute the sale of any software, and no ownership interest in the Platform, its source code, or any component thereof passes to the Client at any time.</p>
+        </div>
+        <h3>2.2 Licence Restrictions</h3>
+        <p>Except as expressly permitted by this Agreement or applicable mandatory law, the Client shall not, and shall procure that its Authorised Users do not:</p>
+        <ul>
+          <li>Copy, reproduce, translate, adapt, modify, create derivative works from, or otherwise alter the Platform or any component thereof</li>
+          <li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code, algorithms, AI models, database schemas, or underlying structure of the Platform, except to the limited extent mandated by applicable law and after providing Volaxin with 30 days' prior written notice and an opportunity to provide the requested interoperability information</li>
+          <li>Distribute, sublicense, sell, resell, transfer, assign, or otherwise commercially exploit or make the Platform available to any third party, including on a bureau service, time-sharing, managed services, or outsourcing basis</li>
+          <li>Remove, obscure, or alter any proprietary notices, copyright legends, watermarks, or branding elements embedded within or displayed by the Platform</li>
+          <li>Access the Platform for the purpose of building a competing product or service, benchmarking against a competing product without Volaxin's prior written consent, or harvesting data for any purpose other than the Client's legitimate operational needs</li>
+          <li>Use automated scraping tools, bots, crawlers, or data extraction mechanisms against the Platform's APIs or user interface beyond those expressly authorised in writing by Volaxin</li>
+          <li>Exceed the number of vessels, user seats, or API call rate limits specified in the Order Form without first executing an appropriate amendment</li>
+        </ul>
+        <h3>2.3 Trial and Evaluation Access</h3>
+        <p>Where Volaxin provides access to the Platform on a trial or evaluation basis ("Trial Access"), such Trial Access is provided strictly "as-is" with no warranties of any kind, for the evaluation period stated in the trial confirmation (typically 14–30 days). Volaxin reserves the right to terminate Trial Access at any time without notice. Client Data uploaded during a trial period will be retained for 14 days following expiry of the trial, after which it will be permanently deleted unless the Client converts to a paid subscription.</p>
       </div>
 
       <!-- §3 -->
-      <div class="doc-section" id="s3">
+      <div class="doc-section" id="t3">
         <div class="sec-num">Section 03</div>
-        <h2>Categories of Personal Data We Collect</h2>
-        <h3>3.1 Account &amp; Identity Data</h3>
-        <p>When you or your organisation creates an account on the Volaxin platform, we collect:</p>
-        <ul>
-          <li>Full legal name, professional title, and business email address</li>
-          <li>Job function, department, and organisational role within the fleet management hierarchy</li>
-          <li>Phone number (optional, for multi-factor authentication and support escalation)</li>
-          <li>Login credentials in hashed, salted, cryptographically irreversible form (bcrypt / Argon2id)</li>
-          <li>IP address and device fingerprint metadata associated with authentication events</li>
-          <li>Time-stamped access logs, session tokens, and API key associations</li>
-        </ul>
-        <h3>3.2 Seafarer &amp; Crew Personal Data</h3>
-        <p>The Crew Management module of the Platform processes significant volumes of personal data relating to seafarers and maritime personnel, including:</p>
-        <ul>
-          <li>Full name, date of birth, nationality, and passport / national ID details</li>
-          <li>STCW Certificate of Competency numbers, flag state endorsements, and GMDSS licence details</li>
-          <li>Medical fitness certificates (ENG1 or equivalent), vaccination records, and Yellow Fever certification — constituting Special Category (health) data under Article 9 GDPR</li>
-          <li>Seafarer Employment Agreement (SEA) terms, rank, vessel assignment, and embarkation/disembarkation dates</li>
-          <li>Wage scales, allotment instructions, and payroll records</li>
-          <li>Next-of-kin contact details and emergency notification preferences</li>
-          <li>Performance appraisal records and disciplinary history (where applicable)</li>
-          <li>Flag state Continuous Discharge Book (CDB) and Seaman's Book details</li>
-        </ul>
-        <div class="warning-box">
-          <p>⚠ Health and medical data constitutes Special Category personal data under Article 9(1) GDPR. Such data is processed solely under Article 9(2)(b) (employment law obligations) and Article 9(2)(h) (occupational health purposes), and is subject to elevated access controls, encryption, and a strictly limited retention schedule.</p>
-        </div>
-        <h3>3.3 Usage &amp; Telemetry Data</h3>
-        <p>The Platform automatically collects technical and behavioural data to ensure service performance, security monitoring, and product improvement:</p>
-        <ul>
-          <li>Browser type, operating system, screen resolution, and device hardware category</li>
-          <li>Page views, feature interactions, click-path sequences, and session duration metrics</li>
-          <li>API call logs, error events, and performance timing data (retained in anonymised aggregate form after 90 days)</li>
-          <li>Vessel AIS identifiers and position data where integrated via approved SATCOM or AIS data providers</li>
-        </ul>
-        <h3>3.4 Communications Data</h3>
-        <p>When you contact Volaxin support, submit a sales enquiry, or participate in a product demonstration, we collect the content of such communications, associated metadata, and any attachments you provide.</p>
+        <h2>Intellectual Property Rights &amp; Ownership</h2>
+        <h3>3.1 Volaxin Intellectual Property</h3>
+        <p>Volaxin and its licensors retain sole and exclusive ownership of all right, title, and interest in and to the Platform and all Volaxin IP, including all enhancements, improvements, and derivative works, whether or not such enhancements were developed in response to Client feedback or requests. Nothing in this Agreement transfers any intellectual property rights to the Client. The Client's only rights with respect to the Platform are the limited licence rights expressly set forth in Section 2.1.</p>
+        <h3>3.2 Client Data Ownership</h3>
+        <p>As between Volaxin and the Client, the Client retains sole and exclusive ownership of all Client Data. Volaxin acquires no ownership interest in Client Data by virtue of processing, storing, transmitting, or analysing it in connection with the provision of the Platform. The Client grants Volaxin a limited, non-exclusive, worldwide licence to use, process, store, and transmit Client Data solely to the extent necessary to provide the Platform and associated services, and for no other purpose.</p>
+        <h3>3.3 Aggregated Anonymous Data</h3>
+        <p>Notwithstanding the foregoing, Volaxin reserves the right to analyse aggregated, fully anonymised, and de-identified data derived from all clients' use of the Platform for the purposes of improving platform performance, developing new features, producing industry benchmarking reports, and training AI/ML models. Such anonymised data shall not contain any information from which the Client, its vessels, or individual data subjects can be identified, and shall be treated as Volaxin's proprietary information.</p>
+        <h3>3.4 Feedback Licence</h3>
+        <p>Where the Client or its Authorised Users voluntarily provide Volaxin with suggestions, enhancement requests, recommendations, bug reports, or other feedback relating to the Platform ("Feedback"), the Client grants Volaxin a perpetual, irrevocable, royalty-free, worldwide, sublicensable licence to use, incorporate, and exploit such Feedback in any manner and for any purpose, without any obligation of compensation, attribution, or confidentiality to the Client.</p>
+        <h3>3.5 Trademarks</h3>
+        <p>The VOLAXIN name, logo, "Maritime Suite" designation, and all associated product names, service marks, and trade dress are registered and unregistered trademarks of Volaxin Maritime Suite Ltd. Nothing in this Agreement grants any right to use Volaxin's trademarks without prior written consent. Unauthorised use constitutes trademark infringement actionable in the courts of England and Wales and relevant international jurisdictions.</p>
       </div>
 
       <!-- §4 -->
-      <div class="doc-section" id="s4">
+      <div class="doc-section" id="t4">
         <div class="sec-num">Section 04</div>
-        <h2>Lawful Basis for Processing</h2>
-        <p>Volaxin identifies and documents a specific lawful basis for each category of processing activity conducted as a Controller, in strict compliance with Article 6 GDPR:</p>
-        <table class="data-table">
-          <thead><tr><th>Processing Activity</th><th>Lawful Basis (Art. 6)</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td>Account creation and Platform access</td><td>6(1)(b) — Contract performance</td><td>Necessary to deliver subscribed services</td></tr>
-            <tr><td>Billing and invoicing</td><td>6(1)(b) — Contract performance; 6(1)(c) — Legal obligation</td><td>Tax and accounting obligations apply</td></tr>
-            <tr><td>Security monitoring and fraud prevention</td><td>6(1)(f) — Legitimate interests</td><td>LIA conducted; interests not overridden</td></tr>
-            <tr><td>Product analytics and improvement</td><td>6(1)(f) — Legitimate interests (anonymised)</td><td>Data pseudonymised or aggregated before use</td></tr>
-            <tr><td>Marketing communications</td><td>6(1)(a) — Consent</td><td>Opt-in only; unsubscribe honoured immediately</td></tr>
-            <tr><td>Regulatory reporting (flag state)</td><td>6(1)(c) — Legal obligation</td><td>MLC 2006, STCW, ISM requirements</td></tr>
-            <tr><td>Crew medical data</td><td>9(2)(b) and 9(2)(h) — Employment law &amp; occupational health</td><td>Supplementary Art. 9 basis documented per jurisdiction</td></tr>
-          </tbody>
-        </table>
+        <h2>Subscription Fees, Billing &amp; Payment Terms</h2>
+        <h3>4.1 Subscription Fees</h3>
+        <p>The Client shall pay Volaxin the subscription fees as set out in the applicable Order Form. Unless otherwise specified, fees are denominated in United States Dollars (USD) and are exclusive of all applicable taxes, levies, and duties including VAT, GST, sales tax, withholding tax, and any other governmental charge ("Taxes"), which shall be the sole responsibility of the Client.</p>
+        <h3>4.2 Billing &amp; Invoice Terms</h3>
+        <p>Subscription fees are invoiced in advance at the commencement of each billing period (monthly or annual, as specified in the Order Form). All invoices are due and payable within 30 calendar days of the invoice date, by wire transfer, credit card, or such other payment method as agreed in the Order Form. Time is of the essence with respect to payment obligations.</p>
+        <h3>4.3 Late Payment</h3>
+        <p>Without prejudice to any other right or remedy, Volaxin reserves the right to charge interest on overdue amounts at the rate of 8% per annum above the Bank of England base rate, calculated on a daily basis from the due date until the date of actual payment, pursuant to the Late Payment of Commercial Debts (Interest) Act 1998. Volaxin further reserves the right to suspend Platform access (after 15 days' written notice) or terminate this Agreement (after 30 days' written notice) in respect of any invoice remaining unpaid beyond 45 days after its due date.</p>
+        <h3>4.4 Price Adjustments</h3>
+        <p>Volaxin reserves the right to adjust subscription fees at any time on 60 days' written notice for existing subscriptions. Fee increases shall not exceed 5% per annum without Client consent, except where such increases reflect demonstrably higher third-party infrastructure costs (in which case Volaxin will provide supporting documentation upon request). The Client may terminate the Agreement without penalty within 30 days of receiving a price increase notice if it does not accept the new pricing.</p>
+        <h3>4.5 Refund Policy</h3>
+        <p>All subscription fees are non-refundable except where (a) Volaxin fails to meet the uptime SLA thresholds specified in Section 5 and service credits are applicable, (b) Volaxin materially breaches this Agreement and fails to cure such breach within the cure period, or (c) applicable mandatory consumer protection law requires a refund. Pro-rated refunds may be issued at Volaxin's sole discretion upon early termination requested by the Client for legitimate operational reasons.</p>
       </div>
 
       <!-- §5 -->
-      <div class="doc-section" id="s5">
+      <div class="doc-section" id="t5">
         <div class="sec-num">Section 05</div>
-        <h2>How We Use Personal Data</h2>
-        <p>Personal data collected by Volaxin is used exclusively for the following clearly defined purposes, each of which is supported by a documented lawful basis and proportionality assessment:</p>
-        <ol>
-          <li><strong>Service Delivery.</strong> To provision, operate, maintain, and support the Volaxin Platform in accordance with the subscription agreement, including user account management, vessel data management, and scheduled maintenance workflows.</li>
-          <li><strong>Regulatory Compliance &amp; Reporting.</strong> To assist client organisations in meeting obligations under the Maritime Labour Convention 2006, STCW 1978 (as amended), ISM Code, ISPS Code, IMO CII regulations, EU-ETS, and applicable flag state legislation.</li>
-          <li><strong>Security &amp; Fraud Prevention.</strong> To detect, investigate, and prevent unauthorised access, data breaches, account compromise, or misuse of the Platform through continuous security monitoring, anomaly detection, and audit logging.</li>
-          <li><strong>Platform Performance &amp; Improvement.</strong> To analyse aggregated, pseudonymised usage patterns to identify performance bottlenecks, usability improvements, and new feature priorities — without building individual behavioural profiles.</li>
-          <li><strong>Customer Support.</strong> To respond to technical queries, resolve incidents, and provide the 24/7 specialist maritime support that constitutes a core element of the Volaxin service commitment.</li>
-          <li><strong>Contractual &amp; Legal Obligations.</strong> To fulfil our contractual obligations to client organisations, including Data Processing Agreements, and to comply with applicable laws including tax, employment, and maritime regulations.</li>
-          <li><strong>Marketing Communications (with Consent).</strong> To send product updates, industry intelligence reports, event invitations, and promotional communications to individuals who have expressly opted in to receive such content.</li>
-        </ol>
+        <h2>Service Level Agreement (SLA) &amp; Support Commitments</h2>
+        <h3>5.1 Uptime Commitment</h3>
+        <p>Volaxin commits to maintaining 99.9% Platform availability (measured monthly, excluding scheduled maintenance windows). This equates to a maximum of approximately 8.76 hours of unplanned downtime per year. Availability is measured by Volaxin's external monitoring infrastructure and reported in real-time at status.volaxin.com.</p>
+        <table class="data-table">
+          <thead><tr><th>Monthly Uptime</th><th>SLA Credit (% of Monthly Fee)</th></tr></thead>
+          <tbody>
+            <tr><td>99.9% – 100% (SLA Met)</td><td>No credit applicable</td></tr>
+            <tr><td>99.0% – 99.89%</td><td>5% service credit</td></tr>
+            <tr><td>95.0% – 98.99%</td><td>10% service credit</td></tr>
+            <tr><td>90.0% – 94.99%</td><td>20% service credit</td></tr>
+            <tr><td>Below 90.0%</td><td>30% service credit; Client may terminate for cause</td></tr>
+          </tbody>
+        </table>
+        <p>Service credits must be claimed in writing within 30 days of the month in which the downtime occurred. Credits are applied to the next invoice and are the Client's sole and exclusive remedy for Platform unavailability, except in cases where downtime is attributable to Volaxin's wilful misconduct or gross negligence.</p>
+        <h3>5.2 Support Response Commitments</h3>
+        <table class="data-table">
+          <thead><tr><th>Priority Level</th><th>Definition</th><th>Initial Response</th><th>Resolution Target</th></tr></thead>
+          <tbody>
+            <tr><td><strong>P1 — Critical</strong></td><td>Complete Platform unavailability or data corruption risk affecting active vessel operations</td><td>Under 4 minutes</td><td>2 hours</td></tr>
+            <tr><td><strong>P2 — High</strong></td><td>Core module non-functional; significant operational impact; no workaround available</td><td>Under 30 minutes</td><td>4 hours</td></tr>
+            <tr><td><strong>P3 — Medium</strong></td><td>Module partially impaired; workaround available; moderate operational impact</td><td>Under 2 hours</td><td>24 hours</td></tr>
+            <tr><td><strong>P4 — Low</strong></td><td>Minor defect; cosmetic issue; feature enhancement request; general query</td><td>Under 4 hours</td><td>5 business days</td></tr>
+          </tbody>
+        </table>
+        <h3>5.3 Scheduled Maintenance</h3>
+        <p>Volaxin performs routine scheduled maintenance during defined low-usage windows (typically between 02:00–04:00 UTC on Sundays). Advance notice of at least 72 hours will be provided via the Platform notification system and email for maintenance windows exceeding 30 minutes. Emergency maintenance required to address critical security vulnerabilities may be executed with shorter notice, with full post-incident disclosure within 24 hours.</p>
       </div>
 
       <!-- §6 -->
-      <div class="doc-section" id="s6">
+      <div class="doc-section" id="t6">
         <div class="sec-num">Section 06</div>
-        <h2>Data Sharing &amp; Third-Party Disclosures</h2>
-        <p>Volaxin does not sell, rent, or trade personal data. We share personal data only in the following defined and documented circumstances:</p>
-        <h3>6.1 Sub-Processors</h3>
-        <p>Volaxin engages a limited number of carefully vetted sub-processors to support the delivery of the Platform. All sub-processors are bound by a written Data Processing Agreement, are required to maintain equivalent data protection standards, and are assessed against our Security Supplier Questionnaire prior to engagement and at annual renewal. Current sub-processor categories include:</p>
-        <ul>
-          <li>Cloud infrastructure providers (hosting, storage, database management)</li>
-          <li>Transactional email delivery services (for system notifications and alerts)</li>
-          <li>Customer relationship management (CRM) platform (sales and support context only)</li>
-          <li>Payment processing service (no card data touches Volaxin systems; fully PCI DSS scoped to provider)</li>
-          <li>Security and monitoring tooling (SIEM, vulnerability scanning, penetration testing partners)</li>
-          <li>Video conferencing and collaboration tools (for support and onboarding sessions)</li>
-        </ul>
-        <p>A complete and current list of approved sub-processors is available upon written request to info@volaxin.com. Volaxin will provide 30 days' advance notice of any material sub-processor changes via the Platform notification system and email, affording clients the right to object as provided under Article 28(2) GDPR.</p>
-        <h3>6.2 Regulatory &amp; Legal Disclosures</h3>
-        <p>We may disclose personal data to competent regulatory authorities, flag state administrations, port state control officers, or law enforcement bodies where we are legally compelled to do so, subject to appropriate verification of the legal basis and, where permitted, prior notification to the data subject or client organisation.</p>
-        <h3>6.3 Professional Advisers</h3>
-        <p>Volaxin may share data in anonymised or aggregated form with legal advisers, auditors, and insurers for the purpose of obtaining professional advice, conducting audits, or managing claims. Such sharing is governed by professional confidentiality obligations and, where applicable, data sharing agreements.</p>
-        <h3>6.4 Business Transfers</h3>
-        <p>In the event of a merger, acquisition, restructuring, or sale of all or substantially all of Volaxin's assets, personal data may be transferred to the acquiring entity, subject to equivalent privacy commitments and advance notification to affected data subjects in compliance with applicable law.</p>
+        <h2>Client Obligations &amp; Responsibilities</h2>
+        <p>The Client assumes full responsibility for the following obligations throughout the subscription term:</p>
+        <ol>
+          <li><strong>Account Security.</strong> Maintaining the confidentiality and security of all account credentials, API keys, and access tokens. All activity conducted through Authorised User accounts shall be deemed the Client's activity and the Client's responsibility, regardless of whether such activity was authorised.</li>
+          <li><strong>Authorised User Management.</strong> Ensuring that Authorised Users are aware of and comply with the terms of this Agreement, implementing appropriate access controls, promptly revoking access of departed employees or contractors, and not sharing individual user credentials across multiple persons.</li>
+          <li><strong>Data Accuracy &amp; Integrity.</strong> Ensuring the accuracy, completeness, and legality of all Client Data uploaded to the Platform, including vessel particulars, crew records, maintenance data, and compliance documentation. Volaxin bears no liability for consequences arising from inaccurate Client Data.</li>
+          <li><strong>Regulatory Compliance.</strong> Maintaining compliance with all applicable maritime regulations, flag state requirements, and classification society rules independent of the Platform. The Platform is a tool to assist compliance; it does not substitute for qualified maritime professional judgment or legal advice.</li>
+          <li><strong>System Requirements.</strong> Ensuring that Authorised Users' computing devices, browsers, and network infrastructure meet the minimum system requirements published in the Documentation. Volaxin is not liable for degraded performance attributable to inadequate client-side infrastructure.</li>
+          <li><strong>Incident Notification.</strong> Promptly notifying Volaxin upon becoming aware of any actual or suspected security breach, unauthorised access, or compromise of Authorised User credentials that may affect the integrity of Platform data or infrastructure.</li>
+          <li><strong>Export Compliance.</strong> Ensuring that Client's use of the Platform complies with all applicable export control laws and sanctions regimes, including those administered by the UK Export Control Joint Unit (ECJU), the US Office of Foreign Assets Control (OFAC), and the EU Council's sanctions regulations.</li>
+        </ol>
       </div>
 
       <!-- §7 -->
-      <div class="doc-section" id="s7">
+      <div class="doc-section" id="t7">
         <div class="sec-num">Section 07</div>
-        <h2>International Data Transfers</h2>
-        <p>
-          Given the inherently global nature of maritime operations, Volaxin processes and may transfer personal data to recipients located outside the United Kingdom and the European Economic Area (EEA). All such international transfers are governed by one or more of the following legally recognised safeguard mechanisms:
-        </p>
+        <h2>Acceptable Use Policy</h2>
+        <p>The Platform may be used only for lawful purposes directly related to maritime fleet, vessel, crew, and compliance management. The following categories of use are strictly prohibited and constitute material breaches of this Agreement entitling Volaxin to immediate suspension or termination without liability:</p>
         <ul>
-          <li><strong>UK Adequacy Regulations:</strong> Where the recipient country has been designated as adequate by the UK Secretary of State under Section 17A of the UK Data Protection Act 2018.</li>
-          <li><strong>EU Adequacy Decisions:</strong> Where the recipient country has been recognised as adequate by the European Commission under Article 45 GDPR.</li>
-          <li><strong>UK International Data Transfer Agreements (IDTAs):</strong> The UK-specific contractual mechanism approved by the Information Commissioner's Office (ICO) for transfers from the UK to third countries.</li>
-          <li><strong>EU Standard Contractual Clauses (SCCs):</strong> The 2021 European Commission-approved SCCs, Module 2 (Controller-to-Processor) and Module 3 (Processor-to-Processor), as applicable.</li>
-          <li><strong>Binding Corporate Rules (BCRs):</strong> Where sub-processors operate within a group subject to ICO or supervisory authority-approved BCRs.</li>
+          <li>Use of the Platform in furtherance of any criminal, fraudulent, or tortious activity, including but not limited to the falsification of vessel maintenance records, crew certificates, work and rest hours data, or any statutory maritime document</li>
+          <li>Upload or processing of data relating to vessels, individuals, or entities subject to international sanctions administered by the UN Security Council, UK OFSI, EU, US OFAC, or any other competent authority</li>
+          <li>Introduction of malicious code, viruses, trojans, ransomware, or any other harmful programming routines into the Platform or its underlying infrastructure</li>
+          <li>Interference with, disruption of, or unauthorised probing of the Platform's infrastructure, APIs, or data centres, including unauthorised penetration testing without prior written consent from Volaxin's security team</li>
+          <li>Systematic mass-download, harvesting, or exfiltration of data beyond normal operational use, whether for competitive intelligence, data brokerage, or any other purpose</li>
+          <li>Misrepresentation of identity, vessel identity, flag state registration, or other material particulars within the Platform</li>
+          <li>Processing of content that is defamatory, discriminatory, racially or ethnically offensive, or that violates the rights of any third party, including privacy rights and intellectual property rights</li>
         </ul>
-        <p>Volaxin maintains a Transfer Impact Assessment (TIA) registry for all international data flows, which evaluates the legal landscape of the destination country and documents supplementary technical and organisational measures applied to ensure equivalent protection. This registry is reviewed quarterly and is available to clients upon request under the applicable DPA.</p>
-        <div class="highlight-box">
-          <span class="highlight-box-icon">🔐</span>
-          <p>All data transferred internationally — including replication to disaster recovery environments — is encrypted in transit using TLS 1.3 and at rest using AES-256. Additional application-layer encryption is applied to Special Category data regardless of geographic location.</p>
+        <div class="critical-box">
+          <p>⛔ The falsification of Work &amp; Rest Hours records, medical certificates, or any other statutory maritime document facilitated through misuse of the Platform may constitute a criminal offence under the Merchant Shipping Act 1995, MLC 2006, and equivalent national legislation. Volaxin will cooperate fully with competent authorities in any investigation of such misconduct, including by disclosing relevant Platform access logs and data pursuant to a valid legal instrument.</p>
         </div>
       </div>
 
       <!-- §8 -->
-      <div class="doc-section" id="s8">
+      <div class="doc-section" id="t8">
         <div class="sec-num">Section 08</div>
-        <h2>Data Retention Periods</h2>
-        <p>Volaxin applies a documented data retention schedule aligned with legal obligations, legitimate business requirements, and data minimisation principles. We do not retain personal data beyond the period necessary for the stated purpose:</p>
-        <table class="data-table">
-          <thead><tr><th>Data Category</th><th>Retention Period</th><th>Basis for Period</th></tr></thead>
-          <tbody>
-            <tr><td>Active Platform account data</td><td>Duration of subscription + 90 days</td><td>Contract; post-termination data export window</td></tr>
-            <tr><td>Seafarer certification records</td><td>5 years post last voyage</td><td>MLC 2006 flag state requirements</td></tr>
-            <tr><td>Work &amp; Rest Hours records</td><td>3 years (MLC 2006 Regulation 2.3)</td><td>Mandatory regulatory retention</td></tr>
-            <tr><td>Crew medical data</td><td>5 years or as required by flag state</td><td>STCW, MLC 2006, flag state regulations</td></tr>
-            <tr><td>SHEQ incident records</td><td>5 years from date of closure</td><td>ISM Code; limitation periods</td></tr>
-            <tr><td>Security audit logs</td><td>24 months rolling</td><td>ISO/IEC 27001; ICO guidance</td></tr>
-            <tr><td>Billing &amp; financial records</td><td>7 years</td><td>UK Companies Act 2006; HMRC requirements</td></tr>
-            <tr><td>Marketing consent records</td><td>3 years from last interaction or withdrawal</td><td>UK PECR; ICO guidance</td></tr>
-            <tr><td>Support communication records</td><td>3 years from case closure</td><td>Legitimate interest; dispute resolution</td></tr>
-            <tr><td>Anonymised usage analytics</td><td>Indefinite (no personal identifiers)</td><td>Not personal data post-anonymisation</td></tr>
-          </tbody>
-        </table>
-        <p>Upon expiry of the applicable retention period, personal data is permanently deleted using cryptographic erasure (where data is encrypted) or multi-pass secure overwrite techniques conforming to NIST SP 800-88 and NCSC guidance, with deletion certificates issued to clients upon request.</p>
+        <h2>Client Data — Ownership, Export &amp; Deletion</h2>
+        <h3>8.1 Data Portability on Termination</h3>
+        <p>Upon termination or expiry of the subscription for any reason, Volaxin will make all Client Data available for export in standard machine-readable formats (JSON, XML, CSV, PDF) for a period of 90 calendar days following the effective termination date. The Client is responsible for initiating and completing such data export during this window. Volaxin will provide reasonable technical assistance with export at no additional charge.</p>
+        <h3>8.2 Post-Export Deletion</h3>
+        <p>Following expiry of the 90-day export window, or upon earlier written request from the Client following completed data export, Volaxin will permanently delete all Client Data from its production systems, backup systems, and disaster recovery infrastructure. Deletion will be completed within 30 days of the request and confirmed to the Client in writing, subject to retention obligations imposed by applicable law or regulatory requirement (which Volaxin will disclose).</p>
+        <h3>8.3 Data Processing Agreement</h3>
+        <p>Where the Client uploads personal data (as defined under applicable data protection law) to the Platform, such processing is governed by Volaxin's Data Processing Agreement (DPA), which is incorporated into this Agreement by reference. In the event of any conflict between the DPA and these Terms of Service in respect of personal data processing, the DPA shall prevail.</p>
       </div>
 
       <!-- §9 -->
-      <div class="doc-section" id="s9">
+      <div class="doc-section" id="t9">
         <div class="sec-num">Section 09</div>
-        <h2>Your Data Subject Rights</h2>
-        <p>Under UK GDPR, EU GDPR, and applicable national legislation, data subjects whose personal data is processed by Volaxin as Controller have the following enforceable rights:</p>
-        <ol>
-          <li><strong>Right of Access (Article 15 GDPR).</strong> The right to obtain confirmation of whether personal data is being processed and to receive a copy of that data, along with prescribed supplementary information.</li>
-          <li><strong>Right to Rectification (Article 16 GDPR).</strong> The right to obtain correction of inaccurate personal data or completion of incomplete personal data without undue delay.</li>
-          <li><strong>Right to Erasure / Right to be Forgotten (Article 17 GDPR).</strong> The right to request deletion of personal data where it is no longer necessary for the purpose for which it was collected, where consent is withdrawn, or where there is no overriding legitimate basis for continued processing. This right is subject to exceptions including legal retention obligations.</li>
-          <li><strong>Right to Restriction of Processing (Article 18 GDPR).</strong> The right to request that processing be restricted in defined circumstances, including during a period of accuracy verification or pending an objection determination.</li>
-          <li><strong>Right to Data Portability (Article 20 GDPR).</strong> The right to receive personal data in a structured, commonly used, machine-readable format and to transmit that data to another controller, where technically feasible. Volaxin supports export in JSON, XML, and CSV formats across all core modules.</li>
-          <li><strong>Right to Object (Article 21 GDPR).</strong> The right to object at any time to processing based on legitimate interests, including profiling, and to processing for direct marketing purposes (absolute right without requirement to demonstrate prejudice).</li>
-          <li><strong>Rights Related to Automated Decision-Making (Article 22 GDPR).</strong> The right not to be subject to decisions based solely on automated processing, including profiling, which produce legal or significant effects. Volaxin's AI-powered features provide recommendations and intelligence but do not produce automated decisions without human review and confirmation.</li>
-          <li><strong>Right to Withdraw Consent (Article 7(3) GDPR).</strong> Where processing is based on consent, the right to withdraw that consent at any time without detriment, affecting only future processing.</li>
-        </ol>
-        <p>To exercise any of the above rights, submit a written request to <strong>info@volaxin.com</strong>. Volaxin will respond within one calendar month of receipt of a valid, verifiable request, with the possibility of a two-month extension for complex or numerous requests (with prior notice). Identity verification may be required before disclosing personal data. There is no charge for exercising your rights except in cases of manifestly unfounded or excessive requests.</p>
-        <p>Data subjects also have the right to lodge a complaint with the relevant supervisory authority. For UK-based individuals this is the <strong>Information Commissioner's Office (ICO)</strong> at ico.org.uk. EU-based individuals should contact the supervisory authority of their Member State of habitual residence.</p>
+        <h2>Confidentiality Obligations</h2>
+        <h3>9.1 Mutual Confidentiality</h3>
+        <p>Each party (the "Receiving Party") agrees to maintain the confidential information of the other party (the "Disclosing Party") in strict confidence, using at minimum the same degree of care applied to its own confidential information and in any event no less than reasonable care. Confidential information may be used solely for the purposes of performing obligations or exercising rights under this Agreement.</p>
+        <h3>9.2 Confidential Information Defined</h3>
+        <p>"Confidential Information" includes the Platform's source code, algorithms, AI/ML architecture, pricing, roadmap, and technical documentation (Volaxin's confidential information), and the Client's vessel operational data, commercial strategies, fleet performance data, and Client Data (Client's confidential information). Confidential information does not include information that: (a) is or becomes publicly available without breach of this Agreement; (b) was lawfully known prior to disclosure; (c) is independently developed without use of confidential information; or (d) is received from a third party without restriction.</p>
+        <h3>9.3 Permitted Disclosures</h3>
+        <p>Confidential information may be disclosed to employees, officers, sub-contractors, and professional advisers who have a need to know and are bound by confidentiality obligations at least as stringent as those in this Agreement, and to competent authorities when required by law, provided that (where legally permissible) the Disclosing Party is given prompt prior notice and the opportunity to seek a protective order.</p>
+        <p>These confidentiality obligations shall survive termination or expiry of this Agreement for a period of 5 years, except in respect of trade secrets (including Volaxin's AI/ML model architecture and source code), which shall remain confidential indefinitely.</p>
       </div>
 
       <!-- §10 -->
-      <div class="doc-section" id="s10">
+      <div class="doc-section" id="t10">
         <div class="sec-num">Section 10</div>
-        <h2>Cookies, Tracking &amp; Web Analytics</h2>
-        <p>The Volaxin corporate website (volaxin.com) uses a limited set of cookies and similar tracking technologies. The Platform application itself uses session cookies strictly necessary for authentication and security, with no advertising or third-party tracking cookies deployed within authenticated Platform sessions.</p>
-        <table class="data-table">
-          <thead><tr><th>Cookie Category</th><th>Purpose</th><th>Consent Required</th><th>Duration</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Strictly Necessary</strong></td><td>Session management, CSRF protection, load balancing, authentication tokens</td><td>No (exempt)</td><td>Session / 14 days</td></tr>
-            <tr><td><strong>Performance Analytics</strong></td><td>Anonymised page-view statistics, error tracking, feature usage patterns</td><td>Yes</td><td>12 months</td></tr>
-            <tr><td><strong>Marketing</strong></td><td>No marketing or advertising cookies are deployed on any Volaxin property</td><td>N/A</td><td>N/A</td></tr>
-          </tbody>
-        </table>
-        <p>Analytics data collected on the Volaxin website is processed in anonymised, aggregated form and does not involve cross-site tracking, real-time bidding, or data enrichment from third-party data brokers. You may withdraw consent to non-essential cookies at any time via the cookie preference centre accessible in the website footer.</p>
+        <h2>Warranties, Representations &amp; Disclaimers</h2>
+        <h3>10.1 Volaxin's Limited Warranties</h3>
+        <p>Volaxin warrants to the Client that: (a) the Platform will perform materially in accordance with the Documentation during the subscription term; (b) Volaxin has the right, power, and authority to grant the licence in Section 2.1; (c) Volaxin will implement and maintain security measures that are not materially less protective than those described in the Security Policy at volaxin.com/security; and (d) the Platform does not knowingly infringe the intellectual property rights of any third party as at the date of execution of the applicable Order Form.</p>
+        <h3>10.2 Disclaimer of Implied Warranties</h3>
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, AND SAVE FOR THE EXPRESS WARRANTIES IN SECTION 10.1, THE PLATFORM IS PROVIDED "AS IS" AND "AS AVAILABLE". VOLAXIN EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES, REPRESENTATIONS, AND CONDITIONS OF ANY KIND, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY QUALITY, NON-INFRINGEMENT, AND ACCURACY.</p>
+        <div class="warning-box">
+          <p>⚠ The Platform is a professional fleet management tool and does not constitute maritime, legal, regulatory, safety, or navigational advice. Compliance decisions, safety-critical determinations, and navigational judgments must at all times be made by qualified maritime professionals exercising independent professional judgment. Volaxin shall not be liable for any regulatory penalty, vessel casualty, crew injury, or commercial loss arising from reliance on Platform outputs without appropriate professional review.</p>
+        </div>
+        <h3>10.3 Third-Party Data Sources</h3>
+        <p>The Platform may integrate third-party data sources including AIS providers, weather services, regulatory databases, and class society APIs. Volaxin makes no warranty as to the accuracy, timeliness, or completeness of such third-party data and shall not be liable for errors or omissions in third-party data sets.</p>
       </div>
 
       <!-- §11 -->
-      <div class="doc-section" id="s11">
+      <div class="doc-section" id="t11">
         <div class="sec-num">Section 11</div>
-        <h2>Maritime-Specific Data Processing Considerations</h2>
-        <p>The maritime industry presents unique data protection challenges not contemplated by standard enterprise software contexts. Volaxin has embedded specific safeguards to address these:</p>
-        <h3>11.1 Offline Vessel Data Synchronisation</h3>
-        <p>The Platform supports seamless offline operation for vessels operating in remote sea areas with limited or no SATCOM connectivity. During offline periods, all personal data remains encrypted on vessel-side devices (AES-256 at-rest encryption) and synchronises to Volaxin's cloud infrastructure upon re-establishment of connectivity via TLS 1.3-encrypted HTTPS channels. No unencrypted personal data is ever stored on portable media or unmanaged devices without explicit client approval and documented compensating controls.</p>
-        <h3>11.2 Port State Control &amp; Flag State Disclosures</h3>
-        <p>In furtherance of client compliance obligations, the Platform generates PSC-ready work and rest hours reports. Where such reports are transmitted to port state control authorities or flag state administrations, the disclosure is supported by Article 6(1)(c) GDPR (legal obligation on the data controller). Volaxin facilitates such disclosures as processor but documents each instance within the processing activity log.</p>
-        <h3>11.3 AIS &amp; Vessel Tracking Data</h3>
-        <p>Automatic Identification System (AIS) data processed within the Platform is primarily vessel-level data and does not ordinarily constitute personal data. Where individual seafarers can be identified through a combination of AIS data, watch schedules, and position records, Volaxin treats such combined data as personal data and applies commensurate protections.</p>
-        <h3>11.4 Multinational Crew Data</h3>
-        <p>Maritime crews are frequently multinational. The processing of personal data relating to seafarers may engage the data protection legislation of multiple jurisdictions simultaneously. Volaxin operates under the principle of applying the most protective standard applicable to a given processing activity and maintains flag-state-specific data handling annexes for all supported jurisdictions.</p>
+        <h2>Limitation of Liability</h2>
+        <h3>11.1 Exclusion of Consequential Loss</h3>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF GOODWILL, LOSS OF ANTICIPATED SAVINGS, LOSS OF DATA (SAVE AS SET OUT IN SECTION 11.3), BUSINESS INTERRUPTION, OR COST OF SUBSTITUTE SERVICES, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR OTHERWISE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <h3>11.2 Aggregate Liability Cap</h3>
+        <p>VOLAXIN'S TOTAL AGGREGATE LIABILITY TO THE CLIENT ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT — WHETHER IN CONTRACT, TORT, BREACH OF STATUTORY DUTY, OR OTHERWISE — SHALL IN NO EVENT EXCEED THE TOTAL SUBSCRIPTION FEES PAID OR PAYABLE BY THE CLIENT TO VOLAXIN IN THE TWELVE (12) CALENDAR MONTHS IMMEDIATELY PRECEDING THE EVENT OR SERIES OF EVENTS GIVING RISE TO THE CLAIM.</p>
+        <h3>11.3 Exceptions to Caps</h3>
+        <p>Nothing in this Agreement shall limit or exclude either party's liability for: (a) death or personal injury caused by negligence; (b) fraud or fraudulent misrepresentation; (c) any matter which it would be unlawful to limit or exclude under applicable law including the Unfair Contract Terms Act 1977; or (d) in the case of Volaxin, unauthorised disclosure of the Client's confidential information attributable to Volaxin's wilful misconduct.</p>
       </div>
 
       <!-- §12 -->
-      <div class="doc-section" id="s12">
+      <div class="doc-section" id="t12">
         <div class="sec-num">Section 12</div>
-        <h2>Children's Privacy</h2>
-        <p>The Volaxin Platform is designed exclusively for use by maritime industry professionals and organisations. We do not knowingly collect or process personal data of individuals under the age of 18. If Volaxin becomes aware that personal data of a minor has been provided without appropriate parental or guardian consent, it will be deleted without undue delay. Contact privacy@volaxin.com if you believe we have inadvertently collected such data.</p>
+        <h2>Indemnification</h2>
+        <h3>12.1 Client Indemnity</h3>
+        <p>The Client shall indemnify, defend, and hold harmless Volaxin and its officers, directors, employees, contractors, and agents from and against any and all third-party claims, losses, damages, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to: (a) the Client's breach of this Agreement; (b) the Client's or its Authorised Users' misuse of the Platform; (c) Client Data infringing the intellectual property, privacy, or other rights of any third party; (d) the Client's violation of any applicable law or maritime regulation; or (e) the Client's negligence or wilful misconduct.</p>
+        <h3>12.2 Volaxin IP Indemnity</h3>
+        <p>Volaxin shall indemnify, defend, and hold harmless the Client against any third-party claim alleging that the Client's authorised use of the Platform infringes such third party's intellectual property rights, provided that the Client: (a) promptly notifies Volaxin in writing of the claim; (b) grants Volaxin sole control of the defence and settlement of the claim; and (c) provides reasonable assistance to Volaxin at Volaxin's expense. Volaxin's indemnity obligations under this Section shall not apply where infringement arises from Client modifications to the Platform, combination with third-party products not approved by Volaxin, or continued use after Volaxin has provided a non-infringing alternative.</p>
       </div>
 
       <!-- §13 -->
-      <div class="doc-section" id="s13">
+      <div class="doc-section" id="t13">
         <div class="sec-num">Section 13</div>
-        <h2>Policy Changes &amp; Version Control</h2>
-        <p>Volaxin reserves the right to amend this Privacy Policy from time to time to reflect changes in applicable law, regulatory guidance, Platform functionality, or our processing practices. This policy is version-controlled; the current version, effective date, and full change history are maintained at volaxin.com/privacy.</p>
-        <p>For material changes — defined as changes that significantly affect data subject rights, introduce new processing purposes, or alter the categories of data processed — Volaxin will provide not less than 30 days' advance notice via:</p>
-        <ul>
-          <li>A prominently displayed in-Platform notification banner</li>
-          <li>Direct email communication to the primary account holder email address on record</li>
-          <li>Updated version documentation in the Privacy Policy change log</li>
-        </ul>
-        <p>Continued use of the Platform following the expiry of the notice period constitutes acceptance of the updated policy. Where required by law, Volaxin will seek renewed consent rather than relying on continued use as acceptance.</p>
+        <h2>Term, Suspension &amp; Termination</h2>
+        <h3>13.1 Agreement Term</h3>
+        <p>This Agreement commences on the date the Client's first Order Form is executed and continues until all Order Forms have expired or been terminated. Individual Order Forms shall be for the initial term specified therein and shall automatically renew for successive periods of equal duration unless either party provides written notice of non-renewal not less than 60 days prior to the end of the then-current term.</p>
+        <h3>13.2 Suspension</h3>
+        <p>Volaxin reserves the right to suspend Platform access immediately and without prior notice in the following circumstances: (a) a credible security threat or active compromise is detected; (b) the Client's use is causing harm to Volaxin's infrastructure or other clients; or (c) Volaxin is required to do so by law or competent authority order. In all other circumstances (including non-payment and AUP breach), Volaxin will provide the notice periods specified in Sections 4.3 and 7 respectively before suspending access.</p>
+        <h3>13.3 Termination for Cause</h3>
+        <p>Either party may terminate this Agreement for material breach upon 30 days' written notice specifying the nature of the breach, provided the breaching party fails to cure the breach within that 30-day period. Certain breaches — including fraudulent falsification of statutory records, serious AUP violations, non-payment beyond 45 days, and insolvency — entitle Volaxin to terminate immediately without a cure period.</p>
+        <h3>13.4 Effects of Termination</h3>
+        <p>Upon termination for any reason: (a) all licences granted under this Agreement cease immediately; (b) the Client must cease all use of the Platform; (c) Volaxin will provide the 90-day Client Data export window specified in Section 8.1; (d) accrued payment obligations survive; and (e) Sections 3, 8.2, 9, 10.2, 11, 12, 15, and 16 survive indefinitely.</p>
       </div>
 
       <!-- §14 -->
-      <div class="doc-section" id="s14">
+      <div class="doc-section" id="t14">
         <div class="sec-num">Section 14</div>
-        <h2>Contact Information &amp; Data Protection Officer</h2>
-        <p>All privacy-related enquiries, data subject rights requests, complaints, and Data Processing Agreement negotiations should be directed to:</p>
+        <h2>Force Majeure</h2>
+        <p>Neither party shall be in breach of this Agreement or liable for delay in performing or failure to perform any of its obligations (other than payment obligations) to the extent that such delay or failure results from a Force Majeure Event. A "Force Majeure Event" means any event beyond the reasonable control of the affected party including acts of God, war, civil unrest, terrorism, sanctions (imposed by competent international authority), epidemics, pandemics, natural disasters, power grid failures, or failure of third-party internet infrastructure beyond Volaxin's reasonable control.</p>
+        <p>The affected party shall: (a) notify the other party in writing within 5 business days of becoming aware of the Force Majeure Event; (b) use all reasonable endeavours to mitigate its effects; and (c) resume performance as soon as practicable. Where a Force Majeure Event affecting Platform availability persists for more than 30 consecutive days, either party may terminate the affected Order Form without liability on 14 days' written notice.</p>
+      </div>
+
+      <!-- §15 -->
+      <div class="doc-section" id="t15">
+        <div class="sec-num">Section 15</div>
+        <h2>Governing Law &amp; Dispute Resolution</h2>
+        <h3>15.1 Governing Law</h3>
+        <p>This Agreement and any non-contractual obligations arising out of or in connection with it shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of laws principles.</p>
+        <h3>15.2 Dispute Resolution — Escalation First</h3>
+        <p>Before commencing formal proceedings, the parties agree to engage in good-faith senior management escalation discussions for a period of 30 days from written notice of a dispute. The parties shall each designate a senior representative (at VP or C-suite level) to participate in escalation discussions within 10 business days of the notice.</p>
+        <h3>15.3 Arbitration</h3>
+        <p>If a dispute is not resolved through escalation, it shall be referred to and finally resolved by binding arbitration under the ICC Rules of Arbitration in force at the time of the dispute. The seat of arbitration shall be London, England. The arbitration shall be conducted in English before a sole arbitrator for disputes with a value below USD 2,000,000, and a panel of three arbitrators for disputes at or above that threshold. The arbitral award shall be final and binding and enforceable in any competent jurisdiction.</p>
+        <h3>15.4 Injunctive Relief</h3>
+        <p>Notwithstanding Section 15.3, either party may seek emergency interim or injunctive relief from the courts of England and Wales (or any other court of competent jurisdiction) in connection with an actual or threatened breach of confidentiality or intellectual property obligations, without prejudice to the right of the other party to require arbitration of the underlying dispute.</p>
+      </div>
+
+      <!-- §16 -->
+      <div class="doc-section" id="t16">
+        <div class="sec-num">Section 16</div>
+        <h2>General Provisions</h2>
+        <h3>16.1 Entire Agreement</h3>
+        <p>This Agreement (including all Order Forms, the DPA, the Security Policy, and all incorporated schedules) constitutes the entire agreement between the parties with respect to its subject matter and supersedes all prior agreements, representations, warranties, understandings, negotiations, and discussions, whether written or oral, relating to the same subject matter. Neither party has entered into this Agreement in reliance on any statement or representation not expressly set out herein.</p>
+        <h3>16.2 Amendments</h3>
+        <p>Volaxin reserves the right to modify these Terms of Service by providing the Client with 30 days' written notice. In the absence of written objection within that notice period, the updated terms shall take effect at the end of the notice period. For material changes, Volaxin will obtain affirmative acceptance from enterprise clients before the updated terms apply.</p>
+        <h3>16.3 Waiver</h3>
+        <p>No failure or delay by either party to exercise any right or remedy under this Agreement shall constitute a waiver of that or any other right or remedy. Waivers shall be effective only if made in writing and signed by an authorised representative of the waiving party.</p>
+        <h3>16.4 Severability</h3>
+        <p>If any provision of this Agreement is held by a court or arbitral tribunal of competent jurisdiction to be invalid, unenforceable, or contrary to applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.</p>
+        <h3>16.5 Assignment</h3>
+        <p>The Client may not assign, transfer, novate, or sub-license any of its rights or obligations under this Agreement without Volaxin's prior written consent (not to be unreasonably withheld or delayed). Volaxin may assign this Agreement, including all rights and obligations, to any affiliate or in connection with a merger, acquisition, or sale of substantially all of its assets, provided Volaxin provides the Client with written notice and the assignee assumes all of Volaxin's obligations hereunder.</p>
+        <h3>16.6 Notices</h3>
+        <p>All formal notices under this Agreement shall be in writing and delivered by: (a) email with confirmed delivery receipt to the addresses specified in the applicable Order Form; or (b) courier or recorded post to the registered addresses of the parties. Notices shall be deemed received: on the day of delivery for courier/recorded post; and within 24 hours of transmission for email (if no delivery failure notification is received).</p>
+        <h3>16.7 Third Party Rights</h3>
+        <p>Except as expressly provided, this Agreement does not create any rights enforceable by any person who is not a party to it under the Contracts (Rights of Third Parties) Act 1999. The parties may vary or rescind this Agreement without consent of any third party.</p>
         <div class="contact-card">
-          <div class="contact-card-title">Data Protection Office</div>
+          <div class="contact-card-title">Legal &amp; Contracts Enquiries</div>
+      
           <div class="contact-row"><span>✉</span> info@volaxin.com</div>
-          <!--<div class="contact-row"><span>✉</span> dpo@volaxin.com (Data Protection Officer direct)</div>-->
-          <div class="contact-row"><span>☎</span> +44 35342 322358 (Ext. DPO)</div>
-          <div class="contact-row"><span>⊕</span> Singapore · Rotterdam · Houston · Dubai</div>
-        </div>
-        <p style="margin-top:16px;">
-          Volaxin has appointed an external, independent Data Protection Officer (DPO) in accordance with Article 37 GDPR. The DPO provides independent oversight of all data protection matters and is contactable directly at dpo@volaxin.com. The DPO operates free from any instruction from Volaxin management on matters within the scope of their duties, and reports directly to the highest management level.
-        </p>
-        <div class="highlight-box">
-          <span class="highlight-box-icon">⚖</span>
-          <p>If you are dissatisfied with our response to a privacy concern, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at ico.org.uk / 0303 123 1113, or with the relevant EU supervisory authority in your Member State of residence.</p>
+          <div class="contact-row"><span>☎</span> +44 35342 322358</div>
+         
         </div>
       </div>
 
     </main>
   </div>
 
-  <!-- FOOTER -->
   <footer class="page-footer">
-    <span class="fc">© 2026 Volaxin Maritime Suite Ltd. All rights reserved. Registered in England &amp; Wales.</span>
+    <span class="fc">© 2026 Volaxin Maritime Suite Ltd. All rights reserved.</span>
     <ul class="flinks">
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
@@ -1141,27 +1121,25 @@
   </footer>
 
   <script>
-    // Cursor
     const cur = document.getElementById('cur'), ring = document.getElementById('cur-ring');
-    let mx=0,my=0,rx=0,ry=0;
+    let mx = 0, my = 0, rx = 0, ry = 0;
     if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
       document.body.style.cursor = 'none';
-      document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-      (function loop(){ rx+=(mx-rx)*.14; ry+=(my-ry)*.14; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
-      document.querySelectorAll('a,button,.toc-list a').forEach(el => {
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
+      (function loop() { rx += (mx - rx) * .14; ry += (my - ry) * .14; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+      document.querySelectorAll('a,button').forEach(el => {
         el.addEventListener('mouseenter', () => document.body.classList.add('hov'));
         el.addEventListener('mouseleave', () => document.body.classList.remove('hov'));
         el.style.cursor = 'none';
       });
     }
-    // TOC active highlighting
     const sections = document.querySelectorAll('.doc-section[id]');
     const tocLinks = document.querySelectorAll('.toc-list a');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           tocLinks.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector('.toc-list a[href="#'+e.target.id+'"]');
+          const active = document.querySelector('.toc-list a[href="#' + e.target.id + '"]');
           if (active) active.classList.add('active');
         }
       });
