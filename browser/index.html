@@ -4,9 +4,9 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Volaxin Maritime Suite — Ship Management Software | PMS, Crew, Vessel Tracking</title>
-  <meta name="description" content="Volaxin Maritime Suite is the leading ship management software with PMS, Crew Management, Inventory, Procurement, Work Rest Hours, Vessel Tracking, Live Weather, and cloud sync for office and ship side operations.">
-  <meta name="keywords" content="ship management software, maritime software, planned maintenance system, PMS software, crew management software, vessel tracking software, marine inventory management, work rest hours software, MLC 2006 compliance, maritime procurement software, vendor supply chain management, offshore fleet management, ISM compliance software, SHEQ maritime, ship document management, IMO CII reporting, maritime cloud software, online offline ship management, vessel monitoring software, live weather maritime, fleet management system, maritime SaaS, marine ERP, ship operations software, shipping company software, maritime compliance software, fleet monitoring platform, port management software, tanker management software, bulk carrier software, container ship management">
+  <title>Volaxin Maritime Suite — Ship Management Software | PMS, Crew, Chartering, Navigation & Vessel Tracking</title>
+  <meta name="description" content="Volaxin Maritime Suite is the leading ship management software with PMS, Crew Management, Chartering, Navigation &amp; Voyage Planning, Inventory, Procurement, Work Rest Hours, Vessel Tracking, Live Weather, and cloud sync for office and ship side operations.">
+  <meta name="keywords" content="ship management software, maritime software, planned maintenance system, PMS software, crew management software, vessel tracking software, marine inventory management, work rest hours software, MLC 2006 compliance, maritime procurement software, vendor supply chain management, offshore fleet management, ISM compliance software, SHEQ maritime, ship document management, IMO CII reporting, maritime cloud software, online offline ship management, vessel monitoring software, live weather maritime, fleet management system, maritime SaaS, marine ERP, ship operations software, shipping company software, maritime compliance software, fleet monitoring platform, port management software, tanker management software, bulk carrier software, container ship management, chartering software, charter party management, voyage estimation software, laytime calculation software, demurrage software, freight and hire management, post fixture software, ship navigation software, passage planning software, weather routing software, voyage optimisation software">
   <meta name="author" content="Volaxin Maritime Suite Ltd">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://volaxin.com/">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://volaxin.com/">
   <meta property="og:title" content="Volaxin Maritime Suite — Ship Management Software">
-  <meta property="og:description" content="Unified ship management platform: PMS, Crew, Inventory, Procurement, Work Rest Hours, Vessel Tracking, Live Weather &amp; Cloud Sync. Trusted by 500+ vessels across 15+ flag states.">
+  <meta property="og:description" content="Unified ship management platform: PMS, Crew, Chartering, Navigation, Inventory, Procurement, Work Rest Hours, Vessel Tracking, Live Weather &amp; Cloud Sync. Trusted by 500+ vessels across 15+ flag states.">
   <meta property="og:image" content="https://volaxin.com/og-image.jpg">
   <meta property="og:site_name" content="Volaxin Maritime Suite">
   <meta property="og:locale" content="en_GB">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@VolaxinMaritime">
   <meta name="twitter:title" content="Volaxin Maritime Suite — Ship Management Software">
-  <meta name="twitter:description" content="Unified ship management: PMS, Crew, Inventory, Vessel Tracking, Live Weather &amp; Cloud Sync for office and ship side.">
+  <meta name="twitter:description" content="Unified ship management: PMS, Crew, Chartering, Navigation, Inventory, Vessel Tracking, Live Weather &amp; Cloud Sync for office and ship side.">
   <meta name="twitter:image" content="https://volaxin.com/og-image.jpg">
 
   <!-- Structured Data -->
@@ -38,7 +38,7 @@
           "name": "Volaxin Maritime Suite",
           "url": "https://volaxin.com",
           "logo": "https://volaxin.com/logo.png",
-          "description": "Volaxin Maritime Suite is a comprehensive ship management software platform offering Planned Maintenance (PMS), Crew Management, Inventory, Procurement, Work & Rest Hours, Vessel Tracking, Live Weather Intelligence, and seamless online/offline cloud sync for both office and ship-side operations.",
+          "description": "Volaxin Maritime Suite is a comprehensive ship management software platform offering Planned Maintenance (PMS), Crew Management, Chartering & Post-Fixture, Navigation & Voyage Planning, Inventory, Procurement, Work & Rest Hours, Vessel Tracking, Live Weather Intelligence, and seamless online/offline cloud sync for both office and ship-side operations.",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web, Cloud",
           "offers": {
@@ -50,6 +50,10 @@
           "featureList": [
             "Planned Maintenance System (PMS)",
             "Crew Management Software",
+            "Chartering & Post-Fixture Management",
+            "Voyage Estimation, Laytime & Demurrage",
+            "Navigation & Passage Planning",
+            "Weather Routing & Voyage Optimisation",
             "Maritime Inventory Management",
             "Vendor & Supply Chain Procurement",
             "Work Rest Hours MLC 2006 Compliance",
@@ -106,7 +110,17 @@
             {
               "@type": "Question",
               "name": "What is Volaxin Maritime Suite?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Volaxin Maritime Suite is a cloud-based ship management software platform with 10 integrated modules including PMS, Crew Management, Inventory, Procurement, Work Rest Hours, Vessel Tracking, and Live Weather Intelligence."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Volaxin Maritime Suite is a cloud-based ship management software platform with 11 integrated modules including PMS, Crew Management, Chartering, Navigation & Voyage Planning, Inventory, Procurement, Work Rest Hours, Vessel Tracking, and Live Weather Intelligence."}
+            },
+            {
+              "@type": "Question",
+              "name": "Does Volaxin include chartering and post-fixture management?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Chartering module covers charter party and fixture management, voyage estimation and P&L, laytime and demurrage calculations, freight, hire and commission invoicing, and bunker and port cost tracking — fully integrated with operations and reporting."}
+            },
+            {
+              "@type": "Question",
+              "name": "Can Volaxin plan and optimise voyages?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Navigation module provides passage planning, weather-routing AI, speed versus fuel optimisation, dynamic ETA management, port congestion alerts, and real-time vessel tracking."}
             },
             {
               "@type": "Question",
@@ -1105,7 +1119,7 @@
 
     .globe-hdr {
       position: absolute;
-      top: 50%;
+      top: calc(50% + 12px); /* nudged down so the header never clashes with the fixed navbar */
       left: 54px;
       transform: translateY(-50%);
       max-width: 380px;
@@ -2580,6 +2594,31 @@
       }
     }
 
+    /* Subtle top-edge fog — flipped and much fainter than the bottom bank */
+    @keyframes fog_effect_top {
+      0% {
+        opacity: 0;
+        transform: scaleX(1) scaleY(-1);
+      }
+
+      15% {
+        opacity: 0.10;
+      }
+
+      50% {
+        opacity: 0.14;
+      }
+
+      85% {
+        opacity: 0.10;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scaleX(2.2) scaleY(-2.8);
+      }
+    }
+
     /* ══════════════════════════════════════════
        MOBILE RESPONSIVE STYLES  (≤ 768px)
     ══════════════════════════════════════════ */
@@ -3330,10 +3369,10 @@
       <div class="plat-wrap">
         <div class="plat-glass">
           <div class="sec-lbl">The Platform</div>
-          <h2 class="sec-h2">Ten integrated modules.<br>One intelligent command centre.</h2>
-          <p class="sec-p">Volaxin Maritime Suite was engineered from the vessel up — connecting maintenance, crew, compliance, cargo and carbon into a single source of truth for your entire fleet. No silos. No data gaps. Just complete operational clarity at every watch.</p>
+          <h2 class="sec-h2">Eleven integrated modules.<br>One intelligent command centre.</h2>
+          <p class="sec-p">Volaxin Maritime Suite was engineered from the vessel up — connecting maintenance, crew, chartering, navigation, compliance, cargo and carbon into a single source of truth for your entire fleet. No silos. No data gaps. Just complete operational clarity at every watch.</p>
           <div class="stats">
-            <div><div class="stat-n">10</div><div class="stat-l">Core Modules</div></div>
+            <div><div class="stat-n">11</div><div class="stat-l">Core Modules</div></div>
             <div class="stat-div"></div>
             <div><div class="stat-n">24/7</div><div class="stat-l">Expert Support</div></div>
             <div class="stat-div"></div>
@@ -3363,7 +3402,8 @@
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M6 26L6 11L16 4L26 11L26 26Z" stroke="rgba(15,52,96,.5)" stroke-width="1.2" fill="none"/><rect x="12" y="17" width="8" height="9" stroke="rgba(200,146,58,.6)" stroke-width="1" fill="none"/><line x1="10" y1="13" x2="22" y2="13" stroke="rgba(46,156,202,.5)" stroke-width="1"/></svg></div><div class="mc-name">DMS · Document Mgmt</div><div class="mc-desc">Version control, approvals &amp; secure distribution. Offline vessel sync with full acknowledgement tracking.</div></div>
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3L29 10L29 22L16 29L3 22L3 10Z" stroke="rgba(15,52,96,.5)" stroke-width="1.2" fill="none"/><circle cx="16" cy="16" r="3.5" stroke="rgba(200,146,58,.7)" stroke-width="1.5" fill="none"/><path d="M13 16l2 2 4-4" stroke="rgba(200,146,58,.7)" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="mc-name">SHEQ · Safety &amp; Quality</div><div class="mc-desc">Safety, health, environment &amp; quality — incidents, audits &amp; KPIs. ISM, ISPS and ISO-aligned management.</div></div>
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="3" y="5" width="26" height="22" rx="1" stroke="rgba(15,52,96,.5)" stroke-width="1.2" fill="none"/><rect x="7" y="16" width="4" height="5" fill="rgba(200,146,58,.45)"/><rect x="14" y="13" width="4" height="8" fill="rgba(46,156,202,.5)"/><rect x="21" y="17" width="4" height="4" fill="rgba(15,52,96,.3)"/></svg></div><div class="mc-name">WRH · Work &amp; Rest Hours</div><div class="mc-desc">MLC 2006 &amp; STCW-compliant hour recording with automated violation alerts and PSC-ready export.</div></div>
-          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(15,52,96,.4)" stroke-width="1" fill="none" stroke-dasharray="3 2"/><path d="M8 20L16 8L24 20" stroke="rgba(200,146,58,.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="rgba(200,146,58,.3)" stroke="rgba(200,146,58,.8)" stroke-width="1"/></svg></div><div class="mc-name">NAV · Nav Intelligence</div><div class="mc-desc">Route optimisation, port &amp; hazard alerts. Weather-routing AI with fuel-optimised passage plans.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(15,52,96,.4)" stroke-width="1" fill="none" stroke-dasharray="3 2"/><path d="M8 20L16 8L24 20" stroke="rgba(200,146,58,.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="rgba(200,146,58,.3)" stroke="rgba(200,146,58,.8)" stroke-width="1"/></svg></div><div class="mc-name">NAV · Navigation &amp; Voyage</div><div class="mc-desc">Passage planning, route optimisation, port &amp; hazard alerts. Weather-routing AI with fuel-optimised passage plans and live vessel tracking.</div></div>
+          <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="4" width="20" height="24" rx="1.5" stroke="rgba(15,52,96,.5)" stroke-width="1.2" fill="none"/><line x1="10" y1="10" x2="22" y2="10" stroke="rgba(200,146,58,.6)" stroke-width="1"/><line x1="10" y1="14" x2="19" y2="14" stroke="rgba(46,156,202,.5)" stroke-width="1"/><line x1="10" y1="18" x2="17" y2="18" stroke="rgba(15,52,96,.35)" stroke-width="1"/><path d="M10 23.5C11.5 22 13 25 14.5 23.5" stroke="rgba(200,146,58,.8)" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg></div><div class="mc-name">CHT · Chartering</div><div class="mc-desc">Charter party &amp; fixture management, voyage estimation, laytime &amp; demurrage, freight &amp; hire — full post-fixture control.</div></div>
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="2" stroke="rgba(15,52,96,.5)" stroke-width="1.2" fill="none"/><line x1="9" y1="12" x2="23" y2="12" stroke="rgba(200,146,58,.5)" stroke-width="1"/><line x1="9" y1="17" x2="19" y2="17" stroke="rgba(46,156,202,.5)" stroke-width="1"/><line x1="9" y1="22" x2="15" y2="22" stroke="rgba(15,52,96,.35)" stroke-width="1"/></svg></div><div class="mc-name">RPT · Custom Reports</div><div class="mc-desc">Advanced builder — KPI dashboards &amp; exports. Real-time fleet analytics with one-click compliance reporting.</div></div>
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(15,52,96,.4)" stroke-width="1" fill="none" stroke-dasharray="3 2"/><circle cx="16" cy="16" r="5.5" stroke="rgba(200,146,58,.6)" stroke-width="1.5" fill="none"/><path d="M12 16Q14 12 16 16Q18 20 20 16" stroke="rgba(46,156,202,.6)" stroke-width="1" fill="none"/></svg></div><div class="mc-name">CRB · Carbon Reporting</div><div class="mc-desc">IMO CII ratings, EU-ETS compliance, Poseidon Principles reporting, and decarbonisation roadmaps.</div></div>
         </div>
@@ -3391,6 +3431,7 @@
           <div class="mfc"><div class="mft">Work Rest Hours</div><div class="mfh">Fatigue Management</div><div class="mfb">Automated MLC 2006 and STCW compliance with instant PSC-ready reporting and schedule optimisation AI.</div><div class="mffl"><div class="mffi">Violation auto-detection</div><div class="mffi">Schedule optimisation AI</div><div class="mffi">Port state export</div></div></div>
           <div class="mfc"><div class="mft">AI Engine</div><div class="mfh">Predictive Intelligence</div><div class="mfb">Cross-module AI that surfaces risks and anomalies before they become incidents — always learning.</div><div class="mffl"><div class="mffi">Equipment failure prediction</div><div class="mffi">Cost anomaly detection</div><div class="mffi">Natural language queries</div></div></div>
           <div class="mfc"><div class="mft">Nav Intel</div><div class="mfh">Voyage Optimisation</div><div class="mfb">Weather-routing AI with fuel-optimised passage plans, dynamic ETA management and port congestion alerts.</div><div class="mffl"><div class="mffi">Met-ocean integration</div><div class="mffi">Speed vs. fuel modelling</div><div class="mffi">Hazard &amp; routing alerts</div></div></div>
+          <div class="mfc"><div class="mft">Chartering</div><div class="mfh">Fixtures &amp; Post-Fixture</div><div class="mfb">From voyage estimate to final hire statement — charter parties, laytime, demurrage and freight in one commercial workspace.</div><div class="mffl"><div class="mffi">Voyage estimation &amp; P&amp;L</div><div class="mffi">Laytime &amp; demurrage engine</div><div class="mffi">Freight, hire &amp; commissions</div></div></div>
           <div class="mfc"><div class="mft">Carbon</div><div class="mfh">ESG &amp; Decarbonisation</div><div class="mfb">Track IMO CII ratings per vessel and generate Poseidon Principles reports automatically with EU-ETS tracking.</div><div class="mffl"><div class="mffi">EU-ETS allowance tracking</div><div class="mffi">Biofuel &amp; LNG logging</div><div class="mffi">Decarbonisation roadmap</div></div></div>
         </div>
         <div class="mods-arrow-row">
@@ -3482,7 +3523,7 @@
         <div class="sp-hero">
           <div class="sp-eyebrow">Platform Modules</div>
           <h1 class="sp-h1">Complete Maritime <em>Intelligence</em></h1>
-          <p class="sp-p">Ten deeply integrated modules covering every operational dimension of modern fleet management — from the engine room to the boardroom.</p>
+          <p class="sp-p">Eleven deeply integrated modules covering every operational dimension of modern fleet management — from the engine room to the chartering desk to the boardroom.</p>
         </div>
 
         <div class="sp-grid">
@@ -3493,8 +3534,10 @@
           <div class="sp-card"><div class="sp-card-tag">DMS</div><div class="sp-card-h">Document Management</div><div class="sp-card-p">Version control, approvals &amp; secure distribution with offline vessel sync and full read receipt tracking.</div><div class="sp-card-list"><div class="sp-card-item">Version &amp; revision control</div><div class="sp-card-item">Approval &amp; distribution matrix</div><div class="sp-card-item">Offline vessel synchronisation</div><div class="sp-card-item">Read receipt acknowledgements</div><div class="sp-card-item">ISM-aligned SMS management</div></div></div>
           <div class="sp-card"><div class="sp-card-tag">SHEQ</div><div class="sp-card-h">Safety &amp; Quality</div><div class="sp-card-p">Safety, health, environment &amp; quality — incidents, audits &amp; KPIs aligned to ISM, ISPS, and ISO standards.</div><div class="sp-card-list"><div class="sp-card-item">Incident &amp; near-miss reporting</div><div class="sp-card-item">Root cause investigation tools</div><div class="sp-card-item">Drill &amp; exercise management</div><div class="sp-card-item">Audit &amp; inspection management</div><div class="sp-card-item">Real-time KPI dashboards</div></div></div>
           <div class="sp-card"><div class="sp-card-tag">WRH</div><div class="sp-card-h">Work &amp; Rest Hours</div><div class="sp-card-p">MLC 2006 &amp; STCW-compliant hour recording with automated violation alerts and instant PSC export.</div><div class="sp-card-list"><div class="sp-card-item">MLC 2006 &amp; STCW compliance</div><div class="sp-card-item">Violation auto-detection</div><div class="sp-card-item">Schedule optimisation AI</div><div class="sp-card-item">Port state control export</div><div class="sp-card-item">Multi-officer shift planning</div></div></div>
-          <div class="sp-card"><div class="sp-card-tag">NAV</div><div class="sp-card-h">Nav Intelligence</div><div class="sp-card-p">Route optimisation, port &amp; hazard alerts with met-ocean integration and dynamic ETA management.</div><div class="sp-card-list"><div class="sp-card-item">Weather-routing AI passage plans</div><div class="sp-card-item">Speed vs. fuel optimisation</div><div class="sp-card-item">Port congestion alerts</div><div class="sp-card-item">Hazard &amp; NOtam integration</div><div class="sp-card-item">Real-time vessel tracking</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">NAV</div><div class="sp-card-h">Navigation &amp; Voyage</div><div class="sp-card-p">Passage planning, route optimisation, port &amp; hazard alerts with met-ocean integration and dynamic ETA management.</div><div class="sp-card-list"><div class="sp-card-item">Passage planning &amp; waypoint management</div><div class="sp-card-item">Weather-routing AI passage plans</div><div class="sp-card-item">Speed vs. fuel optimisation</div><div class="sp-card-item">Port congestion &amp; hazard alerts</div><div class="sp-card-item">Real-time vessel tracking</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">CHT</div><div class="sp-card-h">Chartering</div><div class="sp-card-p">Complete commercial workspace — from voyage estimate and fixture to laytime, demurrage, and final hire statement.</div><div class="sp-card-list"><div class="sp-card-item">Charter party &amp; fixture management</div><div class="sp-card-item">Voyage estimation &amp; P&amp;L</div><div class="sp-card-item">Laytime &amp; demurrage calculations</div><div class="sp-card-item">Freight, hire &amp; commission invoicing</div><div class="sp-card-item">Bunker &amp; port cost tracking</div></div></div>
           <div class="sp-card"><div class="sp-card-tag">RPT</div><div class="sp-card-h">Custom Reports</div><div class="sp-card-p">Advanced report builder — KPI dashboards &amp; exports across every module with scheduled distribution.</div><div class="sp-card-list"><div class="sp-card-item">Drag-and-drop report builder</div><div class="sp-card-item">Multi-module KPI dashboards</div><div class="sp-card-item">Scheduled PDF &amp; Excel export</div><div class="sp-card-item">PSC &amp; vetting report templates</div><div class="sp-card-item">Fleet benchmarking analytics</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">CRB</div><div class="sp-card-h">Carbon Reporting</div><div class="sp-card-p">IMO CII ratings, EU-ETS compliance and Poseidon Principles reporting with decarbonisation roadmaps per vessel.</div><div class="sp-card-list"><div class="sp-card-item">IMO CII rating per vessel</div><div class="sp-card-item">EU-ETS allowance tracking</div><div class="sp-card-item">Poseidon Principles reporting</div><div class="sp-card-item">Fuel &amp; biofuel consumption logging</div><div class="sp-card-item">Decarbonisation roadmap planning</div></div></div>
         </div>
 
         <div class="sp-divider"></div>
@@ -3586,6 +3629,34 @@
               <div class="leader-card"><div class="leader-avatar">LB</div><div class="leader-name">Lena Brandt</div><div class="leader-role">Head of Regulatory Affairs</div></div>
           -->
         </div>
+
+        <div class="sp-divider"></div>
+
+        <div style="margin-bottom:18px">
+          <div class="sp-eyebrow" style="margin-bottom:8px">Who We Serve</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,4vw,28px);font-weight:400;color:white;">One platform, every fleet segment</h2>
+        </div>
+        <div class="sp-grid" style="margin-bottom:28px">
+          <div class="sp-card"><div class="sp-card-tag">Tankers &amp; Gas</div><div class="sp-card-h">Tanker &amp; Gas Carrier Operators</div><div class="sp-card-p">Vetting-ready operations for crude, product, chemical and LNG/LPG fleets — with SIRE 2.0 preparation, TMSA alignment and terminal compliance built into daily workflows.</div><div class="sp-card-list"><div class="sp-card-item">SIRE 2.0 &amp; vetting readiness</div><div class="sp-card-item">TMSA-aligned safety management</div><div class="sp-card-item">Cargo &amp; terminal documentation</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">Bulk &amp; Cargo</div><div class="sp-card-h">Bulk Carrier &amp; General Cargo Fleets</div><div class="sp-card-p">Voyage-driven commercial and technical management for dry bulk and general cargo — from fixture and laytime to hold maintenance and PSC readiness.</div><div class="sp-card-list"><div class="sp-card-item">Chartering &amp; laytime integration</div><div class="sp-card-item">Hold &amp; hatch maintenance routines</div><div class="sp-card-item">RightShip &amp; PSC preparation</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">Container &amp; RoRo</div><div class="sp-card-h">Container &amp; RoRo Operators</div><div class="sp-card-p">Schedule-critical fleets need zero surprises. Volaxin keeps reefer plants, lashing gear and port rotations maintained, crewed and compliant on tight turnarounds.</div><div class="sp-card-list"><div class="sp-card-item">Reefer &amp; critical spares control</div><div class="sp-card-item">Port rotation ETA management</div><div class="sp-card-item">Crew rotation on liner schedules</div></div></div>
+          <div class="sp-card"><div class="sp-card-tag">Offshore &amp; Workboats</div><div class="sp-card-h">OSV, Tug &amp; Workboat Fleets</div><div class="sp-card-p">High-utilisation vessels with charterer audits and day-rate pressure — Volaxin tracks certification, maintenance and crew hours even with limited connectivity offshore.</div><div class="sp-card-list"><div class="sp-card-item">Offline-first vessel operations</div><div class="sp-card-item">Charterer audit documentation</div><div class="sp-card-item">DP &amp; critical equipment assurance</div></div></div>
+        </div>
+
+        <div class="sp-divider"></div>
+
+        <div style="margin-bottom:18px">
+          <div class="sp-eyebrow" style="margin-bottom:8px">Frequently Asked Questions</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,4vw,28px);font-weight:400;color:white;">Answers before you ask</h2>
+        </div>
+        <div class="sp-grid">
+          <div class="sp-card"><div class="sp-card-tag">Platform</div><div class="sp-card-h">What is Volaxin Maritime Suite?</div><div class="sp-card-p" style="max-width:none">Volaxin Maritime Suite is a cloud-based ship management software platform with 11 integrated modules including PMS, Crew Management, Chartering, Navigation &amp; Voyage Planning, Inventory, Procurement, Work Rest Hours, Vessel Tracking, and Live Weather Intelligence.</div></div>
+          <div class="sp-card"><div class="sp-card-tag">Connectivity</div><div class="sp-card-h">Does Volaxin support offline ship-side operations?</div><div class="sp-card-p" style="max-width:none">Yes. Volaxin supports seamless online and offline cloud sync, allowing vessel crews to operate without internet connectivity and synchronise data when connection is restored.</div></div>
+          <div class="sp-card"><div class="sp-card-tag">Compliance</div><div class="sp-card-h">Is Volaxin MLC 2006 compliant?</div><div class="sp-card-p" style="max-width:none">Yes. Volaxin's Work &amp; Rest Hours module is fully MLC 2006 and STCW compliant with automated violation detection and PSC-ready export.</div></div>
+          <div class="sp-card"><div class="sp-card-tag">Chartering</div><div class="sp-card-h">Does Volaxin include chartering and post-fixture management?</div><div class="sp-card-p" style="max-width:none">Yes. The Chartering module covers charter party and fixture management, voyage estimation and P&amp;L, laytime and demurrage calculations, freight, hire and commission invoicing, and bunker and port cost tracking — fully integrated with operations and reporting.</div></div>
+          <div class="sp-card"><div class="sp-card-tag">Navigation</div><div class="sp-card-h">Can Volaxin plan and optimise voyages?</div><div class="sp-card-p" style="max-width:none">Yes. The Navigation module provides passage planning, weather-routing AI, speed versus fuel optimisation, dynamic ETA management, port congestion alerts, and real-time vessel tracking.</div></div>
+          <div class="sp-card"><div class="sp-card-tag">Scale</div><div class="sp-card-h">How many vessels does Volaxin manage?</div><div class="sp-card-p" style="max-width:none">Volaxin currently manages 500+ vessels across 60+ client companies and 15+ flag states with a 99.9% platform uptime SLA.</div></div>
+        </div>
       </div>
 
       <!-- ── CONTACT PAGE ── -->
@@ -3612,7 +3683,7 @@
                 <div class="form-field"><label>Phone</label><input type="tel" id="cf-phone" placeholder="+91 6388410410"></div>
                 <div class="form-field"><label>Fleet Size</label><select id="cf-fleet"><option value>Select range</option><option>1–5 Vessels</option><option>6–20 Vessels</option><option>21–50 Vessels</option><option>51–100 Vessels</option><option>100+ Vessels</option></select></div>
               </div>
-              <div class="form-field"><label>Modules of Interest</label><select id="cf-module"><option value>Select primary module</option><option>PMS – Planned Maintenance</option><option>INV – Inventory Management</option><option>PRC – Procurement</option><option>CREW – Crew Management</option><option>DMS – Document Management</option><option>SHEQ – Safety &amp; Quality</option><option>WRH – Work &amp; Rest Hours</option><option>NAV – Nav Intelligence</option><option>RPT – Custom Reports</option><option>Full Platform Suite</option></select></div>
+              <div class="form-field"><label>Modules of Interest</label><select id="cf-module"><option value>Select primary module</option><option>PMS – Planned Maintenance</option><option>INV – Inventory Management</option><option>PRC – Procurement</option><option>CREW – Crew Management</option><option>DMS – Document Management</option><option>SHEQ – Safety &amp; Quality</option><option>WRH – Work &amp; Rest Hours</option><option>NAV – Navigation &amp; Voyage</option><option>CHT – Chartering</option><option>RPT – Custom Reports</option><option>CRB – Carbon Reporting</option><option>Full Platform Suite</option></select></div>
               <div class="form-field"><label>Message</label><textarea id="cf-message" placeholder="Tell us about your fleet, current challenges, or the specific modules you'd like to explore…"></textarea></div>
               <div id="form-msg" class="form-msg"></div>
               <button type="button" class="form-submit" id="form-submit-btn" onclick="submitContactForm()">Send Enquiry →</button>
@@ -3626,8 +3697,8 @@
               <div class="sp-card-h">Reach our team</div>
               <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
                 <div style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--text-mid)"><span style="color:var(--gold);font-size:15px">✉</span>info@volaxin.com</div>
-                <div style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--text-mid)"><span style="color:var(--gold);font-size:15px">☎</span>+44 35342 322358</div>
-                <div style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--text-mid)"><span style="color:var(--gold);font-size:15px">⊕</span>Singapore · Rotterdam · Houston · Dubai</div>
+                <div style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--text-mid)"><span style="color:var(--gold);font-size:15px">☎</span>+91 6388410450</div>
+                <div style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--text-mid)"><span style="color:var(--gold);font-size:15px">⊕</span>Singapore · Rotterdam · Houston · Dubai· India</div>
               </div>
             </div>
             <div class="sp-card">
@@ -3716,6 +3787,8 @@
         setTimeout(() => {
           subOverlay.classList.remove('active');
           subOverlay.style.display = 'none';
+          // Restore the exact section the visitor left from (panel, dots, label, fog, stars, globe)
+          if (!subOpen && !isBusy) showPanel(curSec);
         }, 520);
         subOpen = false;
       };
@@ -3788,12 +3861,12 @@
          MAIN SITE ENGINE
       ════════════════════════════════════ */
       const SECTION_CONFIG = [
-        { name: 'Home', videoStart: 0, videoEnd: 0, speed: 1, fog: 'bottom', idleAmp: 6, idleZoom: 0.028 },
-        { name: 'Platform', videoStart: 0, videoEnd: 7, speed: 1.4, fog: 'bottom', idleAmp: 5, idleZoom: 0.024 },
-        { name: 'Globe', videoStart: 7, videoEnd: 16, speed: 1.4, fog: 'bottom', idleAmp: 0, idleZoom: 0.01 },
-        { name: 'Modules', videoStart: 16, videoEnd: 26.4, speed: 1.8, fog: 'bottom', idleAmp: 4, idleZoom: 0.022 },
-        { name: 'Capabilities', videoStart: 26.4, videoEnd: 35.2, speed: 1.2, fog: 'bottom', idleAmp: 4, idleZoom: 0.022 },
-        { name: 'AI & Support', videoStart: 35.2, videoEnd: 42, speed: 1.2, fog: 'bottom', idleAmp: 4, idleZoom: 0.022 },
+        { name: 'Home', videoStart: 0, videoEnd: 0, speed: 1, fog: 'full', idleAmp: 6, idleZoom: 0.028 },
+        { name: 'Platform', videoStart: 0, videoEnd: 7, speed: 1.4, fog: 'full', idleAmp: 5, idleZoom: 0.024 },
+        { name: 'Globe', videoStart: 7, videoEnd: 16, speed: 1.4, fog: 'full', idleAmp: 0, idleZoom: 0.01 },
+        { name: 'Modules', videoStart: 16, videoEnd: 26.4, speed: 1.8, fog: 'full', idleAmp: 4, idleZoom: 0.022 },
+        { name: 'Capabilities', videoStart: 26.4, videoEnd: 35.2, speed: 1.2, fog: 'full', idleAmp: 4, idleZoom: 0.022 },
+        { name: 'AI & Support', videoStart: 35.2, videoEnd: 42, speed: 1.2, fog: 'full', idleAmp: 4, idleZoom: 0.022 },
         { name: 'Contact', videoStart: 42, videoEnd: 49, speed: 1.2, fog: 'light', idleAmp: 5, idleZoom: 0.024 },
       ];
       const NUM_SECTIONS = SECTION_CONFIG.length;
@@ -3900,7 +3973,7 @@
       const FOG_SRCS = [{ src: 'fog/fog1.png', i: 1 }, { src: 'fog/fog2.png', i: 2 }, { src: 'fog/fog3.png', i: 3 }, { src: 'fog/fog4.png', i: 4 }, { src: 'fog/fog5.png', i: 5 }, { src: 'fog/fog1.png', i: 10 }, { src: 'fog/fog2.png', i: 9 }, { src: 'fog/fog3.png', i: 8 }, { src: 'fog/fog4.png', i: 7 }, { src: 'fog/fog5.png', i: 6 }];
       let fogBuilt = false;
       function buildFogLayer() { if (fogBuilt) return; fogBuilt = true; fogLayer.innerHTML = ''; const frag = document.createDocumentFragment(); for (const { src, i } of FOG_SRCS) { const img = document.createElement('img'); img.src = src; img.style.setProperty('--i', String(i)); frag.appendChild(img); } fogLayer.appendChild(frag); }
-      function applyFogMode(mode) { const imgs = fogLayer.querySelectorAll('img'); imgs.forEach((img, idx) => { img.removeAttribute('style'); img.style.setProperty('--i', FOG_SRCS[idx].i); if (mode === 'full' && idx % 2 === 1) { img.style.bottom = 'auto'; img.style.top = '0px'; img.style.transform = 'scaleY(-1) translateY(-2px)'; img.style.opacity = '0.08'; } else if (mode === 'light') img.style.opacity = '0.08'; }); }
+      function applyFogMode(mode) { const imgs = fogLayer.querySelectorAll('img'); imgs.forEach((img, idx) => { img.removeAttribute('style'); img.style.setProperty('--i', FOG_SRCS[idx].i); if (mode === 'full' && idx % 2 === 1) { img.style.bottom = 'auto'; img.style.top = '0px'; img.style.transformOrigin = 'center'; img.style.animationName = 'fog_effect_top'; } else if (mode === 'light') img.style.opacity = '0.08'; }); }
       function showFog(mode) { if (!mode || mode === 'none') { hideFog(); return; } buildFogLayer(); applyFogMode(mode); fogLayer.classList.add('visible'); fogLayer.style.opacity = '1'; }
       function hideFog() { fogLayer.classList.remove('visible'); fogLayer.style.opacity = '0'; }
       function setFogMode(mode) { if (!mode || mode === 'none') { hideFog(); return; } if (!fogBuilt) { showFog(mode); return; } applyFogMode(mode); fogLayer.classList.add('visible'); fogLayer.style.opacity = '0.22'; }
@@ -4365,7 +4438,7 @@
 
     })();
   </script>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-KPX3BRDQ.js" type="module"></script></body>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-5TRPZOXP.js" type="module"></script></body>
 </html>
 
 
