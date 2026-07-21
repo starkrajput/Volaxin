@@ -1,0 +1,31 @@
+# Volaxin Maritime Suite
+
+> Volaxin Maritime Suite is all-in-one ship management software for ship owners, technical managers and operators. It unifies eleven integrated modules — Planned Maintenance (PMS), Marine Inventory, Maritime Procurement, Crew Management, Work & Rest Hours (MLC 2006), SHEQ safety management, Document Management, Chartering & Post-Fixture, Navigation & Voyage planning, Custom Reports and IMO CII / EU ETS / FuelEU carbon compliance — in one cloud platform with true offline ship-side operation and automatic office-to-vessel synchronisation. Trusted across 500+ vessels in 15+ flag states.
+
+## Solutions
+- [Ship Management Software](https://volaxin.com/solutions/ship-management-software.html): The full 11-module platform for technical, crewing, commercial and compliance operations across a fleet.
+- [Planned Maintenance System (PMS) Software](https://volaxin.com/solutions/planned-maintenance-system-software.html): Class-approved marine PMS with job scheduling, ISM 10.3 critical equipment, defects, spares linkage, class-survey and dry-dock management, offline at sea.
+- [Marine Inventory Management Software](https://volaxin.com/solutions/marine-inventory-management-software.html): Fleet-wide spares and stores with min/max, automated reorder, multi-warehouse and consumption analytics, linked to PMS and procurement.
+- [Maritime Procurement Software](https://volaxin.com/solutions/maritime-procurement-software.html): Requisition-to-delivery purchasing with RFQ and supplier bid comparison, PO approvals, budget analytics and invoice matching.
+- [Crew Management Software](https://volaxin.com/solutions/crew-management-software.html): Full seafarer lifecycle — certificate/STCW alerts, rotation and relief, payroll and allotments, appraisals, flag-state and P&I compliance.
+- [Work & Rest Hours Software (MLC 2006 / STCW)](https://volaxin.com/solutions/work-rest-hours-software.html): Rest-hour recording with automatic violation detection against MLC 2006 and STCW, and PSC-ready export.
+- [SHEQ / Marine Safety Management Software](https://volaxin.com/solutions/sheq-safety-management-software.html): Incidents, near-misses, audits, risk assessments, drills, CAPA and KPIs aligned to ISM, ISPS and ISO, with vetting (SIRE 2.0 / RightShip) readiness.
+- [Chartering & Post-Fixture Software](https://volaxin.com/solutions/chartering-software.html): Charter party and fixture management, voyage estimation and P&L, laytime and demurrage, freight/hire/commission invoicing.
+- [Vessel Tracking & Voyage Planning Software](https://volaxin.com/solutions/vessel-tracking-voyage-software.html): Live vessel tracking, passage planning, weather routing, speed-vs-fuel optimisation and dynamic ETA — feeding CII and MRV reporting.
+- [CII, EU ETS & FuelEU Maritime Compliance Software](https://volaxin.com/solutions/maritime-emissions-cii-compliance-software.html): IMO CII ratings, EU ETS allowance tracking, FuelEU GHG-intensity (banking/borrowing/pooling) and automated EU MRV / IMO DCS / Poseidon Principles reporting.
+- [Best Ship Management Software 2026: Comparison & Buyer's Guide](https://volaxin.com/solutions/best-ship-management-software.html): Vendor-neutral selection criteria, how the main platforms differ (Volaxin, DNV ShipManager, IFS/SpecTec AMOS, ABS Nautical Systems, SERTICA, BASSnet), and where Volaxin fits.
+
+## Insights
+- [Planned Maintenance System for Ships: Complete 2026 Guide](https://volaxin.com/blogs/planned-maintenance-system-ships-guide.html): ISM Code requirements, maintenance strategies compared, and how to choose PMS software.
+- [IMO CII Rating Explained (2026 Guide)](https://volaxin.com/blogs/imo-cii-rating-2026-guide.html): The AER formula, rating bands, reduction factors and strategies to improve.
+- [EU ETS & FuelEU Maritime 2026 Guide](https://volaxin.com/blogs/eu-ets-fueleu-maritime-2026-guide.html): Phase-in, GHG-intensity targets and how to prepare.
+
+## Key facts
+- Deployment: cloud (web) with offline vessel client and automatic ship-to-shore sync over VSAT / Starlink.
+- Scale: 500+ vessels, 15+ flag states, 99.9% uptime SLA.
+- Standards covered: ISM Code, ISPS, MLC 2006, STCW, IMO CII, EU ETS, FuelEU Maritime, EU MRV, IMO DCS, Poseidon Principles, IMO cyber-risk MSC.428(98).
+- Ship types: tankers (crude/product/chemical/LNG/LPG), bulk carriers, container ships, general cargo, offshore/OSV, passenger and specialised vessels.
+
+## Contact
+- Demo: https://volaxin.com/
+- Email: info@volaxin.com
