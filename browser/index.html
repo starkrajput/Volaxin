@@ -1549,6 +1549,8 @@
         box-shadow: 0 0 8px var(--teal-glow);
       }
 
+    #p3 .sec-lbl, #p4 .sec-lbl { font-size: 12px; letter-spacing: .3em; }
+
     .sec-h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(22px,3.2vw,48px);
@@ -1766,13 +1768,13 @@
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border-radius: 16px;
-      padding: 20px 16px;
+      padding: 26px 22px;
       transition: background .28s, border-color .28s, transform .24s, box-shadow .28s;
       cursor: none;
       position: relative;
       overflow: hidden;
-      flex: 0 0 195px;
-      min-width: 195px;
+      flex: 0 0 240px;
+      min-width: 240px;
       box-shadow: var(--shadow-soft);
     }
 
@@ -1782,8 +1784,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 2.5px;
-        background: transparent;
+        height: 3.5px;
+        background: linear-gradient(90deg, var(--violet), var(--teal-light), var(--gold-light));
         transition: background .28s;
         border-radius: 16px 16px 0 0;
       }
@@ -1800,31 +1802,34 @@
         }
 
     .mc-icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 9px;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 12px;
     }
 
       .mc-icon svg {
-        width: 28px;
-        height: 28px;
+        width: 36px;
+        height: 36px;
       }
 
     .mc-name {
-      font-size: 10px;
-      letter-spacing: .14em;
+      font-size: 13.5px;
+      letter-spacing: .09em;
+      background: linear-gradient(90deg, var(--violet), var(--azure));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       color: var(--violet);
       text-transform: uppercase;
-      margin-bottom: 5px;
-      font-weight: 600;
-      text-shadow: 0 0 12px rgba(124,58,237,0.22);
+      margin-bottom: 8px;
+      font-weight: 700;
     }
 
     .mc-desc {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 400;
-      color: var(--text-mid);
-      line-height: 1.6;
+      color: var(--text-dark);
+      line-height: 1.66;
     }
 
     /* ═══════════════════════════════════
@@ -1859,11 +1864,13 @@
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border-radius: 16px;
-      padding: 22px 18px;
+      padding: 26px 22px;
       transition: background .28s, border-color .28s, transform .24s, box-shadow .28s;
       cursor: none;
-      flex: 0 0 210px;
-      min-width: 210px;
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 250px;
+      min-width: 250px;
       box-shadow: var(--shadow-soft);
     }
 
@@ -1874,17 +1881,31 @@
         box-shadow: var(--shadow-violet);
       }
 
+      .mfc::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3.5px;
+        background: linear-gradient(90deg, var(--teal-light), var(--violet), var(--gold-light));
+        border-radius: 16px 16px 0 0;
+      }
+
     .mft {
-      font-size: 8.5px;
-      letter-spacing: .22em;
+      font-size: 11.5px;
+      letter-spacing: .16em;
+      background: linear-gradient(90deg, var(--teal-light), var(--violet));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       color: var(--teal-light);
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-weight: 600;
-      text-shadow: 0 0 12px var(--teal-glow);
+      gap: 8px;
+      font-weight: 700;
     }
 
       .mft::before {
@@ -1897,18 +1918,18 @@
 
     .mfh {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 7px;
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 9px;
       color: var(--steel);
     }
 
     .mfb {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 400;
-      color: var(--text-mid);
-      line-height: 1.62;
-      margin-bottom: 11px;
+      color: var(--text-dark);
+      line-height: 1.66;
+      margin-bottom: 13px;
     }
 
     .mffl {
@@ -1918,12 +1939,12 @@
     }
 
     .mffi {
-      font-size: 10.5px;
-      font-weight: 400;
+      font-size: 12.5px;
+      font-weight: 500;
       color: var(--text-mid);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
       .mffi::before {
@@ -3797,6 +3818,7 @@
         <li><a href="solutions/vessel-tracking-voyage-software.html">Vessel Tracking &amp; Voyage Planning Software</a></li>
         <li><a href="solutions/maritime-emissions-cii-compliance-software.html">CII, EU ETS &amp; FuelEU Compliance Software</a></li>
         <li><a href="solutions/best-ship-management-software.html">Best Ship Management Software 2026 — Comparison</a></li>
+        <li><a href="solutions/maritime-software-security.html">Security &amp; Trust — Maritime Software Cyber Security</a></li>
         <li><a href="blog.html">Maritime Insights Blog</a></li>
       </ul>
     </nav>
@@ -3955,7 +3977,7 @@
       <div class="mods-wrap">
         <div class="mods-hdr">
           <div class="sec-lbl">Core Modules</div>
-          <h2 class="sec-h2" style="font-size:clamp(18px,2.6vw,38px);margin-bottom:4px;color:var(--steel)">Complete operational coverage, bow to stern</h2>
+          <h2 class="sec-h2" style="font-size:clamp(26px,3.6vw,50px);margin-bottom:6px;background:linear-gradient(90deg,var(--steel),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--steel)">Complete operational coverage, bow to stern</h2>
         </div>
         <div class="mods-scroll-row" id="mods-scroll">
           <div class="mc"><div class="mc-icon"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="rgba(15,52,96,.5)" stroke-width="1.2"/><path d="M16 9L16 16L22 16" stroke="rgba(200,146,58,.8)" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="2" fill="rgba(200,146,58,.8)"/></svg></div><div class="mc-name">PMS · Planned Maintenance</div><div class="mc-desc">Schedule, track &amp; log all vessel maintenance jobs. Condition and interval-based scheduling linked to class survey calendars.</div></div>
@@ -3982,7 +4004,7 @@
       <div class="mfull-wrap">
         <div style="margin-bottom:18px">
           <div class="sec-lbl">Deep Capabilities</div>
-          <h2 class="sec-h2" style="font-size:clamp(18px,2.4vw,36px);margin-bottom:0;color:white;">Engineered for every operational challenge at sea</h2>
+          <h2 class="sec-h2" style="font-size:clamp(26px,3.4vw,50px);margin-bottom:2px;background:linear-gradient(90deg,#ffffff,var(--gold-light));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:white;">Engineered for every operational challenge at sea</h2>
         </div>
         <div class="mfull-scroll" id="feat-scroll">
           <div class="mfc"><div class="mft">PMS</div><div class="mfh">Planned Maintenance</div><div class="mfb">Condition and interval-based scheduling linked directly to class survey calendars and critical equipment registers.</div><div class="mffl"><div class="mffi">Overdue job escalation</div><div class="mffi">Critical equipment tagging</div><div class="mffi">Defect &amp; repair tracking</div></div></div>

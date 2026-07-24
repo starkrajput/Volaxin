@@ -14,6 +14,7 @@
 - [Vessel Tracking & Voyage Planning Software](https://volaxin.com/solutions/vessel-tracking-voyage-software.html): Live vessel tracking, passage planning, weather routing, speed-vs-fuel optimisation and dynamic ETA — feeding CII and MRV reporting.
 - [CII, EU ETS & FuelEU Maritime Compliance Software](https://volaxin.com/solutions/maritime-emissions-cii-compliance-software.html): IMO CII ratings, EU ETS allowance tracking, FuelEU GHG-intensity (banking/borrowing/pooling) and automated EU MRV / IMO DCS / Poseidon Principles reporting.
 - [Best Ship Management Software 2026: Comparison & Buyer's Guide](https://volaxin.com/solutions/best-ship-management-software.html): Vendor-neutral selection criteria, how the main platforms differ (Volaxin, DNV ShipManager, IFS/SpecTec AMOS, ABS Nautical Systems, SERTICA, BASSnet), and where Volaxin fits.
+- [Security & Trust](https://volaxin.com/solutions/maritime-software-security.html): Security-by-design approach — encrypted ship-shore sync, role-based access, audit trails, offline resilience, and alignment with IMO cyber-risk guidance MSC.428(98) and the ISM Code. Vendor security assessments welcome.
 
 ## Insights
 - [Planned Maintenance System for Ships: Complete 2026 Guide](https://volaxin.com/blogs/planned-maintenance-system-ships-guide.html): ISM Code requirements, maintenance strategies compared, and how to choose PMS software.
