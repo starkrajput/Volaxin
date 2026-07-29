@@ -94,6 +94,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://volaxin.com/blogs/sire-2-0-tanker-vetting-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/sire-2-0-tanker-vetting-og.jpg</image:loc>
+      <image:title>SIRE 2.0 tanker vetting inspection guide</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://volaxin.com/blogs/maritime-cyber-security-imo-guide.html</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
