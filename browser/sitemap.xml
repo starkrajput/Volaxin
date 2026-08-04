@@ -22,6 +22,72 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://volaxin.com/solutions/electronic-record-books-software.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/ballast-water-management-d2-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/ballast-water-d2-og.jpg</image:loc>
+      <image:title>Ballast Water Management D-2 standard compliance</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/dry-dock-planning-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/dry-dock-planning-og.jpg</image:loc>
+      <image:title>Dry dock planning, specification and cost control</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/psc-inspection-detention-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/psc-detention-og.jpg</image:loc>
+      <image:title>Port State Control detention — top deficiencies and prevention</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/mlc-rest-hours-calculation-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/mlc-rest-hours-og.jpg</image:loc>
+      <image:title>MLC and STCW rest hours calculation with worked examples</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/oil-record-book-entries-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/oil-record-book-entries-og.jpg</image:loc>
+      <image:title>Oil Record Book entries, codes and common PSC deficiencies</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://volaxin.com/blogs/electronic-record-books-marpol-guide.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://volaxin.com/images/blog/electronic-record-books-og.jpg</image:loc>
+      <image:title>MARPOL electronic record books and e-ORB approval</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://volaxin.com/solutions/maritime-software-security.html</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
