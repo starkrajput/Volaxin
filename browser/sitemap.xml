@@ -33,7 +33,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/ballast-water-d2-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/ballast-water-d2-og.png</image:loc>
       <image:title>Ballast Water Management D-2 standard compliance</image:title>
     </image:image>
   </url>
@@ -43,7 +43,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/dry-dock-planning-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/dry-dock-planning-og.png</image:loc>
       <image:title>Dry dock planning, specification and cost control</image:title>
     </image:image>
   </url>
@@ -53,7 +53,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/psc-detention-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/psc-detention-og.png</image:loc>
       <image:title>Port State Control detention — top deficiencies and prevention</image:title>
     </image:image>
   </url>
@@ -63,7 +63,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/mlc-rest-hours-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/mlc-rest-hours-og.png</image:loc>
       <image:title>MLC and STCW rest hours calculation with worked examples</image:title>
     </image:image>
   </url>
@@ -73,7 +73,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/oil-record-book-entries-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/oil-record-book-entries-og.png</image:loc>
       <image:title>Oil Record Book entries, codes and common PSC deficiencies</image:title>
     </image:image>
   </url>
@@ -83,7 +83,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/electronic-record-books-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/electronic-record-books-og.png</image:loc>
       <image:title>MARPOL electronic record books and e-ORB approval</image:title>
     </image:image>
   </url>
@@ -165,7 +165,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://volaxin.com/images/blog/sire-2-0-tanker-vetting-og.jpg</image:loc>
+      <image:loc>https://volaxin.com/images/blog/sire-2-0-tanker-vetting-og.png</image:loc>
       <image:title>SIRE 2.0 tanker vetting inspection guide</image:title>
     </image:image>
   </url>
