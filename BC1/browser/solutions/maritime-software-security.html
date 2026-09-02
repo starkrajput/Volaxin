@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security &amp; Trust | Volaxin Maritime Suite</title>
+  <meta name="description" content="How Volaxin approaches maritime software security: encrypted ship-shore sync, role-based access, audit trails and IMO cyber-risk (MSC.428(98)) alignment.">
+  <meta name="keywords" content="maritime software security, ship management software security, maritime cyber security, IMO MSC.428(98), maritime cyber risk management, secure ship shore data sync, maritime data protection, vendor security assessment maritime, ISM cyber security, fleet data security">
+  <meta name="author" content="Volaxin Maritime Suite Ltd">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://volaxin.com/solutions/maritime-software-security.html">
+  <meta name="theme-color" content="#040d1c">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://volaxin.com/solutions/maritime-software-security.html">
+  <meta property="og:title" content="Security &amp; Trust — Volaxin Maritime Suite">
+  <meta property="og:description" content="Security-by-design for fleet operations: encrypted ship-shore sync, RBAC, audit trails, resilient offline architecture and IMO cyber-risk alignment.">
+  <meta property="og:image" content="https://volaxin.com/og-image.jpg">
+  <meta property="og:site_name" content="Volaxin Maritime Suite">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@VolaxinMaritime">
+  <meta name="twitter:title" content="Security &amp; Trust — Volaxin Maritime Suite">
+  <meta name="twitter:description" content="How Volaxin approaches maritime software security and data protection.">
+  <meta name="twitter:image" content="https://volaxin.com/og-image.jpg">
+  <!--
+    ┌─────────────────────────────────────────────────────────────────────────────┐
+    │  CLIENT ACTION REQUIRED BEFORE THIS PAGE IS FULLY LIVE                        │
+    │  This page is written at the honest "approach / by-design" level and makes    │
+    │  NO specific certification, hosting-provider, or cryptographic claims that     │
+    │  have not been confirmed. Replace the [[CONFIRM: …]] markers below with your   │
+    │  REAL, verifiable facts before relying on them in sales:                       │
+    │    • Hosting platform & data regions (e.g. AWS eu-west, Azure, on-prem option) │
+    │    • Encryption specifics (e.g. TLS 1.2+ in transit, AES-256 at rest)          │
+    │    • Certifications actually held or in progress (ISO 27001, SOC 2, …)         │
+    │    • Class-society approvals (DNV / LR / ABS / BV …) for the PMS scheme        │
+    │    • Uptime SLA figure and its contractual remedy                              │
+    │    • Penetration-testing cadence and who performs it                           │
+    │  When you have real certification logos, add them where marked, and tell your  │
+    │  developer to add a "HasCredential"/"certification" block to the schema below. │
+    └─────────────────────────────────────────────────────────────────────────────┘
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://volaxin.com/solutions/maritime-software-security.html#page",
+        "name": "Security & Trust — Volaxin Maritime Suite",
+        "url": "https://volaxin.com/solutions/maritime-software-security.html",
+        "description": "How Volaxin Maritime Suite approaches security, data protection and cyber-risk for fleet operations, including encrypted ship-shore sync, role-based access, audit trails and alignment with IMO MSC.428(98) and the ISM Code.",
+        "isPartOf": {"@type": "WebSite", "url": "https://volaxin.com", "name": "Volaxin Maritime Suite"},
+        "about": {"@type": "SoftwareApplication", "name": "Volaxin Maritime Suite", "url": "https://volaxin.com/solutions/ship-management-software.html"},
+        "publisher": {"@type": "Organization", "name": "Volaxin Maritime Suite Ltd", "url": "https://volaxin.com", "logo": {"@type": "ImageObject", "url": "https://volaxin.com/logo.png"}}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://volaxin.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Ship Management Software", "item": "https://volaxin.com/solutions/ship-management-software.html"},
+          {"@type": "ListItem", "position": 3, "name": "Security & Trust", "item": "https://volaxin.com/solutions/maritime-software-security.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How does Volaxin secure ship-to-shore data?", "acceptedAnswer": {"@type": "Answer", "text": "Ship-shore synchronisation is designed to be encrypted in transit, with role-based access control, per-user authentication and full audit trails. The vessel operates offline and reconciles with the office over encrypted channels when connectivity returns, so data is neither exposed nor lost during transfer."}},
+          {"@type": "Question", "name": "Does Volaxin align with IMO cyber-risk requirements?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The platform is designed to support owners and managers in meeting IMO cyber-risk management guidance (Resolution MSC.428(98)) and the ISM Code, providing access control, audit logging and controlled document distribution that feed a company's safety-management and cyber-risk framework."}},
+          {"@type": "Question", "name": "Can we run a vendor security assessment on Volaxin?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Volaxin welcomes buyer due diligence — security questionnaires, architecture reviews and evidence requests. Contact the team to receive current documentation and complete your vendor security assessment as part of procurement."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="solutions.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <nav>
+    <a href="../index.html" class="nlogo">
+      <div class="nmark"><img src="../logo.png" alt="Volaxin Maritime Suite logo" onerror="this.parentNode.innerHTML='<div class=\'nmark-fallback\'></div>'"></div>
+      <div class="ntitle-wrap"><span class="ntitle">Volaxin</span><span class="ntagline">Security &amp; Trust</span></div>
+    </a>
+    <a href="ship-management-software.html" class="nav-back">All Solutions</a>
+  </nav>
+
+  <article>
+    <header class="article-hero">
+      <div class="crumbs"><a href="../index.html">Home</a> / <a href="ship-management-software.html">Solutions</a> / Security &amp; Trust</div>
+      <span class="article-chip">Security &amp; Trust</span>
+      <h1 class="article-h1">Security &amp; Trust, <em>by Design</em></h1>
+      <p class="article-lead">Fleet software holds some of a shipping company's most sensitive data — crew records, positions, commercial terms and compliance evidence. Volaxin Maritime Suite is built around security-by-design principles: encrypted ship-shore synchronisation, strict access control, complete audit trails and a resilient offline architecture, aligned with the IMO's cyber-risk guidance and the ISM Code. This page explains our approach — and we welcome your own security assessment.</p>
+      <div class="article-meta">
+        <span>Security-by-design</span>
+        <span>IMO MSC.428(98) aligned</span>
+        <span>Assessments welcome</span>
+      </div>
+    </header>
+
+    <div class="article-body">
+
+      <section class="asec" id="principles">
+        <h2>Our Security Principles</h2>
+        <ul class="check-list">
+          <li><strong>Least-privilege access.</strong> Role-based access control (RBAC) with per-user authentication means people see only the data and actions their role requires, across office and vessel.</li>
+          <li><strong>Encrypted in transit.</strong> Ship-shore synchronisation and office access are designed to run over encrypted channels, so data is protected as it moves between vessel and shore.</li>
+          <li><strong>Everything is auditable.</strong> Actions are logged with user, time and change detail, giving a defensible trail for internal audit, ISM and vetting.</li>
+          <li><strong>Resilient by architecture.</strong> The vessel works fully offline and reconciles automatically — no reliance on a live link means no data loss and no exposure window during outages.</li>
+          <li><strong>Controlled documents.</strong> The Document Management module distributes controlled, versioned SMS documents with read-receipts, reducing the risk of out-of-date procedures at sea.</li>
+        </ul>
+        <!-- [[CONFIRM: add exact encryption details here once verified, e.g. "TLS 1.2+ in transit, AES-256 at rest". Do NOT state specifics you cannot evidence.]] -->
+      </section>
+
+      <section class="asec" id="imo-cyber">
+        <h2>Alignment with IMO Cyber-Risk &amp; the ISM Code</h2>
+        <p>Since 1 January 2021, IMO Resolution <strong>MSC.428(98)</strong> requires cyber risk to be addressed within a company's <strong>Safety Management System</strong> under the ISM Code. Volaxin is designed to support that obligation rather than complicate it:</p>
+        <ul>
+          <li>Access control and authentication that map to your cyber-risk policy.</li>
+          <li>Audit logging that evidences "who did what, when" for DPA reviews and PSC.</li>
+          <li>Controlled SMS document distribution so cyber and safety procedures reach the vessel and are acknowledged.</li>
+          <li>Offline-first design that keeps critical operations running if connectivity is degraded or lost.</li>
+        </ul>
+        <div class="callout"><span class="callout-icon">🛡️</span><p>Volaxin is a tool that supports your cyber-risk framework; it does not replace your own SMS, policies or crew training. We're happy to map our controls to your risk assessment during evaluation.</p></div>
+      </section>
+
+      <section class="asec" id="data">
+        <h2>Data Handling &amp; Privacy</h2>
+        <p>We treat customer and crew data as a responsibility, not just an asset:</p>
+        <table class="atable">
+          <thead><tr><th>Area</th><th>Approach</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Data ownership</strong></td><td>Your operational data remains yours; we act as a processor for the purpose of delivering the service.</td></tr>
+            <tr><td><strong>Access</strong></td><td>Role-based, least-privilege, per-user — with administrative access restricted and logged.</td></tr>
+            <tr><td><strong>Personal data</strong></td><td>Crew and personal data handled with privacy-by-design principles and data-subject rights in mind. <!-- [[CONFIRM: state GDPR/UK-GDPR posture and DPA availability once verified]] --></td></tr>
+            <tr><td><strong>Hosting &amp; regions</strong></td><td><!-- [[CONFIRM: replace with real hosting platform + data regions, e.g. "Hosted on AWS in EU/UK regions"]] -->Cloud-hosted with an on/offline vessel client; hosting and data-region details available on request.</td></tr>
+            <tr><td><strong>Backups &amp; continuity</strong></td><td>Regular backups and reconciliation between ship and shore protect against data loss. <!-- [[CONFIRM: RPO/RTO and backup cadence]] --></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="asec" id="standards">
+        <h2>Standards, Certifications &amp; Assurance</h2>
+        <p>We align our security programme to recognised maritime and information-security standards, including IMO MSC.428(98) cyber-risk guidance and ISM-aligned document control. For current certifications, attestations and audit evidence — or to run your own vendor security assessment — contact our team and we'll support your procurement due diligence.</p>
+        <!--
+          [[CLIENT: When you hold real certifications, replace the paragraph above with specific,
+          truthful claims and add certification logos here (ISO 27001, SOC 2, class-society
+          approvals, etc.). Do not display any badge you have not actually earned.]]
+        -->
+        <div class="callout"><span class="callout-icon">📋</span><p><strong>Buying for a fleet?</strong> We welcome security questionnaires, penetration-test evidence requests and architecture reviews as a normal part of evaluation. Ask for our security pack when you book a demo.</p></div>
+      </section>
+
+      <div class="cta-box">
+        <h2>Do your due diligence — <em>we encourage it</em></h2>
+        <p>Book a demo and bring your security team. We'll walk through access control, encrypted sync, audit trails and our cyber-risk alignment, and complete your vendor assessment.</p>
+        <a class="cta-btn" href="../index.html?demo=1" target="_top">Request a Demo</a>
+      </div>
+
+      <section class="asec" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How does Volaxin secure ship-to-shore data?</h3>
+        <p>Through encrypted synchronisation, role-based access, per-user authentication and full audit trails, with an offline-first design so data is neither exposed nor lost during connectivity outages.</p>
+        <h3>Does Volaxin align with IMO cyber-risk requirements?</h3>
+        <p>Yes — it's designed to support owners and managers meeting IMO MSC.428(98) and ISM cyber-risk obligations, but it complements rather than replaces your own SMS and policies.</p>
+        <h3>Can we run a vendor security assessment?</h3>
+        <p>Absolutely. We welcome security questionnaires, evidence requests and architecture reviews as part of procurement.</p>
+      </section>
+
+      <section class="related">
+        <h2>Related</h2>
+        <a href="ship-management-software.html"><div class="r-h">Ship Management Software (Platform Overview)</div><div class="r-p">The full platform these security controls run across.</div></a>
+        <a href="best-ship-management-software.html"><div class="r-h">Best Ship Management Software 2026 (Buyer's Guide)</div><div class="r-p">Security is one of the seven selection criteria — see the full scorecard.</div></a>
+      </section>
+
+    </div>
+  </article>
+
+  <footer class="page-footer">
+    <span class="fc">© 2026 Volaxin Maritime Suite Ltd. All rights reserved.</span>
+    <ul class="flinks">
+      <li><a href="../index.html">Platform</a></li>
+      <li><a href="ship-management-software.html">Solutions</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../privacy.html">Privacy Policy</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    if (window.self !== window.top || new URLSearchParams(location.search).get('embed') === '1') { document.body.classList.add('framed'); }
+    const bar = document.getElementById('progress');
+    document.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%'; }, { passive: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Privacy Policy — Volaxin Maritime Suite</title>
+  <meta name="description" content="Volaxin Maritime Suite Privacy Policy — how we collect, process, store and protect your personal data in full compliance with GDPR, UK GDPR and international maritime data regulations.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://volaxin.com/privacy.html">
+  <meta name="theme-color" content="#040d1c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Mobile-specific contact grid override */
+    @media (max-width: 768px) {
+      #contact-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .form-submit {
+        width: 100%;
+        text-align: center;
+        align-self: stretch;
+        cursor: pointer;
+      }
+
+      .arrow-btn {
+        cursor: pointer;
+      }
+
+      .mobile-nav-cta {
+        cursor: pointer;
+      }
+    }
+  </style>
+  <style>
+    /* ── PASTE YOUR ROOT VARIABLES & BASE STYLES FROM MAIN SITE HERE ── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #020810;
+      --deep: #050e1f;
+      --steel: #0b2a5e;
+      --horizon: #1340a0;
+      --azure: #2563eb;
+      --mist: #60a5fa;
+      --pearl: #dbeafe;
+      --white: #ffffff;
+      --gold: #b8860b;
+      --gold-rich: #d4a017;
+      --gold-light: #f0c040;
+      --gold-glow: rgba(212,160,23,0.70);
+      --gold-glow-soft: rgba(212,160,23,0.30);
+      --violet: #7c3aed;
+      --violet-light: #a78bfa;
+      --violet-glow: rgba(124,58,237,0.55);
+      --teal: #0d9488;
+      --teal-light: #2dd4bf;
+      --teal-glow: rgba(13,148,136,0.55);
+      --sapphire: #1d4ed8;
+      --text-dark: #0a1628;
+      --text-mid: #1e3a5f;
+      --text-muted: rgba(10,22,40,0.55);
+      --glass-white: rgba(240,245,255,0.82);
+      --glass-border: rgba(180,200,255,0.52);
+      --shadow-soft: 0 8px 40px rgba(5,14,50,0.16), 0 2px 8px rgba(5,14,50,0.10);
+      --shadow-deep: 0 24px 70px rgba(2,8,16,0.32), 0 6px 20px rgba(2,8,16,0.18);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(160deg, #e8eeff 0%, #d4dcf8 30%, #c8d2f4 60%, #d0d8f8 100%);
+      min-height: 100vh;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── CURSOR (desktop only) ── */
+    #cur {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: transform .08s, background .18s;
+      box-shadow: 0 0 12px var(--gold-glow), 0 0 28px rgba(212,160,23,0.3);
+    }
+
+    #cur-ring {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid rgba(124,58,237,0.55);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: width .18s, height .18s;
+    }
+
+    body.hov #cur {
+      transform: translate(-50%,-50%) scale(2.4);
+      background: var(--violet-light);
+    }
+
+    body.hov #cur-ring {
+      width: 44px;
+      height: 44px;
+      border-color: rgba(124,58,237,0.32);
+    }
+
+    @media (hover:none) and (pointer:coarse) {
+      #cur, #cur-ring {
+        display: none !important;
+      }
+
+      body {
+        cursor: auto;
+      }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      width: 100%;
+      padding: 12px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(235,240,255,0.92);
+      backdrop-filter: blur(32px) saturate(2.0);
+      -webkit-backdrop-filter: blur(32px) saturate(2.0);
+      border-bottom: 1px solid rgba(180,200,255,0.55);
+      box-shadow: 0 4px 40px rgba(5,14,50,0.10);
+    }
+
+    .nlogo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nmark-fallback {
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid rgba(212,160,23,0.65);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg,rgba(212,160,23,0.10),rgba(124,58,237,0.08));
+      position: relative;
+      flex-shrink: 0;
+    }
+
+      .nmark-fallback::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border: 1.5px solid var(--gold-rich);
+        transform: rotate(45deg);
+        border-radius: 3px;
+      }
+
+    .nmark img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .ntitle-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .ntitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      color: var(--steel);
+      text-transform: uppercase;
+    }
+
+    .ntagline {
+      font-size: 8.5px;
+      letter-spacing: .18em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .nav-back {
+      font-size: 10px;
+      letter-spacing: .14em;
+      font-weight: 600;
+      color: var(--steel);
+      text-decoration: none;
+      text-transform: uppercase;
+      background: rgba(29,78,216,0.07);
+      border: 1.5px solid rgba(29,78,216,0.20);
+      padding: 8px 18px;
+      border-radius: 10px;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: none;
+    }
+
+      .nav-back:hover {
+        background: rgba(29,78,216,0.13);
+        border-color: var(--violet);
+        color: var(--violet);
+      }
+
+      .nav-back::before {
+        content: '←';
+        font-size: 13px;
+      }
+
+    /* ── HERO BANNER ── */
+    .page-hero {
+      padding: 52px 52px 36px;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(29,78,216,0.10);
+    }
+
+    .page-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: .32em;
+      color: var(--teal-light);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-shadow: 0 0 14px var(--teal-glow);
+    }
+
+      .page-eyebrow::before {
+        content: '';
+        width: 24px;
+        height: 1.5px;
+        background: var(--teal-light);
+        flex-shrink: 0;
+        box-shadow: 0 0 8px var(--teal-glow);
+      }
+
+    .page-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px,4.5vw,58px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--steel);
+      margin-bottom: 14px;
+    }
+
+      .page-h1 em {
+        font-style: italic;
+        color: var(--teal);
+        text-shadow: 0 0 22px var(--teal-glow);
+      }
+
+    .page-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .page-meta-item {
+      font-size: 10px;
+      letter-spacing: .14em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+      .page-meta-item::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--gold-light);
+        box-shadow: 0 0 6px var(--gold-glow-soft);
+        flex-shrink: 0;
+      }
+
+    /* ── LAYOUT ── */
+    .page-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 52px 80px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── TOC SIDEBAR ── */
+    .toc {
+      position: sticky;
+      top: 80px;
+      background: rgba(235,240,255,0.82);
+      border: 1px solid rgba(180,200,255,0.60);
+      backdrop-filter: blur(20px);
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .toc-title {
+      font-size: 9px;
+      letter-spacing: .22em;
+      color: var(--teal-light);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+      .toc-title::before {
+        content: '';
+        width: 14px;
+        height: 1.5px;
+        background: var(--teal-light);
+        flex-shrink: 0;
+      }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+      .toc-list a {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--text-mid);
+        text-decoration: none;
+        padding: 7px 10px;
+        border-radius: 8px;
+        transition: all .2s;
+        display: block;
+        cursor: none;
+        letter-spacing: .04em;
+        line-height: 1.4;
+      }
+
+        .toc-list a:hover {
+          color: var(--violet);
+          background: rgba(124,58,237,0.08);
+        }
+
+        .toc-list a.active {
+          color: var(--violet);
+          background: rgba(124,58,237,0.12);
+        }
+
+      .toc-list .toc-num {
+        font-size: 9px;
+        color: var(--text-muted);
+        margin-right: 4px;
+      }
+
+    /* ── CONTENT ── */
+    .doc-content {
+      min-width: 0;
+    }
+
+    .doc-section {
+      background: rgba(235,240,255,0.80);
+      border: 1px solid rgba(180,200,255,0.58);
+      backdrop-filter: blur(18px);
+      border-radius: 20px;
+      padding: 34px 38px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 18px;
+      scroll-margin-top: 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+      .doc-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--teal), var(--violet-light));
+        border-radius: 20px 20px 0 0;
+      }
+
+    .sec-num {
+      font-size: 9px;
+      letter-spacing: .28em;
+      color: var(--teal-light);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow: 0 0 12px var(--teal-glow);
+    }
+
+      .sec-num::before {
+        content: '';
+        width: 14px;
+        height: 1.5px;
+        background: var(--teal-light);
+        flex-shrink: 0;
+        box-shadow: 0 0 6px var(--teal-glow);
+      }
+
+    .doc-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px,2.4vw,28px);
+      font-weight: 500;
+      color: var(--steel);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .doc-section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(15px,1.8vw,20px);
+      font-weight: 500;
+      color: var(--steel);
+      margin: 20px 0 10px;
+      line-height: 1.3;
+    }
+
+    .doc-section p {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-mid);
+      line-height: 1.84;
+      margin-bottom: 14px;
+    }
+
+      .doc-section p:last-child {
+        margin-bottom: 0;
+      }
+
+    .doc-section ul, .doc-section ol {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+      .doc-section ul li, .doc-section ol li {
+        font-size: 12.5px;
+        color: var(--text-mid);
+        line-height: 1.72;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+        .doc-section ul li::before {
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: var(--gold-light);
+          flex-shrink: 0;
+          margin-top: 5px;
+          box-shadow: 0 0 6px var(--gold-glow-soft);
+        }
+
+    .doc-section ol {
+      counter-reset: li;
+    }
+
+      .doc-section ol li::before {
+        counter-increment: li;
+        content: counter(li);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(29,78,216,0.10);
+        border: 1px solid rgba(29,78,216,0.22);
+        color: var(--sapphire);
+        font-size: 9.5px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        letter-spacing: 0;
+      }
+
+    .highlight-box {
+      background: rgba(13,148,136,0.07);
+      border: 1px solid rgba(13,148,136,0.24);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .highlight-box-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .highlight-box p {
+      font-size: 12.5px;
+      color: var(--teal);
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.68;
+    }
+
+    .warning-box {
+      background: rgba(212,160,23,0.08);
+      border: 1px solid rgba(212,160,23,0.28);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+      .warning-box p {
+        font-size: 12.5px;
+        color: var(--gold);
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.68;
+      }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 12px;
+    }
+
+      .data-table th {
+        background: rgba(29,78,216,0.08);
+        color: var(--steel);
+        font-size: 9px;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px 14px;
+        text-align: left;
+        border-bottom: 1.5px solid rgba(29,78,216,0.15);
+      }
+
+      .data-table td {
+        padding: 10px 14px;
+        color: var(--text-mid);
+        line-height: 1.6;
+        border-bottom: 1px solid rgba(29,78,216,0.07);
+        vertical-align: top;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table tr:hover td {
+        background: rgba(124,58,237,0.04);
+      }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .legal-badge {
+      font-size: 9px;
+      letter-spacing: .12em;
+      color: var(--text-mid);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(29,78,216,0.07);
+      border: 1px solid rgba(29,78,216,0.20);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+      .legal-badge::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--teal-light);
+        box-shadow: 0 0 6px var(--teal-glow);
+      }
+
+    .contact-card {
+      background: rgba(29,78,216,0.06);
+      border: 1px solid rgba(29,78,216,0.18);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-top: 16px;
+    }
+
+    .contact-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--steel);
+      margin-bottom: 12px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      margin-bottom: 7px;
+    }
+
+      .contact-row span {
+        color: var(--gold);
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      border-top: 1px solid rgba(29,78,216,0.10);
+      padding: 20px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: rgba(235,240,255,0.70);
+      backdrop-filter: blur(14px);
+    }
+
+    .fc {
+      font-size: 9.5px;
+      letter-spacing: .12em;
+      color: var(--text-muted);
+    }
+
+    .flinks {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+    }
+
+      .flinks a {
+        font-size: 9.5px;
+        letter-spacing: .12em;
+        color: var(--text-muted);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .22s;
+        cursor: none;
+      }
+
+        .flinks a:hover {
+          color: var(--gold-rich);
+        }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        padding: 24px 20px 60px;
+      }
+
+      .toc {
+        position: static;
+        display: none;
+      }
+
+      .page-hero {
+        padding: 32px 20px 24px;
+      }
+
+      nav {
+        padding: 10px 16px;
+      }
+
+      .page-footer {
+        padding: 14px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .doc-section {
+        padding: 22px 18px;
+        border-radius: 14px;
+      }
+
+      .page-h1 {
+        font-size: clamp(22px,7vw,32px);
+      }
+
+      .data-table {
+        font-size: 11px;
+      }
+
+        .data-table th, .data-table td {
+          padding: 8px 10px;
+        }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .doc-section {
+      animation: fadeUp .5s ease both;
+    }
+
+      .doc-section:nth-child(2) {
+        animation-delay: .05s;
+      }
+
+      .doc-section:nth-child(3) {
+        animation-delay: .10s;
+      }
+
+      .doc-section:nth-child(4) {
+        animation-delay: .15s;
+      }
+
+      .doc-section:nth-child(5) {
+        animation-delay: .20s;
+      }
+
+      .doc-section:nth-child(6) {
+        animation-delay: .25s;
+      }
+  </style>
+</head>
+<body>
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nlogo">
+      <div class="nmark">
+        <img src="logo.png" alt="Volaxin" onerror="this.parentNode.innerHTML='<div class=\'nmark-fallback\'></div>'">
+      </div>
+      <div class="ntitle-wrap">
+        <span class="ntitle">Volaxin</span>
+        <span class="ntagline">Maritime Suite</span>
+      </div>
+    </a>
+    <a href="index.html" class="nav-back">Return to Platform</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-eyebrow">Legal & Compliance</div>
+    <h1 class="page-h1">Privacy <em>Policy</em></h1>
+    <p style="font-size:13.5px;color:var(--text-mid);line-height:1.78;max-width:620px;margin-top:8px;">
+      This Privacy Policy governs the collection, processing, storage, transfer and protection of personal data by Volaxin Maritime Suite Ltd in connection with the operation of the Volaxin platform, our corporate website, and all associated services.
+    </p>
+    <div class="page-meta">
+      <div class="page-meta-item">Effective Date: 1 January 2025</div>
+      <div class="page-meta-item">Last Revised: 19 May 2026</div>
+      <div class="page-meta-item">Version: 3.1</div>
+    </div>
+    <div class="badge-row" style="margin-top:18px;">
+      <span class="legal-badge">GDPR Article 13 &amp; 14 Compliant</span>
+      <span class="legal-badge">UK GDPR Aligned</span>
+      <span class="legal-badge">CCPA Ready</span>
+      <span class="legal-badge">ISO/IEC 27001 Framework</span>
+      <span class="legal-badge">MLC 2006 Crew Data Compliant</span>
+    </div>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="page-layout">
+
+    <!-- SIDEBAR TOC -->
+    <aside class="toc">
+      <div class="toc-title">Contents</div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span class="toc-num">01</span> Data Controller</a></li>
+        <li><a href="#s2"><span class="toc-num">02</span> Definitions</a></li>
+        <li><a href="#s3"><span class="toc-num">03</span> Data We Collect</a></li>
+        <li><a href="#s4"><span class="toc-num">04</span> Lawful Basis</a></li>
+        <li><a href="#s5"><span class="toc-num">05</span> How We Use Data</a></li>
+        <li><a href="#s6"><span class="toc-num">06</span> Data Sharing</a></li>
+        <li><a href="#s7"><span class="toc-num">07</span> International Transfers</a></li>
+        <li><a href="#s8"><span class="toc-num">08</span> Retention Periods</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span> Your Rights</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span> Cookies &amp; Tracking</a></li>
+        <li><a href="#s11"><span class="toc-num">11</span> Maritime Specific Data</a></li>
+        <li><a href="#s12"><span class="toc-num">12</span> Children's Privacy</a></li>
+        <li><a href="#s13"><span class="toc-num">13</span> Policy Changes</a></li>
+        <li><a href="#s14"><span class="toc-num">14</span> Contact &amp; DPO</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="doc-content">
+
+      <!-- §1 -->
+      <div class="doc-section" id="s1">
+        <div class="sec-num">Section 01</div>
+        <h2>Data Controller Identity &amp; Corporate Details</h2>
+        <p>
+          For the purposes of the UK General Data Protection Regulation (UK GDPR), the EU General Data Protection Regulation 2016/679 (EU GDPR), and all applicable national data protection legislation, the Data Controller of personal data processed in connection with the Volaxin Maritime Suite platform and all related services is:
+        </p>
+        <div class="contact-card">
+          <div class="contact-card-title">Volaxin Maritime Suite Ltd</div>
+          <div class="contact-row"><span>✉</span> info@volaxin.com</div>
+          <div class="contact-row"><span>☎</span> +44 35342 322358</div>
+        </div>
+        <p style="margin-top:14px;">
+          Where Volaxin processes personal data on behalf of its clients (ship operators, fleet managers, crewing agencies, and other maritime organisations), Volaxin acts as a <strong>Data Processor</strong> under the terms of the applicable Data Processing Agreement (DPA) executed between Volaxin and the respective client entity, which constitutes the Data Controller for such data.
+        </p>
+        <div class="highlight-box">
+          <span class="highlight-box-icon">ℹ</span>
+          <p>If you are a seafarer whose personal data has been uploaded by your employer or crewing manager, your primary data controller is that employing or crewing organisation. You should also direct rights requests to Volaxin as processor where direct access to platform data is required.</p>
+        </div>
+      </div>
+
+      <!-- §2 -->
+      <div class="doc-section" id="s2">
+        <div class="sec-num">Section 02</div>
+        <h2>Definitions &amp; Interpretive Framework</h2>
+        <p>Throughout this Privacy Policy, the following capitalised terms carry the meanings set out below:</p>
+        <table class="data-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Personal Data</strong></td><td>Any information relating to an identified or identifiable natural person ("data subject") as defined in Article 4(1) GDPR, including but not limited to names, identification numbers, location data, online identifiers, and professional credentials.</td></tr>
+            <tr><td><strong>Special Category Data</strong></td><td>Personal data revealing racial or ethnic origin, health data, biometric data processed for identification purposes, or any other category listed under Article 9(1) GDPR, processing of which requires an explicit supplementary lawful basis.</td></tr>
+            <tr><td><strong>Processing</strong></td><td>Any operation or set of operations performed on personal data, whether or not by automated means, including collection, recording, organisation, structuring, storage, adaptation, retrieval, consultation, use, disclosure, dissemination, restriction, erasure or destruction.</td></tr>
+            <tr><td><strong>Platform</strong></td><td>The Volaxin Maritime Suite SaaS application, including all modules (PMS, INV, CREW, DMS, SHEQ, WRH, NAV, PRC, RPT, CRB), associated mobile applications, APIs, and offline synchronisation tooling.</td></tr>
+            <tr><td><strong>Data Processing Agreement (DPA)</strong></td><td>The binding contractual instrument executed between Volaxin and each client organisation governing the terms under which Volaxin processes personal data as a processor.</td></tr>
+            <tr><td><strong>Standard Contractual Clauses (SCCs)</strong></td><td>The European Commission-approved contractual mechanisms for the lawful transfer of personal data to third countries, as updated by Commission Implementing Decision (EU) 2021/914.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- §3 -->
+      <div class="doc-section" id="s3">
+        <div class="sec-num">Section 03</div>
+        <h2>Categories of Personal Data We Collect</h2>
+        <h3>3.1 Account &amp; Identity Data</h3>
+        <p>When you or your organisation creates an account on the Volaxin platform, we collect:</p>
+        <ul>
+          <li>Full legal name, professional title, and business email address</li>
+          <li>Job function, department, and organisational role within the fleet management hierarchy</li>
+          <li>Phone number (optional, for multi-factor authentication and support escalation)</li>
+          <li>Login credentials in hashed, salted, cryptographically irreversible form (bcrypt / Argon2id)</li>
+          <li>IP address and device fingerprint metadata associated with authentication events</li>
+          <li>Time-stamped access logs, session tokens, and API key associations</li>
+        </ul>
+        <h3>3.2 Seafarer &amp; Crew Personal Data</h3>
+        <p>The Crew Management module of the Platform processes significant volumes of personal data relating to seafarers and maritime personnel, including:</p>
+        <ul>
+          <li>Full name, date of birth, nationality, and passport / national ID details</li>
+          <li>STCW Certificate of Competency numbers, flag state endorsements, and GMDSS licence details</li>
+          <li>Medical fitness certificates (ENG1 or equivalent), vaccination records, and Yellow Fever certification — constituting Special Category (health) data under Article 9 GDPR</li>
+          <li>Seafarer Employment Agreement (SEA) terms, rank, vessel assignment, and embarkation/disembarkation dates</li>
+          <li>Wage scales, allotment instructions, and payroll records</li>
+          <li>Next-of-kin contact details and emergency notification preferences</li>
+          <li>Performance appraisal records and disciplinary history (where applicable)</li>
+          <li>Flag state Continuous Discharge Book (CDB) and Seaman's Book details</li>
+        </ul>
+        <div class="warning-box">
+          <p>⚠ Health and medical data constitutes Special Category personal data under Article 9(1) GDPR. Such data is processed solely under Article 9(2)(b) (employment law obligations) and Article 9(2)(h) (occupational health purposes), and is subject to elevated access controls, encryption, and a strictly limited retention schedule.</p>
+        </div>
+        <h3>3.3 Usage &amp; Telemetry Data</h3>
+        <p>The Platform automatically collects technical and behavioural data to ensure service performance, security monitoring, and product improvement:</p>
+        <ul>
+          <li>Browser type, operating system, screen resolution, and device hardware category</li>
+          <li>Page views, feature interactions, click-path sequences, and session duration metrics</li>
+          <li>API call logs, error events, and performance timing data (retained in anonymised aggregate form after 90 days)</li>
+          <li>Vessel AIS identifiers and position data where integrated via approved SATCOM or AIS data providers</li>
+        </ul>
+        <h3>3.4 Communications Data</h3>
+        <p>When you contact Volaxin support, submit a sales enquiry, or participate in a product demonstration, we collect the content of such communications, associated metadata, and any attachments you provide.</p>
+      </div>
+
+      <!-- §4 -->
+      <div class="doc-section" id="s4">
+        <div class="sec-num">Section 04</div>
+        <h2>Lawful Basis for Processing</h2>
+        <p>Volaxin identifies and documents a specific lawful basis for each category of processing activity conducted as a Controller, in strict compliance with Article 6 GDPR:</p>
+        <table class="data-table">
+          <thead><tr><th>Processing Activity</th><th>Lawful Basis (Art. 6)</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Account creation and Platform access</td><td>6(1)(b) — Contract performance</td><td>Necessary to deliver subscribed services</td></tr>
+            <tr><td>Billing and invoicing</td><td>6(1)(b) — Contract performance; 6(1)(c) — Legal obligation</td><td>Tax and accounting obligations apply</td></tr>
+            <tr><td>Security monitoring and fraud prevention</td><td>6(1)(f) — Legitimate interests</td><td>LIA conducted; interests not overridden</td></tr>
+            <tr><td>Product analytics and improvement</td><td>6(1)(f) — Legitimate interests (anonymised)</td><td>Data pseudonymised or aggregated before use</td></tr>
+            <tr><td>Marketing communications</td><td>6(1)(a) — Consent</td><td>Opt-in only; unsubscribe honoured immediately</td></tr>
+            <tr><td>Regulatory reporting (flag state)</td><td>6(1)(c) — Legal obligation</td><td>MLC 2006, STCW, ISM requirements</td></tr>
+            <tr><td>Crew medical data</td><td>9(2)(b) and 9(2)(h) — Employment law &amp; occupational health</td><td>Supplementary Art. 9 basis documented per jurisdiction</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- §5 -->
+      <div class="doc-section" id="s5">
+        <div class="sec-num">Section 05</div>
+        <h2>How We Use Personal Data</h2>
+        <p>Personal data collected by Volaxin is used exclusively for the following clearly defined purposes, each of which is supported by a documented lawful basis and proportionality assessment:</p>
+        <ol>
+          <li><strong>Service Delivery.</strong> To provision, operate, maintain, and support the Volaxin Platform in accordance with the subscription agreement, including user account management, vessel data management, and scheduled maintenance workflows.</li>
+          <li><strong>Regulatory Compliance &amp; Reporting.</strong> To assist client organisations in meeting obligations under the Maritime Labour Convention 2006, STCW 1978 (as amended), ISM Code, ISPS Code, IMO CII regulations, EU-ETS, and applicable flag state legislation.</li>
+          <li><strong>Security &amp; Fraud Prevention.</strong> To detect, investigate, and prevent unauthorised access, data breaches, account compromise, or misuse of the Platform through continuous security monitoring, anomaly detection, and audit logging.</li>
+          <li><strong>Platform Performance &amp; Improvement.</strong> To analyse aggregated, pseudonymised usage patterns to identify performance bottlenecks, usability improvements, and new feature priorities — without building individual behavioural profiles.</li>
+          <li><strong>Customer Support.</strong> To respond to technical queries, resolve incidents, and provide the 24/7 specialist maritime support that constitutes a core element of the Volaxin service commitment.</li>
+          <li><strong>Contractual &amp; Legal Obligations.</strong> To fulfil our contractual obligations to client organisations, including Data Processing Agreements, and to comply with applicable laws including tax, employment, and maritime regulations.</li>
+          <li><strong>Marketing Communications (with Consent).</strong> To send product updates, industry intelligence reports, event invitations, and promotional communications to individuals who have expressly opted in to receive such content.</li>
+        </ol>
+      </div>
+
+      <!-- §6 -->
+      <div class="doc-section" id="s6">
+        <div class="sec-num">Section 06</div>
+        <h2>Data Sharing &amp; Third-Party Disclosures</h2>
+        <p>Volaxin does not sell, rent, or trade personal data. We share personal data only in the following defined and documented circumstances:</p>
+        <h3>6.1 Sub-Processors</h3>
+        <p>Volaxin engages a limited number of carefully vetted sub-processors to support the delivery of the Platform. All sub-processors are bound by a written Data Processing Agreement, are required to maintain equivalent data protection standards, and are assessed against our Security Supplier Questionnaire prior to engagement and at annual renewal. Current sub-processor categories include:</p>
+        <ul>
+          <li>Cloud infrastructure providers (hosting, storage, database management)</li>
+          <li>Transactional email delivery services (for system notifications and alerts)</li>
+          <li>Customer relationship management (CRM) platform (sales and support context only)</li>
+          <li>Payment processing service (no card data touches Volaxin systems; fully PCI DSS scoped to provider)</li>
+          <li>Security and monitoring tooling (SIEM, vulnerability scanning, penetration testing partners)</li>
+          <li>Video conferencing and collaboration tools (for support and onboarding sessions)</li>
+        </ul>
+        <p>A complete and current list of approved sub-processors is available upon written request to info@volaxin.com. Volaxin will provide 30 days' advance notice of any material sub-processor changes via the Platform notification system and email, affording clients the right to object as provided under Article 28(2) GDPR.</p>
+        <h3>6.2 Regulatory &amp; Legal Disclosures</h3>
+        <p>We may disclose personal data to competent regulatory authorities, flag state administrations, port state control officers, or law enforcement bodies where we are legally compelled to do so, subject to appropriate verification of the legal basis and, where permitted, prior notification to the data subject or client organisation.</p>
+        <h3>6.3 Professional Advisers</h3>
+        <p>Volaxin may share data in anonymised or aggregated form with legal advisers, auditors, and insurers for the purpose of obtaining professional advice, conducting audits, or managing claims. Such sharing is governed by professional confidentiality obligations and, where applicable, data sharing agreements.</p>
+        <h3>6.4 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, restructuring, or sale of all or substantially all of Volaxin's assets, personal data may be transferred to the acquiring entity, subject to equivalent privacy commitments and advance notification to affected data subjects in compliance with applicable law.</p>
+      </div>
+
+      <!-- §7 -->
+      <div class="doc-section" id="s7">
+        <div class="sec-num">Section 07</div>
+        <h2>International Data Transfers</h2>
+        <p>
+          Given the inherently global nature of maritime operations, Volaxin processes and may transfer personal data to recipients located outside the United Kingdom and the European Economic Area (EEA). All such international transfers are governed by one or more of the following legally recognised safeguard mechanisms:
+        </p>
+        <ul>
+          <li><strong>UK Adequacy Regulations:</strong> Where the recipient country has been designated as adequate by the UK Secretary of State under Section 17A of the UK Data Protection Act 2018.</li>
+          <li><strong>EU Adequacy Decisions:</strong> Where the recipient country has been recognised as adequate by the European Commission under Article 45 GDPR.</li>
+          <li><strong>UK International Data Transfer Agreements (IDTAs):</strong> The UK-specific contractual mechanism approved by the Information Commissioner's Office (ICO) for transfers from the UK to third countries.</li>
+          <li><strong>EU Standard Contractual Clauses (SCCs):</strong> The 2021 European Commission-approved SCCs, Module 2 (Controller-to-Processor) and Module 3 (Processor-to-Processor), as applicable.</li>
+          <li><strong>Binding Corporate Rules (BCRs):</strong> Where sub-processors operate within a group subject to ICO or supervisory authority-approved BCRs.</li>
+        </ul>
+        <p>Volaxin maintains a Transfer Impact Assessment (TIA) registry for all international data flows, which evaluates the legal landscape of the destination country and documents supplementary technical and organisational measures applied to ensure equivalent protection. This registry is reviewed quarterly and is available to clients upon request under the applicable DPA.</p>
+        <div class="highlight-box">
+          <span class="highlight-box-icon">🔐</span>
+          <p>All data transferred internationally — including replication to disaster recovery environments — is encrypted in transit using TLS 1.3 and at rest using AES-256. Additional application-layer encryption is applied to Special Category data regardless of geographic location.</p>
+        </div>
+      </div>
+
+      <!-- §8 -->
+      <div class="doc-section" id="s8">
+        <div class="sec-num">Section 08</div>
+        <h2>Data Retention Periods</h2>
+        <p>Volaxin applies a documented data retention schedule aligned with legal obligations, legitimate business requirements, and data minimisation principles. We do not retain personal data beyond the period necessary for the stated purpose:</p>
+        <table class="data-table">
+          <thead><tr><th>Data Category</th><th>Retention Period</th><th>Basis for Period</th></tr></thead>
+          <tbody>
+            <tr><td>Active Platform account data</td><td>Duration of subscription + 90 days</td><td>Contract; post-termination data export window</td></tr>
+            <tr><td>Seafarer certification records</td><td>5 years post last voyage</td><td>MLC 2006 flag state requirements</td></tr>
+            <tr><td>Work &amp; Rest Hours records</td><td>3 years (MLC 2006 Regulation 2.3)</td><td>Mandatory regulatory retention</td></tr>
+            <tr><td>Crew medical data</td><td>5 years or as required by flag state</td><td>STCW, MLC 2006, flag state regulations</td></tr>
+            <tr><td>SHEQ incident records</td><td>5 years from date of closure</td><td>ISM Code; limitation periods</td></tr>
+            <tr><td>Security audit logs</td><td>24 months rolling</td><td>ISO/IEC 27001; ICO guidance</td></tr>
+            <tr><td>Billing &amp; financial records</td><td>7 years</td><td>UK Companies Act 2006; HMRC requirements</td></tr>
+            <tr><td>Marketing consent records</td><td>3 years from last interaction or withdrawal</td><td>UK PECR; ICO guidance</td></tr>
+            <tr><td>Support communication records</td><td>3 years from case closure</td><td>Legitimate interest; dispute resolution</td></tr>
+            <tr><td>Anonymised usage analytics</td><td>Indefinite (no personal identifiers)</td><td>Not personal data post-anonymisation</td></tr>
+          </tbody>
+        </table>
+        <p>Upon expiry of the applicable retention period, personal data is permanently deleted using cryptographic erasure (where data is encrypted) or multi-pass secure overwrite techniques conforming to NIST SP 800-88 and NCSC guidance, with deletion certificates issued to clients upon request.</p>
+      </div>
+
+      <!-- §9 -->
+      <div class="doc-section" id="s9">
+        <div class="sec-num">Section 09</div>
+        <h2>Your Data Subject Rights</h2>
+        <p>Under UK GDPR, EU GDPR, and applicable national legislation, data subjects whose personal data is processed by Volaxin as Controller have the following enforceable rights:</p>
+        <ol>
+          <li><strong>Right of Access (Article 15 GDPR).</strong> The right to obtain confirmation of whether personal data is being processed and to receive a copy of that data, along with prescribed supplementary information.</li>
+          <li><strong>Right to Rectification (Article 16 GDPR).</strong> The right to obtain correction of inaccurate personal data or completion of incomplete personal data without undue delay.</li>
+          <li><strong>Right to Erasure / Right to be Forgotten (Article 17 GDPR).</strong> The right to request deletion of personal data where it is no longer necessary for the purpose for which it was collected, where consent is withdrawn, or where there is no overriding legitimate basis for continued processing. This right is subject to exceptions including legal retention obligations.</li>
+          <li><strong>Right to Restriction of Processing (Article 18 GDPR).</strong> The right to request that processing be restricted in defined circumstances, including during a period of accuracy verification or pending an objection determination.</li>
+          <li><strong>Right to Data Portability (Article 20 GDPR).</strong> The right to receive personal data in a structured, commonly used, machine-readable format and to transmit that data to another controller, where technically feasible. Volaxin supports export in JSON, XML, and CSV formats across all core modules.</li>
+          <li><strong>Right to Object (Article 21 GDPR).</strong> The right to object at any time to processing based on legitimate interests, including profiling, and to processing for direct marketing purposes (absolute right without requirement to demonstrate prejudice).</li>
+          <li><strong>Rights Related to Automated Decision-Making (Article 22 GDPR).</strong> The right not to be subject to decisions based solely on automated processing, including profiling, which produce legal or significant effects. Volaxin's AI-powered features provide recommendations and intelligence but do not produce automated decisions without human review and confirmation.</li>
+          <li><strong>Right to Withdraw Consent (Article 7(3) GDPR).</strong> Where processing is based on consent, the right to withdraw that consent at any time without detriment, affecting only future processing.</li>
+        </ol>
+        <p>To exercise any of the above rights, submit a written request to <strong>info@volaxin.com</strong>. Volaxin will respond within one calendar month of receipt of a valid, verifiable request, with the possibility of a two-month extension for complex or numerous requests (with prior notice). Identity verification may be required before disclosing personal data. There is no charge for exercising your rights except in cases of manifestly unfounded or excessive requests.</p>
+        <p>Data subjects also have the right to lodge a complaint with the relevant supervisory authority. For UK-based individuals this is the <strong>Information Commissioner's Office (ICO)</strong> at ico.org.uk. EU-based individuals should contact the supervisory authority of their Member State of habitual residence.</p>
+      </div>
+
+      <!-- §10 -->
+      <div class="doc-section" id="s10">
+        <div class="sec-num">Section 10</div>
+        <h2>Cookies, Tracking &amp; Web Analytics</h2>
+        <p>The Volaxin corporate website (volaxin.com) uses a limited set of cookies and similar tracking technologies. The Platform application itself uses session cookies strictly necessary for authentication and security, with no advertising or third-party tracking cookies deployed within authenticated Platform sessions.</p>
+        <table class="data-table">
+          <thead><tr><th>Cookie Category</th><th>Purpose</th><th>Consent Required</th><th>Duration</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Strictly Necessary</strong></td><td>Session management, CSRF protection, load balancing, authentication tokens</td><td>No (exempt)</td><td>Session / 14 days</td></tr>
+            <tr><td><strong>Performance Analytics</strong></td><td>Anonymised page-view statistics, error tracking, feature usage patterns</td><td>Yes</td><td>12 months</td></tr>
+            <tr><td><strong>Marketing</strong></td><td>No marketing or advertising cookies are deployed on any Volaxin property</td><td>N/A</td><td>N/A</td></tr>
+          </tbody>
+        </table>
+        <p>Analytics data collected on the Volaxin website is processed in anonymised, aggregated form and does not involve cross-site tracking, real-time bidding, or data enrichment from third-party data brokers. You may withdraw consent to non-essential cookies at any time via the cookie preference centre accessible in the website footer.</p>
+      </div>
+
+      <!-- §11 -->
+      <div class="doc-section" id="s11">
+        <div class="sec-num">Section 11</div>
+        <h2>Maritime-Specific Data Processing Considerations</h2>
+        <p>The maritime industry presents unique data protection challenges not contemplated by standard enterprise software contexts. Volaxin has embedded specific safeguards to address these:</p>
+        <h3>11.1 Offline Vessel Data Synchronisation</h3>
+        <p>The Platform supports seamless offline operation for vessels operating in remote sea areas with limited or no SATCOM connectivity. During offline periods, all personal data remains encrypted on vessel-side devices (AES-256 at-rest encryption) and synchronises to Volaxin's cloud infrastructure upon re-establishment of connectivity via TLS 1.3-encrypted HTTPS channels. No unencrypted personal data is ever stored on portable media or unmanaged devices without explicit client approval and documented compensating controls.</p>
+        <h3>11.2 Port State Control &amp; Flag State Disclosures</h3>
+        <p>In furtherance of client compliance obligations, the Platform generates PSC-ready work and rest hours reports. Where such reports are transmitted to port state control authorities or flag state administrations, the disclosure is supported by Article 6(1)(c) GDPR (legal obligation on the data controller). Volaxin facilitates such disclosures as processor but documents each instance within the processing activity log.</p>
+        <h3>11.3 AIS &amp; Vessel Tracking Data</h3>
+        <p>Automatic Identification System (AIS) data processed within the Platform is primarily vessel-level data and does not ordinarily constitute personal data. Where individual seafarers can be identified through a combination of AIS data, watch schedules, and position records, Volaxin treats such combined data as personal data and applies commensurate protections.</p>
+        <h3>11.4 Multinational Crew Data</h3>
+        <p>Maritime crews are frequently multinational. The processing of personal data relating to seafarers may engage the data protection legislation of multiple jurisdictions simultaneously. Volaxin operates under the principle of applying the most protective standard applicable to a given processing activity and maintains flag-state-specific data handling annexes for all supported jurisdictions.</p>
+      </div>
+
+      <!-- §12 -->
+      <div class="doc-section" id="s12">
+        <div class="sec-num">Section 12</div>
+        <h2>Children's Privacy</h2>
+        <p>The Volaxin Platform is designed exclusively for use by maritime industry professionals and organisations. We do not knowingly collect or process personal data of individuals under the age of 18. If Volaxin becomes aware that personal data of a minor has been provided without appropriate parental or guardian consent, it will be deleted without undue delay. Contact privacy@volaxin.com if you believe we have inadvertently collected such data.</p>
+      </div>
+
+      <!-- §13 -->
+      <div class="doc-section" id="s13">
+        <div class="sec-num">Section 13</div>
+        <h2>Policy Changes &amp; Version Control</h2>
+        <p>Volaxin reserves the right to amend this Privacy Policy from time to time to reflect changes in applicable law, regulatory guidance, Platform functionality, or our processing practices. This policy is version-controlled; the current version, effective date, and full change history are maintained at volaxin.com/privacy.</p>
+        <p>For material changes — defined as changes that significantly affect data subject rights, introduce new processing purposes, or alter the categories of data processed — Volaxin will provide not less than 30 days' advance notice via:</p>
+        <ul>
+          <li>A prominently displayed in-Platform notification banner</li>
+          <li>Direct email communication to the primary account holder email address on record</li>
+          <li>Updated version documentation in the Privacy Policy change log</li>
+        </ul>
+        <p>Continued use of the Platform following the expiry of the notice period constitutes acceptance of the updated policy. Where required by law, Volaxin will seek renewed consent rather than relying on continued use as acceptance.</p>
+      </div>
+
+      <!-- §14 -->
+      <div class="doc-section" id="s14">
+        <div class="sec-num">Section 14</div>
+        <h2>Contact Information &amp; Data Protection Officer</h2>
+        <p>All privacy-related enquiries, data subject rights requests, complaints, and Data Processing Agreement negotiations should be directed to:</p>
+        <div class="contact-card">
+          <div class="contact-card-title">Data Protection Office</div>
+          <div class="contact-row"><span>✉</span> info@volaxin.com</div>
+          <!--<div class="contact-row"><span>✉</span> dpo@volaxin.com (Data Protection Officer direct)</div>-->
+          <div class="contact-row"><span>☎</span> +44 35342 322358 (Ext. DPO)</div>
+          <div class="contact-row"><span>⊕</span> Singapore · Rotterdam · Houston · Dubai</div>
+        </div>
+        <p style="margin-top:16px;">
+          Volaxin has appointed an external, independent Data Protection Officer (DPO) in accordance with Article 37 GDPR. The DPO provides independent oversight of all data protection matters and is contactable directly at dpo@volaxin.com. The DPO operates free from any instruction from Volaxin management on matters within the scope of their duties, and reports directly to the highest management level.
+        </p>
+        <div class="highlight-box">
+          <span class="highlight-box-icon">⚖</span>
+          <p>If you are dissatisfied with our response to a privacy concern, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at ico.org.uk / 0303 123 1113, or with the relevant EU supervisory authority in your Member State of residence.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <span class="fc">© 2026 Volaxin Maritime Suite Ltd. All rights reserved.</span>
+    <ul class="flinks">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="index.html">Platform</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    // Cursor
+    const cur = document.getElementById('cur'), ring = document.getElementById('cur-ring');
+    let mx=0,my=0,rx=0,ry=0;
+    if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      document.body.style.cursor = 'none';
+      document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+      (function loop(){ rx+=(mx-rx)*.14; ry+=(my-ry)*.14; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+      document.querySelectorAll('a,button,.toc-list a').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hov'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hov'));
+        el.style.cursor = 'none';
+      });
+    }
+    // TOC active highlighting
+    const sections = document.querySelectorAll('.doc-section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector('.toc-list a[href="#'+e.target.id+'"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
