@@ -5022,7 +5022,11 @@
            gone — leaving a black screen when the window comes back. */
         if (!vw || !vh) return;
         W = vw; H = vh;
-        const q = Math.min(1, RENDER_MAX_W / vw);
+        /* Phones need real device pixels or the canvas looks soft; desktops are
+           capped below 1x for per-frame speed. Taking the lower of the two keeps
+           both: 2x on a phone, ~0.67x on a 1920 desktop. */
+        const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 2 : 1);
+        const q = Math.min(dpr, (isMobile ? 1600 : RENDER_MAX_W) / vw);
         cv.width = Math.round(W * q);
         cv.height = Math.round(H * q);
         cv.style.width = W + 'px';
@@ -5352,26 +5356,54 @@
         if (fromStar) hideStars();
         if (fromFog) fogFadeOut();
         const startT = isForward ? cfg.videoStart : cfg.videoEnd;
+        const segDur = Math.max(cfg.videoEnd - cfg.videoStart, 0.001);
         seekTo(startT).then(() => {
           vid.playbackRate = Math.min(cfg.speed, 2.0);
           startDraw();
-          vid.play().catch(() => { });
+
+          /* Autoplay can still be refused on a phone even for a muted inline
+             video — iOS Low Power Mode and Android Data Saver both do it. The
+             old code swallowed that rejection and then waited forever on
+             currentTime, leaving isBusy true and the whole tour frozen. */
+          let playing = false;
+          try {
+            const pr = vid.play();
+            if (pr && pr.then) pr.then(function () { playing = true; }, function () { playing = false; });
+            else playing = true;
+          } catch (_) { playing = false; }
+
           let panelShown = false;
-          const segDur = Math.max(cfg.videoEnd - cfg.videoStart, 0.001);
-          (function chk() {
-            const elapsed = isForward
-              ? (vid.currentTime - cfg.videoStart) / segDur
-              : 1 - (vid.currentTime - cfg.videoStart) / segDur;
-            const r = Math.max(0, Math.min(1, elapsed));
-            if (!panelShown && r >= 0.65) {
+          const t0 = performance.now();
+
+          (function chk(now) {
+            now = now || performance.now();
+            /* Progress is driven by wall clock, not currentTime, so a section
+               always completes even if the clip never advances. Backward is
+               included properly: a video cannot play in reverse, so it is
+               always scrubbed. */
+            const r = Math.max(0, Math.min((now - t0) / durMs, 1));
+
+            if (!isForward || !playing) {
+              const t = isForward
+                ? cfg.videoStart + r * segDur
+                : cfg.videoEnd - r * segDur;
+              if (Math.abs(vid.currentTime - t) > 0.05) {
+                try { vid.currentTime = t; } catch (_) { }
+              }
+            }
+
+            if (!panelShown && r >= 0.58) {
               panelShown = true;
               if (toStar) showStars();
               if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); } else hideFog();
               showPanelContent(toSec);
             }
-            const atEnd = vid.ended || (isForward ? vid.currentTime >= targetT - 0.06 : vid.currentTime <= targetT + 0.06);
-            if (atEnd) {
-              vid.pause(); stopDraw();
+
+            const reachedTime = isForward && playing &&
+              (vid.ended || vid.currentTime >= targetT - 0.06);
+            if (r >= 1 || reachedTime) {
+              try { vid.pause(); } catch (_) { }
+              stopDraw();
               if (!panelShown) {
                 if (toStar) showStars();
                 if (toFog) { buildFogLayer(); applyFogMode(cfg.fog); fogFadeIn(); } else hideFog();
@@ -5786,6 +5818,28 @@
 
       /* loadeddata (first frame decoded) is all boot needs to paint the hero —
          waiting for canplay on a file this large means waiting on the download. */
+      /* Unlock the video inside the visitor's first touch. Mobile browsers grant
+         playback permission to a media element that was started during a real
+         user gesture; after this, later programmatic play() calls in the
+         transition are allowed even under iOS Low Power Mode. */
+      (function primeVideoOnFirstGesture() {
+        var primed = false;
+        function prime() {
+          if (primed) return; primed = true;
+          try {
+            var p = vid.play();
+            if (p && p.then) p.then(function () { try { vid.pause(); } catch (_) { } }, function () { });
+            else { try { vid.pause(); } catch (_) { } }
+          } catch (_) { }
+          ['touchstart', 'pointerdown', 'click', 'keydown'].forEach(function (e) {
+            document.removeEventListener(e, prime, true);
+          });
+        }
+        ['touchstart', 'pointerdown', 'click', 'keydown'].forEach(function (e) {
+          document.addEventListener(e, prime, { capture: true, passive: true });
+        });
+      })();
+
       vid.addEventListener('loadeddata', boot, { once: true });
       vid.addEventListener('canplay', boot, { once: true });
       setTimeout(() => { if (!booted) boot(); }, 8000);
@@ -5856,7 +5910,7 @@
 
 
 
-<!--<script>
+<script>
   (function () {
     function block(e) { e.preventDefault(); e.stopPropagation(); return false; }
     document.addEventListener('contextmenu', block);
@@ -5866,7 +5920,7 @@
       }
     });
   })();
-</script>-->
+</script>
 
 
 <style>
