@@ -1203,8 +1203,23 @@
       transition: opacity .18s, transform .2s, visibility .2s;
       z-index: 595;
     }
+    /* Invisible bridge across the 24px gap between the nav item and the panel.
+       Without it the pointer leaves .has-mm before reaching .tour-dd and the menu
+       closes, making the items unreachable. Mirrors .tour-mm::before exactly so
+       Products and the other dropdowns behave identically. */
+    .tour-dd::before {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      top: -28px;
+      height: 32px;
+      background: transparent;
+      pointer-events: auto;
+    }
     .nlinks li.has-mm:hover .tour-dd,
-    .nlinks li.has-mm:focus-within .tour-dd { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+    .nlinks li.has-mm:focus-within .tour-dd,
+    .nlinks li.has-mm.mm-hold .tour-dd,
+    .tour-dd:hover { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); transition-delay: 0s; }
     .tour-dd a {
       display: block;
       padding: 11px 14px;
@@ -5606,7 +5621,10 @@
 
       (function () {
         document.querySelectorAll('.nlinks li.has-mm').forEach(li => {
-          const panel = li.querySelector('.tour-mm');
+          // Previously matched only '.tour-mm', so the Solutions, Technology and
+          // Company dropdowns got no open/close hold and closed the instant the
+          // pointer left the nav item.
+          const panel = li.querySelector('.tour-mm, .tour-dd');
           if (!panel) return;
           let closeT = null;
           const open = () => { clearTimeout(closeT); li.classList.add('mm-hold'); };

@@ -1,5 +1,5 @@
-const CACHE = 'volaxin-shell-v4';
-const RUNTIME = 'volaxin-runtime-v4';
+const CACHE = 'volaxin-shell-v5';
+const RUNTIME = 'volaxin-runtime-v5';
 const PRECACHE = [
   '/shell/shell.css',
   '/shell/shell.js',

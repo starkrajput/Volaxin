@@ -208,6 +208,22 @@
     .news-empty p{color:var(--text-muted);margin:0;line-height:1.65}
     .bcard-src{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-top:.5rem}
 
+    /* article.css has no blockquote rule at all - the hand-written blogs use .callout
+       markup instead. The model emits real <blockquote>, so it is styled here as a
+       pull-quote using the same violet/gold tokens as .callout. */
+    .asec blockquote{margin:20px 0;padding:16px 22px;border-left:3px solid var(--gold-rich);
+      background:linear-gradient(135deg,rgba(124,58,237,0.07),rgba(45,212,191,0.05));
+      border-radius:0 14px 14px 0;font-family:'Cormorant Garamond',serif;
+      font-size:clamp(16px,2vw,20px);line-height:1.5;color:var(--steel);font-style:italic}
+    .asec blockquote p{margin:0;font-size:inherit;line-height:inherit;color:inherit;font-style:inherit}
+    .asec table{width:100%;border-collapse:collapse;margin:16px 0;font-size:12.5px}
+    .asec table th{text-align:left;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--violet);padding:10px 12px;border-bottom:2px solid rgba(124,58,237,0.30)}
+    .asec table td{padding:10px 12px;border-bottom:1px solid rgba(29,78,216,0.10);
+      color:var(--text-mid);line-height:1.5;vertical-align:top}
+    .asec img{max-width:100%;height:auto;border-radius:14px;margin:16px 0;display:block}
+    .asec code{background:rgba(29,78,216,0.08);padding:2px 6px;border-radius:5px;font-size:.9em}
+
     .n-take{margin:0 0 2rem;padding:1.5rem 1.6rem;border-radius:16px;background:var(--glass-white);
       border:1px solid var(--glass-border);border-left:3px solid var(--gold-rich);backdrop-filter:blur(12px)}
     .n-take-h{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:.9rem}
@@ -278,7 +294,22 @@
         <ol><li><a href="#what-the-framework-actually-charges">What the framework actually charges</a></li><li><a href="#which-vessels-are-most-exposed">Which vessels are most exposed</a></li><li><a href="#what-to-watch-next">What to watch next</a></li></ol>
       </div>
 
-      <p>Shipowners now have a firm date.</p><h2 id="what-the-framework-actually-charges">What the framework actually charges</h2><p>The mechanism prices well-to-wake greenhouse gas intensity rather than fuel volume, which is a meaningful distinction for operators running LNG dual-fuel tonnage. Vessels above 5,000 GT fall in scope, matching the existing DCS reporting boundary, so the administrative footprint is already largely in place for most fleets. The charge applies against a declining GHG intensity trajectory, and ships beating the trajectory generate surplus units that can be banked or traded. Ships falling short buy remedial units at a fixed tier price. Because the baseline tightens annually, a vessel that is compliant in 2028 is not automatically compliant in 2031 without efficiency work or a fuel switch.</p><blockquote>The levy is not a fuel tax. It is an intensity mechanism with a cash settlement.</blockquote><h2 id="which-vessels-are-most-exposed">Which vessels are most exposed</h2><p>Older steam-turbine LNG carriers and mid-life bulkers on conventional fuel oil carry the highest per-voyage exposure, because their baseline intensity sits furthest above the declining trajectory. Container tonnage is comparatively better placed where operators have already invested in engine derating and slow-steaming schedules. The exposure calculation is not simply age: a well-maintained 15-year-old vessel with optimised hull coatings and a modern propeller can outperform a poorly maintained 8-year-old ship. Operators should model exposure per trading pattern, since ballast-heavy rotations amplify intensity penalties.</p><h2 id="what-to-watch-next">What to watch next</h2><p>Three signals matter over the next eighteen months.</p><ul><li>MEPC guidance on surplus-unit trading mechanics, expected 2027</li><li>National implementation rules for flag administrations</li><li>Bunker supplier readiness for certified low-intensity blends</li></ul>
+      <section class="asec"><p>Shipowners now have a firm date.</p></section>
+
+      <section class="asec" id="what-the-framework-actually-charges">
+        <h2>What the framework actually charges</h2>
+        <p>The mechanism prices well-to-wake greenhouse gas intensity rather than fuel volume, which is a meaningful distinction for operators running LNG dual-fuel tonnage. Vessels above 5,000 GT fall in scope, matching the existing DCS reporting boundary, so the administrative footprint is already largely in place for most fleets. The charge applies against a declining GHG intensity trajectory, and ships beating the trajectory generate surplus units that can be banked or traded. Ships falling short buy remedial units at a fixed tier price. Because the baseline tightens annually, a vessel that is compliant in 2028 is not automatically compliant in 2031 without efficiency work or a fuel switch.</p><blockquote>The levy is not a fuel tax. It is an intensity mechanism with a cash settlement.</blockquote>
+      </section>
+
+      <section class="asec" id="which-vessels-are-most-exposed">
+        <h2>Which vessels are most exposed</h2>
+        <p>Older steam-turbine LNG carriers and mid-life bulkers on conventional fuel oil carry the highest per-voyage exposure, because their baseline intensity sits furthest above the declining trajectory. Container tonnage is comparatively better placed where operators have already invested in engine derating and slow-steaming schedules. The exposure calculation is not simply age: a well-maintained 15-year-old vessel with optimised hull coatings and a modern propeller can outperform a poorly maintained 8-year-old ship. Operators should model exposure per trading pattern, since ballast-heavy rotations amplify intensity penalties.</p>
+      </section>
+
+      <section class="asec" id="what-to-watch-next">
+        <h2>What to watch next</h2>
+        <p>Three signals matter over the next eighteen months.</p><ul><li>MEPC guidance on surplus-unit trading mechanics, expected 2027</li><li>National implementation rules for flag administrations</li><li>Bunker supplier readiness for certified low-intensity blends</li></ul>
+      </section>
 
       <div class="n-source">
         <b>Primary source</b>
