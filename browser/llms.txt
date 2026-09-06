@@ -22,6 +22,14 @@
 - [IMO CII Rating Explained (2026 Guide)](https://volaxin.com/blogs/imo-cii-rating-2026-guide.html): The AER formula, rating bands, reduction factors and strategies to improve.
 - [EU ETS & FuelEU Maritime 2026 Guide](https://volaxin.com/blogs/eu-ets-fueleu-maritime-2026-guide.html): Phase-in, GHG-intensity targets and how to prepare.
 
+
+## Maritime News
+Original maritime news and analysis, published continuously by the Volaxin newsroom and written for practitioners rather than headline readers. Six sections: Shipping & Trade, Vessel Operations & Safety, Regulation & Compliance, Green Shipping & Decarbonisation, Ports & Logistics, and Maritime Technology.
+- [Maritime News hub](https://volaxin.com/news.html): Latest shipping, compliance, decarbonisation, ports and maritime technology coverage, updated hourly.
+- [Aditya — Senior Maritime Correspondent](https://volaxin.com/news/author/aditya.html): Covers IMO regulation, emissions compliance, shipping markets and the commercial consequences of new maritime rules.
+- [Marcus — Senior Operations & Safety Correspondent](https://volaxin.com/news/author/marcus.html): Covers Port State Control, vessel operations, safety management and ports & logistics.
+- [Maritime News RSS](https://volaxin.com/news/feed.xml): Full-text RSS feed of every published maritime news article.
+
 ## Key facts
 - Deployment: cloud (web) with offline vessel client and automatic ship-to-shore sync over VSAT / Starlink.
 - Scale: 500+ vessels, 15+ flag states, 99.9% uptime SLA.
