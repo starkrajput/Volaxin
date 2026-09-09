@@ -1,144 +1,354 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://volaxin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://volaxin.com/products/</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://volaxin.com/products/pms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/inventory.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/procurement.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/crew-management.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/sheq.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/navigation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/chartering.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/warehouse.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/drydock.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/operations.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/finance.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/documents.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/analytics.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/hull-integrity.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/compliance.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/products/ai-assistant.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/solutions/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/solutions/tankers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/solutions/bulk-carriers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/solutions/container-liner.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/solutions/offshore.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/solutions/ship-managers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://volaxin.com/technology/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://volaxin.com/technology/architecture.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://volaxin.com/technology/security.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://volaxin.com/technology/integrations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://volaxin.com/company/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://volaxin.com/company/partners.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://volaxin.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://volaxin.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.volaxin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.volaxin.com/products/</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.volaxin.com/products/pms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/inventory.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/procurement.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/crew-management.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/sheq.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/navigation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/chartering.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/warehouse.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/drydock.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/operations.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/finance.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/documents.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/analytics.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/hull-integrity.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/compliance.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/products/ai-assistant.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/tankers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/bulk-carriers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/container-liner.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/offshore.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/solutions/ship-managers.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.volaxin.com/technology/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.volaxin.com/technology/architecture.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.volaxin.com/technology/security.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.volaxin.com/technology/integrations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.volaxin.com/company/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.volaxin.com/company/partners.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.volaxin.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.volaxin.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- news:start -->
   <url>
-    <loc>https://volaxin.com/news.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/xpress-feeders-ts-lines-expand-regional-services.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/jeddah-islamic-port-terminal-4-investment.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/misc-explores-yinson-privatization-consortium.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/tanker-risk-persian-gulf-irgc-maritime-warning.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/turkish-navy-rov-locates-wreck-tugberk-imamoglu.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/us-container-imports-stretch-peak-season-september.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/norway-help-russians-stranded-arctic-ship-seizure.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/strait-of-hormuz-tanker-war-escalates.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/scorpio-tankers-three-year-charters.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/maersk-surcharges-south-america-nordic-region.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/abs-jb-energy-brazil-floating-wind.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/greek-owned-vlcc-drone-strike-iraqi-waters.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/bp-baker-hughes-north-sea-production-contract.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/fincantieri-transfer-fremm-frigates-greece.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/rosneft-launches-vostok-oil-sever-bay-port.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/arctic-lng-2-arbitration-claim-dsme-tankers.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/us-carrier-abraham-lincoln-departs-thailand.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/freightos-founder-zvi-schreiber-boardroom-revolt.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/nanjing-shenghang-orders-six-chemical-tankers.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/apm-terminals-badagry-port-development-nigeria.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/la-spezia-container-terminal-90m-handling-equipment-order.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/everllence-me-production-scrubber-lifecycle-support.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/sea-lion-project-falklands-tensions.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/strait-hormuz-tanker-attacks-us-iran.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/port-of-dover-blocked-protests-supply-chain-risks.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/compagnie-maritime-nantaise-orders-wind-assisted-space-roro.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/strait-hormuz-tanker-attacks-escalate-shipping-risks.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/mediterranean-container-rates-lose-north-europe-premium.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/cosco-rejects-us-intelligence-allegations.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/lt-hydrocarbon-offshore-epcic-contract-ongc.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/author/aditya.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/everllence-damen-175d-engine-framework-agreement.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/shipping-nations-warn-global-trade-fracturing.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/mb-shipbrokers-claes-devantier-ceo-succession.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/hapag-lloyd-warns-shippers-india-scmtr-compliance.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/vallourec-aramco-expand-partnership-decarbonisation.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/maryam-shipmanagement-rebrands-msm-dubai.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/misc-launches-malaysias-first-maritime-foundation.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/arctic-maritime-trade-routes-geopolitics.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/abs-certifies-hanwha-ocean-fpso-design-deepwater.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/jotun-imperial-fouling-protection-co2-emissions.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/msc-shipmanagement-fined-oily-waste-discharges.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/poseidon-principles-marine-insurance-expansion.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/mediterranean-container-rates-match-asia-europe.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/svitzer-expands-fleet-cheoy-lee-transverse-tugs.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/hunter-group-tanker-rate-dispute.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/schoeller-holdings-orders-mr-tankers-chengxi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/dnv-offshore-wind-cost-reduction-study.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/us-southern-command-floating-gas-stations-eastern-pacific.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/suez-canal-revival-gathers-pace-hormuz-crisis.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/venergy-maritime-expands-hengli-suezmax-orderbook.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/inmarsat-nexuswave-bureau-veritas-cyber-security-approval.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/private-salvor-wreck-search-turkish-ferry.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/us-strikes-destroy-iranian-crude-tankers.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/gsd-holding-japanese-handysize-bulker-newbuild.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/kongsberg-maritime-acquires-steerprop-arctic-propulsion.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/shearwater-electric-rovs-north-sea-contract.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/hmm-vale-ore-deal-bulk-shipping.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/europes-largest-carbon-capture-facility-opens-sluiskil.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/mcdermott-secures-subsea-contract-eni-cyprus.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/irgc-captures-us-drone-sub-strait-hormuz.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/samsung-cma-cgm-shipping-complaint-fmc.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/hunter-group-vlcc-charter-dispute-55m.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/maersk-mediterranean-peak-season-surcharges-north-america.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/mcdermott-eni-subsea-contract-cyprus.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/shipping-nations-warn-two-tier-regulatory-system.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.volaxin.com/news/author/aditya.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://volaxin.com/news/author/marcus.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://www.volaxin.com/news/author/marcus.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/news-sitemap.xml",
+      "destination": "https://zetsy.runasp.net/api/maritime-news/news-sitemap.xml"
+    },
+    {
+      "source": "/news-articles-sitemap.xml",
+      "destination": "https://zetsy.runasp.net/api/maritime-news/sitemap.xml"
+    },
+    {
+      "source": "/news/feed.xml",
+      "destination": "https://zetsy.runasp.net/api/maritime-news/feed.xml"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/news-sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=600, s-maxage=600" }
+      ]
+    },
+    {
+      "source": "/news-articles-sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=1800, s-maxage=1800" }
+      ]
+    },
+    {
+      "source": "/news/feed.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=900, s-maxage=900" }
+      ]
+    },
+    {
+      "source": "/6799a50fd72b4fec982a704a4647c6176f4908cae08b49ff87a09cf5dddb01ef.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    }
+  ]
+}

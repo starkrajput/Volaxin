@@ -1,0 +1,449 @@
+/* ==============================================================
+   >>>>>  CHATBOT POSITION  —  EDIT THIS BLOCK ONLY  <<<<<
+   --------------------------------------------------------------
+   These four values are the launcher's CSS `inset`:
+       top  right  bottom  left
+   Use  auto  on the two you are NOT anchoring from.
+   Example — pin to bottom-right corner:
+       --vxb-top: auto;  --vxb-right: 22px;
+       --vxb-bottom: 22px;  --vxb-left: auto;
+   The chat PANEL follows the launcher automatically — it always
+   opens directly above it, so you never adjust the panel.
+   ============================================================== */
+:root {
+  --vxb-top: 557.00px;
+  --vxb-right: auto;
+  --vxb-bottom: auto;
+  --vxb-left: 1350.00px;
+  --vxb-panel-gap: 12px; /* space between launcher and panel  */
+  --vxb-size: 114px;     /* launcher diameter — panel anchors off this */
+}
+/* ==============================================================
+   >>>>>  END CHATBOT POSITION BLOCK  <<<<<
+   ============================================================== */
+
+:root {
+  --vxb-navy: #050e1f;
+  --vxb-steel: #0b2a5e;
+  --vxb-sapphire: #1d4ed8;
+  --vxb-mist: #60a5fa;
+  --vxb-teal: #2dd4bf;
+  --vxb-gold: #d4a017;
+  --vxb-gold-light: #f0c040;
+  --vxb-glass: rgba(240,245,255,0.96);
+  --vxb-border: rgba(180,200,255,0.55);
+  --vxb-text: #0a1628;
+  --vxb-text-mid: #1e3a5f;
+  --vxb-muted: rgba(10,22,40,0.58);
+  --vxb-shadow: 0 24px 70px rgba(2,8,16,0.32), 0 6px 20px rgba(2,8,16,0.18);
+}
+
+#vx-chatbot,
+#vx-chatbot * { box-sizing: border-box; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+#vx-chatbot {
+  position: fixed;
+  top:    var(--vxb-top);
+  right:  var(--vxb-right);
+  bottom: var(--vxb-bottom);
+  left:   var(--vxb-left);
+  /* Must match the launcher, otherwise the panel (anchored to this box)
+     overlaps the launcher graphic. */
+  width: var(--vxb-size);
+  height: var(--vxb-size);
+  z-index: 9500;
+}
+
+#vx-chatbot-launcher {
+  position: absolute;
+  inset: 0;
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0b2a5e 0%, #1d4ed8 55%, #7c3aed 100%);
+  box-shadow: 0 14px 44px rgba(29,78,216,0.44), 0 0 24px rgba(124,58,237,0.34);
+  padding: 0;
+  overflow: hidden;
+  transition: transform .22s cubic-bezier(.22,1,.36,1), box-shadow .22s;
+  display: grid;
+  place-items: center;
+}
+#vx-chatbot-launcher::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(240,192,64,0.55);
+  animation: vxbPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes vxbPulse {
+  0%, 100% { transform: scale(1); opacity: .55; }
+  50% { transform: scale(1.14); opacity: 0; }
+}
+#vx-chatbot-launcher:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 22px 60px rgba(124,58,237,0.55); }
+#vx-chatbot-launcher img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; background:none;}
+
+#vx-chatbot-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #d4a017, #f0c040);
+  color: #050e1f;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 14px rgba(212,160,23,0.55);
+  letter-spacing: .04em;
+}
+
+#vx-chatbot-panel {
+  position: absolute;
+  bottom: calc(100% + var(--vxb-panel-gap));
+  right: 0;
+  z-index: 9600;
+  width: 380px;
+  max-width: 92vw;
+  height: 560px;
+  max-height: calc(100vh - 130px);
+  /* The panel opens upward from the launcher. When the launcher is pinned by
+     --vxb-top, never let the panel grow taller than the space above it or it
+     clips off the top of the screen. If --vxb-top is `auto` this calc is
+     invalid and the browser simply discards it, keeping the rule above. */
+  max-height: min(calc(100vh - 130px), calc(var(--vxb-top) - 20px));
+  background: var(--vxb-glass);
+  backdrop-filter: blur(26px) saturate(1.8);
+  -webkit-backdrop-filter: blur(26px) saturate(1.8);
+  border: 1px solid var(--vxb-border);
+  border-radius: 22px;
+  box-shadow: var(--vxb-shadow);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right;
+  animation: vxbIn .28s cubic-bezier(.22,1,.36,1);
+}
+#vx-chatbot-panel.open { display: flex; }
+@keyframes vxbIn {
+  from { opacity: 0; transform: translateY(16px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.vxb-head {
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #050e1f 0%, #0b2a5e 60%, #1d4ed8 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+.vxb-head::after {
+  content: '';
+  position: absolute; left: 18px; right: 18px; bottom: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(212,160,23,0.55), rgba(124,58,237,0.55), transparent);
+}
+.vxb-avatar {
+  width: 42px; height: 42px; border-radius: 50%; overflow: hidden;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(240,192,64,0.42);
+  flex-shrink: 0;
+  display: grid; place-items: center;
+}
+.vxb-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.vxb-head-txt { flex: 1; min-width: 0; }
+.vxb-name { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 18px; letter-spacing: .06em; }
+.vxb-status { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--vxb-teal); display: inline-flex; align-items: center; gap: 6px; margin-top: 2px; }
+.vxb-status::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--vxb-teal); box-shadow: 0 0 8px var(--vxb-teal); }
+.vxb-close {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: grid; place-items: center;
+  transition: background .18s;
+}
+.vxb-close:hover { background: rgba(255,255,255,0.22); }
+
+.vxb-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(240,245,255,0.6) 0%, rgba(220,225,248,0.55) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.vxb-body::-webkit-scrollbar { width: 6px; }
+.vxb-body::-webkit-scrollbar-thumb { background: rgba(29,78,216,0.32); border-radius: 6px; }
+
+.vxb-msg {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  max-width: 100%;
+  animation: vxbMsgIn .28s cubic-bezier(.22,1,.36,1);
+}
+@keyframes vxbMsgIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.vxb-msg.bot { align-self: flex-start; }
+.vxb-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.vxb-msg-av {
+  width: 30px; height: 30px; border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(255,255,255,0.55);
+}
+.vxb-msg.bot .vxb-msg-av { background: linear-gradient(135deg, #d4a017, #f0c040); }
+.vxb-msg-av img { width: 100%; height: 100%; object-fit: cover; }
+.vxb-msg-b {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--vxb-text);
+  background: #ffffff;
+  border: 1px solid rgba(180,200,255,0.55);
+  box-shadow: 0 4px 12px rgba(5,14,50,0.06);
+  max-width: 260px;
+  word-wrap: break-word;
+}
+.vxb-msg.user .vxb-msg-b {
+  background: linear-gradient(135deg, #0b2a5e, #1d4ed8);
+  color: #fff;
+  border-color: transparent;
+  border-bottom-right-radius: 4px;
+}
+.vxb-msg.bot .vxb-msg-b { border-bottom-left-radius: 4px; }
+.vxb-msg-b a { color: var(--vxb-sapphire); text-decoration: underline; font-weight: 600; }
+.vxb-msg.user .vxb-msg-b a { color: var(--vxb-gold-light); }
+
+.vxb-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  padding-left: 40px;
+}
+.vxb-quick button {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(29,78,216,0.28);
+  color: var(--vxb-steel);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background .16s, border-color .16s, color .16s;
+  letter-spacing: .02em;
+}
+.vxb-quick button:hover {
+  background: linear-gradient(135deg, rgba(29,78,216,0.14), rgba(124,58,237,0.12));
+  border-color: rgba(124,58,237,0.42);
+  color: var(--vxb-sapphire);
+}
+
+.vxb-typing {
+  display: flex; gap: 4px; padding: 10px 14px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(180,200,255,0.55);
+  align-items: center;
+  width: fit-content;
+}
+.vxb-typing span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--vxb-mist);
+  animation: vxbBlink 1.2s infinite;
+}
+.vxb-typing span:nth-child(2) { animation-delay: .2s; }
+.vxb-typing span:nth-child(3) { animation-delay: .4s; }
+@keyframes vxbBlink {
+  0%, 60%, 100% { opacity: .25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+
+.vxb-foot {
+  padding: 12px 14px 14px;
+  background: rgba(255,255,255,0.72);
+  border-top: 1px solid var(--vxb-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.vxb-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.vxb-input {
+  flex: 1;
+  border: 1px solid rgba(29,78,216,0.22);
+  border-radius: 26px;
+  padding: 11px 16px;
+  font-size: 13.5px;
+  color: var(--vxb-text);
+  background: #fff;
+  outline: none;
+  transition: border-color .18s, box-shadow .18s;
+  font-family: inherit;
+}
+.vxb-input:focus { border-color: var(--vxb-sapphire); box-shadow: 0 0 0 3px rgba(29,78,216,0.14); }
+.vxb-send {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, #d4a017, #f0c040);
+  color: #050e1f;
+  font-weight: 800;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 18px rgba(212,160,23,0.42);
+  transition: transform .16s, box-shadow .16s;
+  flex-shrink: 0;
+}
+.vxb-send:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(240,192,64,0.55); }
+.vxb-send svg { width: 18px; height: 18px; }
+.vxb-hint {
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  color: var(--vxb-muted);
+  text-align: center;
+}
+.vxb-hint a { color: var(--vxb-sapphire); font-weight: 600; text-decoration: none; }
+.vxb-hint a:hover { text-decoration: underline; }
+
+/* Safety net: the pinned position above is measured in absolute pixels, so on
+   any viewport too narrow/short to contain it the widget falls back to the
+   bottom-right corner instead of drifting off-screen. */
+@media (max-width: 1460px), (max-height: 760px) {
+  #vx-chatbot {
+    /*top: auto;
+    left: auto;*/
+    right: 22px;
+    bottom: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  #vx-chatbot {
+    top: auto; left: auto;
+    right: 14px; bottom: 14px;
+    width: 56px; height: 56px;
+  }
+  #vx-chatbot-launcher { width: 56px; height: 56px; }
+  #vx-chatbot-launcher img { width: 38px; height: 38px; }
+  #vx-chatbot-panel {
+    width: calc(100vw - 24px);
+    height: calc(100vh - 130px);
+  }
+  .vxb-msg-b { max-width: calc(100vw - 120px); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PARTNER-PAGE THEME  — restyles the panel to match the dark
+   glass / gold-accent look used on Company & Partners pages.
+   Appended last so it overrides the light defaults above.
+   ══════════════════════════════════════════════════════════════ */
+#vx-chatbot-panel {
+  background: linear-gradient(180deg, rgba(10,22,44,0.97) 0%, rgba(5,14,31,0.98) 100%);
+  border: 1px solid rgba(96,165,250,0.24);
+  box-shadow: 0 30px 90px rgba(2,8,16,0.62), 0 0 40px rgba(37,99,235,0.16);
+}
+#vx-chatbot-panel::before {
+  content: '';
+  position: absolute; top: 0; left: 24px; right: 24px; height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(45,212,191,0.65), rgba(240,192,64,0.65), transparent);
+  z-index: 3;
+}
+
+.vxb-head {
+  background: linear-gradient(135deg, rgba(5,14,31,0.96) 0%, rgba(11,42,94,0.94) 100%);
+  border-bottom: 1px solid rgba(96,165,250,0.20);
+}
+.vxb-head::after { display: none; }
+.vxb-avatar { border-color: rgba(240,192,64,0.55); background: rgba(212,160,23,0.12); }
+.vxb-name { font-size: 19px; letter-spacing: .05em; color: #f0f5ff; }
+.vxb-status { color: var(--vxb-teal); }
+
+.vxb-body {
+  background:
+    radial-gradient(ellipse at 12% 6%, rgba(37,99,235,0.14), transparent 55%),
+    radial-gradient(ellipse at 88% 96%, rgba(212,160,23,0.10), transparent 58%),
+    linear-gradient(180deg, rgba(6,16,34,0.6) 0%, rgba(4,11,26,0.72) 100%);
+}
+.vxb-body::-webkit-scrollbar-thumb { background: rgba(212,160,23,0.34); }
+
+/* Bot bubble — dark glass with a teal edge */
+.vxb-msg.bot .vxb-msg-b {
+  background: rgba(13,30,58,0.86);
+  border: 1px solid rgba(45,212,191,0.26);
+  color: rgba(240,245,255,0.93);
+  box-shadow: 0 6px 22px rgba(2,8,16,0.34);
+}
+.vxb-msg.bot .vxb-msg-b a { color: var(--vxb-gold-light); }
+
+/* Visitor bubble — gold, matching the partner-page CTA */
+.vxb-msg.user .vxb-msg-b {
+  background: linear-gradient(135deg, var(--vxb-gold-rich), var(--vxb-gold-light));
+  color: #050e1f;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(212,160,23,0.34);
+}
+.vxb-msg.user .vxb-msg-b a { color: #050e1f; text-decoration: underline; }
+.vxb-msg.bot .vxb-msg-av { background: linear-gradient(135deg, #d4a017, #f0c040); border-color: rgba(240,192,64,0.5); }
+.vxb-msg.user .vxb-msg-av { background: linear-gradient(135deg, #1d4ed8, #7c3aed); border-color: rgba(96,165,250,0.5); }
+
+/* Quick-reply chips — outlined gold pills like the partner page links */
+.vxb-quick button {
+  background: rgba(212,160,23,0.10);
+  border: 1px solid rgba(212,160,23,0.42);
+  color: var(--vxb-gold-light);
+  letter-spacing: .04em;
+}
+.vxb-quick button:hover {
+  background: rgba(212,160,23,0.22);
+  border-color: var(--vxb-gold-light);
+  color: #fff;
+}
+
+.vxb-typing { background: rgba(13,30,58,0.86); border-color: rgba(45,212,191,0.26); }
+.vxb-typing span { background: var(--vxb-teal); }
+
+.vxb-foot {
+  background: rgba(4,11,26,0.92);
+  border-top: 1px solid rgba(96,165,250,0.18);
+}
+.vxb-input {
+  background: rgba(6,16,34,0.9);
+  border: 1px solid rgba(96,165,250,0.28);
+  color: #f0f5ff;
+}
+.vxb-input::placeholder { color: rgba(232,240,255,0.38); }
+.vxb-input:focus {
+  border-color: var(--vxb-teal);
+  box-shadow: 0 0 0 3px rgba(45,212,191,0.16);
+}
+.vxb-hint { color: rgba(232,240,255,0.55); }
+.vxb-hint a { color: var(--vxb-gold-light); }
+.vxb-close { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.20); }
+.vxb-close:hover { background: rgba(212,160,23,0.24); border-color: var(--vxb-gold-light); color: var(--vxb-gold-light); }

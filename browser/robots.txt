@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://volaxin.com/sitemap.xml
+Sitemap: https://www.volaxin.com/sitemap.xml
