@@ -1,5 +1,8 @@
-const CACHE = 'volaxin-shell-v5';
-const RUNTIME = 'volaxin-runtime-v5';
+const CACHE = 'volaxin-shell-v6';
+const RUNTIME = 'volaxin-runtime-v6';
+// Vercel serves with cleanUrls:true, so "/x.html" 308-redirects to "/x".
+// Precache the clean URLs only — never cache a redirected response, because
+// Chrome refuses to serve one to a navigation request (ERR_FAILED).
 const PRECACHE = [
   '/shell/shell.css',
   '/shell/shell.js',
@@ -10,32 +13,38 @@ const PRECACHE = [
   '/chatbotuser.webp',
   '/logo.png',
   '/favicon.ico',
-  '/contact.html',
-  '/company/about.html',
-  '/company/partners.html',
-  '/products/',
-  '/products/pms.html',
-  '/products/inventory.html',
-  '/products/procurement.html',
-  '/products/crew-management.html',
-  '/products/sheq.html',
-  '/products/navigation.html',
-  '/products/chartering.html',
-  '/products/warehouse.html',
-  '/products/drydock.html',
-  '/products/operations.html',
-  '/products/finance.html',
-  '/products/documents.html',
-  '/products/analytics.html',
-  '/products/hull-integrity.html',
-  '/products/compliance.html',
-  '/products/ai-assistant.html'
+  '/contact',
+  '/company/about',
+  '/company/partners',
+  '/products',
+  '/products/pms',
+  '/products/inventory',
+  '/products/procurement',
+  '/products/crew-management',
+  '/products/sheq',
+  '/products/navigation',
+  '/products/chartering',
+  '/products/warehouse',
+  '/products/drydock',
+  '/products/operations',
+  '/products/finance',
+  '/products/documents',
+  '/products/analytics',
+  '/products/hull-integrity',
+  '/products/compliance',
+  '/products/ai-assistant'
 ];
+
+function cacheable(res) {
+  return !!res && res.status === 200 && !res.redirected && res.type === 'basic';
+}
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(c => Promise.all(
-      PRECACHE.map(u => c.add(u).catch(() => null))
+      PRECACHE.map(u =>
+        fetch(u).then(res => { if (cacheable(res)) return c.put(u, res); }).catch(() => null)
+      )
     )).then(() => self.skipWaiting())
   );
 });
@@ -64,14 +73,18 @@ self.addEventListener('fetch', e => {
 
   if (isDoc) {
     e.respondWith(
-      caches.match(e.request).then(hit => {
+      caches.match(e.request).then(cached => {
+        const hit = cached && !cached.redirected ? cached : null;
         const net = fetch(e.request).then(res => {
-          if (res && res.status === 200) {
+          if (cacheable(res)) {
             const clone = res.clone();
             caches.open(RUNTIME).then(c => c.put(e.request, clone));
           }
           return res;
-        }).catch(() => hit);
+        }).catch(err => {
+          if (hit) return hit;
+          throw err;
+        });
         return hit || net;
       })
     );
@@ -79,10 +92,10 @@ self.addEventListener('fetch', e => {
   }
 
   e.respondWith(
-    caches.match(e.request).then(hit => {
-      if (hit) return hit;
+    caches.match(e.request).then(cached => {
+      if (cached && !cached.redirected) return cached;
       return fetch(e.request).then(res => {
-        if (res && res.status === 200 && res.type === 'basic') {
+        if (cacheable(res)) {
           const clone = res.clone();
           caches.open(RUNTIME).then(c => c.put(e.request, clone));
         }
