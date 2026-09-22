@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Page not found (404) | Volaxin Maritime Suite</title>
+  <meta name="description" content="This page is no longer available. Explore Volaxin maritime news, insights and the ship management platform.">
+  <meta name="theme-color" content="#040d1c">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#020810; --deep:#050e1f; --steel:#0b2a5e; --azure:#2563eb;
+      --mist:#60a5fa; --pearl:#dbeafe; --gold:#b8860b; --gold-rich:#d4a017;
+      --gold-light:#f0c040; --violet:#7c3aed; --teal:#2dd4bf;
+      --text-dark:#0a1628; --text-mid:#1e3a5f; --text-muted:rgba(10,22,40,0.55);
+      --glass-white:rgba(240,245,255,0.82); --glass-border:rgba(180,200,255,0.52);
+      --shadow-soft:0 18px 50px rgba(11,42,94,0.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{min-height:100%}
+    body{
+      display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;
+      font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+      color:var(--text-dark);
+      background:linear-gradient(160deg,#e8eeff 0%,#d4dcf8 30%,#c8d2f4 60%,#d0d8f8 100%);
+      -webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden
+    }
+    /* Ambient wash echoing the site's glass aesthetic. */
+    body::before,body::after{content:'';position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+    body::before{width:620px;height:620px;top:-260px;left:-180px;background:radial-gradient(circle,rgba(37,99,235,.20),transparent 70%)}
+    body::after{width:560px;height:560px;bottom:-280px;right:-160px;background:radial-gradient(circle,rgba(124,58,237,.16),transparent 70%)}
+
+    .card{
+      position:relative;z-index:1;width:100%;max-width:680px;text-align:center;
+      background:var(--glass-white);border:1px solid var(--glass-border);
+      border-radius:26px;padding:clamp(2.2rem,5vw,3.4rem);
+      box-shadow:var(--shadow-soft);backdrop-filter:blur(18px);overflow:hidden
+    }
+    .card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;
+      background:linear-gradient(90deg,var(--violet),var(--gold-rich))}
+
+    .brand{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.6rem;text-decoration:none}
+    .brand-mark{width:34px;height:34px;border-radius:9px;border:1px solid var(--glass-border);
+      background:linear-gradient(135deg,rgba(37,99,235,.14),rgba(212,160,23,.14));
+      display:grid;place-items:center;color:var(--steel);font-weight:700;font-size:.85rem}
+    .brand-text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}
+    .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;color:var(--steel);letter-spacing:.06em}
+    .brand-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted)}
+
+    .num{font-family:'Cormorant Garamond',serif;font-size:clamp(5.5rem,17vw,9rem);
+      font-weight:300;line-height:.85;color:var(--steel);opacity:.13;letter-spacing:-.02em;user-select:none}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,5vw,2.9rem);
+      font-weight:500;line-height:1.15;color:var(--steel);margin:-.25em 0 .9rem}
+    h1 em{font-style:italic;color:var(--gold)}
+    p.lead{color:var(--text-mid);line-height:1.7;font-size:.98rem;max-width:46ch;margin:0 auto 2rem}
+
+    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:2.2rem}
+    .btn{display:inline-block;padding:11px 24px;border-radius:999px;text-decoration:none;
+      font-size:.9rem;font-weight:600;letter-spacing:.01em;border:1px solid transparent;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-p{background:linear-gradient(135deg,var(--steel),var(--azure));color:#fff;
+      box-shadow:0 10px 24px rgba(37,99,235,.28)}
+    .btn-g{background:rgba(255,255,255,.6);color:var(--steel);border-color:var(--glass-border)}
+
+    .sep{display:flex;align-items:center;gap:14px;margin-bottom:1.2rem;
+      font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted)}
+    .sep::before,.sep::after{content:'';height:1px;flex:1;background:var(--glass-border)}
+
+    /* Fixed 2x2 rather than auto-fit: with four items auto-fit resolved to three
+       columns and left a lone card stranded on the second row. */
+    .links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .lk{display:block;padding:14px 16px;border-radius:14px;text-decoration:none;text-align:left;
+      background:rgba(255,255,255,.55);border:1px solid var(--glass-border);
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .lk:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(11,42,94,.10);border-color:var(--mist)}
+    .lk-t{display:block;font-weight:600;font-size:.9rem;color:var(--steel);margin-bottom:2px}
+    .lk-d{display:block;font-size:.74rem;color:var(--text-muted);line-height:1.45}
+
+    @media(max-width:520px){
+      .actions .btn{flex:1 1 100%}
+      .links{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <a class="brand" href="/index.html">
+      <span class="brand-mark">V</span>
+      <span class="brand-text">
+        <span class="brand-name">Volaxin</span>
+        <span class="brand-sub">Maritime Suite</span>
+      </span>
+    </a>
+
+    <div class="num" aria-hidden="true">404</div>
+    <h1>This page has <em>slipped its moorings</em></h1>
+    <p class="lead">
+      The page you were looking for doesn't exist, has been moved, or is no longer
+      published. Nothing is wrong on your side.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-p" href="/index.html">Back to platform</a>
+      <a class="btn btn-g" href="/news">Latest maritime news</a>
+    </div>
+
+    <div class="sep"><span>Or continue here</span></div>
+
+    <nav class="links">
+      <a class="lk" href="/news">
+        <span class="lk-t">Maritime News</span>
+        <span class="lk-d">Shipping, ports, compliance &amp; tech</span>
+      </a>
+      <a class="lk" href="/blog">
+        <span class="lk-t">Insights Blog</span>
+        <span class="lk-d">In-depth operational guides</span>
+      </a>
+      <a class="lk" href="/solutions/ship-management-software.html">
+        <span class="lk-t">Solutions</span>
+        <span class="lk-d">The eleven-module platform</span>
+      </a>
+      <a class="lk" href="/contact.html">
+        <span class="lk-t">Request a Demo</span>
+        <span class="lk-d">See Volaxin on your fleet</span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>

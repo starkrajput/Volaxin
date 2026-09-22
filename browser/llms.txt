@@ -1,6 +1,6 @@
 # Volaxin Maritime Suite
 
-> Volaxin Maritime Suite is all-in-one ship management software for ship owners, technical managers and operators. It unifies eleven integrated modules — Planned Maintenance (PMS), Marine Inventory, Maritime Procurement, Crew Management, Work & Rest Hours (MLC 2006), SHEQ safety management, Document Management, Chartering & Post-Fixture, Navigation & Voyage planning, Custom Reports and IMO CII / EU ETS / FuelEU carbon compliance — in one cloud platform with true offline ship-side operation and automatic office-to-vessel synchronisation. Trusted across 500+ vessels in 15+ flag states.
+> Volaxin Maritime Suite is all-in-one ship management software for ship owners, technical managers and operators. It unifies eleven integrated modules — Planned Maintenance (PMS), Marine Inventory, Maritime Procurement, Crew Management, Work & Rest Hours (MLC 2006), SHEQ safety management, Document Management, Chartering & Post-Fixture, Navigation & Voyage planning, Custom Reports and IMO CII / EU ETS / FuelEU carbon compliance — in one cloud platform with true offline ship-side operation and automatic office-to-vessel synchronisation. Capable of managing 500+ vessels across 15+ flag states.
 
 ## Solutions
 - [Ship Management Software](https://www.volaxin.com/solutions/ship-management-software.html): The full 11-module platform for technical, crewing, commercial and compliance operations across a fleet.
@@ -32,7 +32,7 @@ Original maritime news and analysis, published continuously by the Volaxin newsr
 
 ## Key facts
 - Deployment: cloud (web) with offline vessel client and automatic ship-to-shore sync over VSAT / Starlink.
-- Scale: 500+ vessels, 15+ flag states, 99.9% uptime SLA.
+- Scale: capacity for 500+ vessels, 15+ flag states, 99.9% uptime SLA.
 - Standards covered: ISM Code, ISPS, MLC 2006, STCW, IMO CII, EU ETS, FuelEU Maritime, EU MRV, IMO DCS, Poseidon Principles, IMO cyber-risk MSC.428(98).
 - Ship types: tankers (crude/product/chemical/LNG/LPG), bulk carriers, container ships, general cargo, offshore/OSV, passenger and specialised vessels.
 
